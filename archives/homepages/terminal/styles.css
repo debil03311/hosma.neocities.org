@@ -1,0 +1,168 @@
+
+
+@font-face {
+	font-family: 'Quark';
+	src: url('fonts/Quark-Light.otf');
+}
+
+@font-face {
+	font-family: 'Foxcat';
+	src: url('fonts/FoxCat.ttf');
+}
+
+
+
+@-webkit-keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+body {
+	background-color: #000;
+	background: url('bg.jpg') center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #DDD;
+	font-family: 'Quark';
+}
+
+#brightness {
+	position: fixed;
+	top: -2px;
+	left: -2px;
+	width: 100%;
+	height: 200%;
+	background: rgba(0,0,0,.5);
+}
+
+#wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: auto;
+	max-height: 90%;
+	background: rgba(0,0,0,.5);
+	border: solid 5px #03443C;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	overflow: auto;
+}
+
+#category {
+	/*border: solid 1px red;*/
+	width: auto;
+	display: inline-block;
+	vertical-align: top;
+	margin: 40px;
+	padding: 10px;
+}
+
+h1 {
+	font-family: 'Foxcat';
+	letter-spacing: 2px;
+	color: #1ad1a5;
+	border-bottom: solid 3px #03443C;
+	padding: 8px;
+	animation-name: fade-in;
+	animation-duration: 3s;
+}
+
+a {
+	display: block;
+	color: #DDD;
+	text-decoration: none;
+	text-align: left;
+	font-size: 18px;
+	padding: 2px;
+	transition: 1s;
+	animation-name: fade-down;
+	animation-duration: 2s;
+}
+
+a:hover {
+	color: lightgreen;
+	text-shadow: 0 0 8px green;
+}
+
+td {
+	vertical-align: top;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	background: rgba(0,0,0,.5);
+	border-top: solid 4px #03443C;
+}
+
+.clock {
+	position: absolute;
+	right: 30px;
+	animation-name: fade-right;
+	animation-duration: 2s;
+}
+
+.ma {
+	position: absolute;
+	left: 556px;
+}
+
+.ma .amount {
+	color: #069387;
+	text-shadow: 0 0 30px #07AB9E;
+}
+
+#sp-form {
+	position: absolute;
+	top: 8px;
+	left: 15px;
+	animation-name: fade-in;
+	animation-duration: 2s;
+}
+
+#sp-input {
+	width: 500px;
+	height: 10px;
+	padding: 10px;
+	background: #000;
+	color: #DDD;
+	border: solid 2px #03443F;
+}

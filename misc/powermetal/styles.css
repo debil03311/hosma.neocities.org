@@ -1,0 +1,51 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+
+body {
+	background: url( 'bg.jpg' ) fixed center center #024a84;
+	background-size: cover;
+	color: #EEE;
+}
+
+#wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 550px;
+	min-width: 700px;
+	background: rgba( 0, 0, 0, .6 );
+	text-align: center;
+	border: double 4px gold;
+	padding: 40px;
+	transform: translate( -50%, -50% );
+}
+
+#lyrics {
+	height: 290px;
+	margin-bottom: 40px;
+	overflow: auto;
+}
+
+button {
+	width: 140px;
+	height: 50px;
+	background: rgba( 0, 0, 0, .6 );
+	color: #EEE;
+	border: double 4px yellow;
+	border-radius: 2px;
+}
+
+h1 { 
+	font-family: 'Great Vibes', cursive; 
+	font-weight: normal;
+	font-size: 60px;
+	text-shadow: 0 0 10px gold;
+	margin: 40px;
+}
+
+p { font-family: 'Satisfy', serif; font-size: 26px; }
+a { color: #DDD; }

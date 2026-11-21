@@ -1,0 +1,22 @@
+.dream-details {
+    font-weight: 600;
+    text-align: right;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dream-index {
+    font-size: 1.4em;
+}
+
+.dream-index::before {
+    content: "#";
+}
+
+.dream-index {
+    cursor: pointer;
+    transition: 100ms color;
+}

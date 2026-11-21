@@ -1,0 +1,50 @@
+
+@font-face {
+	font-family: 'XXII';
+	src: url('/assets/fonts/en/XXII_BM_W.ttf');
+}
+
+@font-face {
+	font-family: 'IBM Plex';
+	src: url('/assets/fonts/en/IBMPlexCondensed.ttf');
+}
+
+body {
+	background: url('/assets/media/album_covers/high_res/plini__other_things.png') fixed right center #000;
+	background-size: cover;
+	font-family: 'IBM Plex', sans;
+	font-size: 18px;
+	padding: 60px 140px;
+}
+
+section {
+	background: rgba( 255, 255, 255, .6 );
+	border-left: solid 3px #b65f6f;
+	text-align: justify;
+	box-shadow: -2px 2px 10px rgba( 0, 0, 0, .4 );
+	padding: 1px 28px;
+}
+
+table tr td:nth-child(1) {
+	font-weight: bold;
+}
+
+#albums { text-align: center; }
+
+img {
+	width:  180px;
+	height: 180px;
+	box-shadow: 0 0 10px rgba( 0, 0, 0, .4 );
+	padding: 10px;
+	margin: auto 12px;
+	display: inline-block;
+}
+
+a {
+	color: #7498a4;
+	text-decoration: none;
+}
+
+h4 a:hover { color: #bd2319; }
+a:active { text-decoration: underline; }
+h4 { color: #9c1d15; }

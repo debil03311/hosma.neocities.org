@@ -1,0 +1,80 @@
+#cat {
+    position: fixed;
+    top: 8px;
+    left: -300px;
+
+    width: 300px;
+    height: 270px;
+    background: url("/assets/media/nekoarc.png");
+    background-size: cover;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: 1s left, 1s opacity;
+    z-index: -1;
+}
+
+#reimu {
+    position: fixed;
+    top: -80%;
+    right: 28%;
+    width: 512px;
+    height: 512px;
+    background: url("/assets/media/reimufumo.png");
+    background-size: cover;
+}
+
+#cat.pepsi,
+#cat.milk {
+    left: -4px;
+    opacity: .08;
+}
+
+#cat.pepsi.milk {
+    opacity: 1;
+}
+
+#contact-links {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+}
+
+.contact-category:not(:first-child) {
+    margin-top: 8px;
+}
+
+.contact-type {
+    font-weight: 600;
+}
+
+.contact-link {
+    grid-column: 2;
+    text-align: left;
+}
+
+.contact-desc {
+    margin-left: 14px;
+    grid-column: 3;
+}
+
+#bandcamp-embed-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#bandcamp-embed {
+    width: clamp(400px, 600px, 600px);
+    height: 120px;
+    border: none;
+    border-radius: 3px;
+}
+
+.hcb-mod {
+  color: var(--clickable);
+}

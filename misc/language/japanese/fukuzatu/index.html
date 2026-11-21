@@ -1,0 +1,129 @@
+<!DOCTYPE HTML><html><head><title>画数の多い漢字 (30+)</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+
+:root {
+	--accent: #3BBA9C;
+	--purple: #B987FA;
+	--light: #707793;
+	--dark0: #2E3047;
+	--dark1: #3C3F58;
+	--dark2: #43455C;
+}
+
+body, .kanji, #group, #info, #onkun { display: flex; }
+
+body {
+	background: var(--dark1);
+	color: #EEE;
+	font: 1.2em 'Noto Sans JP', sans-serif;
+
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+#group {
+	background: var(--dark0);
+	border: solid 1px var(--light);
+	box-shadow: 0px 0px 0 8px var(--dark0);
+	padding: 0 24px;
+	margin: 14px !important;
+
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+.kanji {
+	width: 76px;
+	height: 124px;
+	font-size: 4em;
+	padding-top: -10px;
+	margin-left: 6px;
+	/*border: solid 1px red;*/
+
+	align-items: center;
+	justify-content: center;
+	margin-top: -4px;
+}
+
+.kanji b {
+	font-weight: normal;
+	color: var(--accent);
+}
+
+.kanji.small {
+	font-size: 1em !important;
+	margin-top: 0px;
+}
+
+#group, #info { margin: 20px; }
+#info, #onkun { flex-direction: column; }
+
+.on  { color: var(--accent); }
+.kun { color: var(--purple); }
+.on:before  { content: "【音】"; color: #EEE; }
+.kun:before { content: "【訓】"; color: #EEE; }
+.kakusuu:before { content: "【画】"; }
+
+.shou {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 28px;
+	height: 28px;
+	background: var(--dark0);
+	font-size: .8em;
+	border: solid 1px var(--light);
+	border-radius: 100%;
+	margin: 10px;
+	cursor: pointer;
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+
+	display: flex;
+	justify-content: center;
+}
+
+.shou:hover { background: var(--dark1); }
+.shou.active { border-color: var(--accent); }
+.shou span { margin-top: 2px; }
+
+</style><script src="./jquery-3.4.1.min.js"></script></head><body><div class="shou"><span>小</span></div>
+
+<script>
+
+/* WELCOME TO THE MONKE CODE EXHIBIT */
+
+$.getJSON("./kanji.json", function(data){
+	for (strokes in data) {
+		elem = '<div id="group"><span class="kanji"><b>{{KANJI}}</b></span><div id="info"><span class="kakusuu">{{STROKES}}</span><div id="onkun"><span class="on">{{ONYOMI}}</span><span class="kun">{{KUNYOMI}}</span></div></div></div>';
+
+		elem = elem.replace(/("kakusuu\">).*?(<\/span>)/g, `"kakusuu">${strokes}<\/span>`);
+		// console.log("S", strokes);
+
+		for (kanji in data[strokes]) {
+			elem = elem.replace(/("kanji\">).*?(<\/span>)/g, `"kanji"><b>${kanji}</b><\/span>`);
+			// console.log("K", kanji);
+
+			elem = elem.replace(/("on\">).*?(<\/span>)/g, `"on">${data[strokes][kanji]["o"]}<\/span>`)
+					.replace(/("kun\">).*?(<\/span>)/g, `"kun">${data[strokes][kanji]["k"]}<\/span>`)
+					.replaceAll(",","<font color=\"#EEE\">&nbsp;&nbsp;</font>")
+					.replaceAll(".","<font color=\"#DDD\">.</font>");
+
+			$("body").append(elem);
+		}
+
+		// console.log("E", elem);
+	}
+});
+
+var small = false;
+
+$('.shou').on('click', function() {
+	$(".kanji").toggleClass('small');
+	$(this).toggleClass('active');
+	if (small === false) small = true;
+	else small = false;
+});;
+</script></body></html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>常用漢字</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <script src="./js/ZyouyouKanzi.js"></script>
+  <script src="./js/index.js"></script>
+
+  <script defer src="https://unpkg.com/alpinejs"></script>
+
+</head><body x-data="body">
+
+  <button id="button-reset" @click="reset()">リセット</button>
+
+  <div id="results">
+    <p>
+      常用漢字：
+      <b x-text="stats.passed">0</b>
+      /
+      <b x-text="ZYOUYOU_KANZI.length">0</b>
+      (<b x-text="percentageOf(ZYOUYOU_KANZI.length, stats.passed, Math.ceil)">0</b>%)
+    </p>
+
+    <p>
+      ここまで見てきた漢字：
+      <b x-text="stats.passed">0</b>
+      /
+      <b x-text="stats.passed + stats.failed">0</b>
+      (<b x-text="percentageOf(stats.passed + stats.failed, stats.passed, Math.ceil)">0</b>%)
+    </p>
+  </div>
+
+  <template x-if="!isFinished">
+  <main id="playing">
+    <header id="kanzi"
+            :style="{'pointer-events': showDetails ? 'none' : 'all'}"
+            x-text="current[0]"
+            @click="showDetails = true"></header>
+
+    <div id="details" data-invisible :data-invisible="!showDetails">
+      <span id="meanings" x-text="current[1].join(', ')"></span>
+      <span id="readings" x-text="current[2].join('　')"></span>
+
+      <div id="progress-buttons">
+        <button id="button-fail" @click="mark(current[0], false)">未知</button>
+        <button id="button-pass" @click="mark(current[0], true )">存知</button>
+      </div>
+    </div>
+  </main>
+  </template>
+
+  <template x-if="isFinished">
+  <main id="finished">
+    <header id="kanzi">終わり</header>
+  </main>
+  </template>
+
+</body></html>

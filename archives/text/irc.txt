@@ -1,0 +1,131 @@
+
+
+ If you're not C this probably doesn't interest 
+ you so just leave
+
+
+
+
+ ###############################################
+ #					 # 1.0 #
+ #  C is a fucking faggot edition	 #######
+ #					       #
+ #  Quick and basic Internet Relay Chat (IRC)  #
+ #	      setup for GNU/Linux	       #
+ #					       #
+ ###############################################
+
+ Table of contents
+ 1 - Installing the client
+ 2 - Waiting for the install to finish
+ 3 - CLI & Basic stuff
+ 4 - Commands & joining the channel
+
+
+
+ (  Terminal commands are  not supposed to be  )
+ (           typed with  the $ or ~$           )
+
+
+
+ ###############################################
+
+  You're a faggot and won't read shit so here's
+  the commands only.
+
+  Hey fuck you, man :(
+
+
+
+  ~$ sudo apt-get install irssi
+  ~$ irssi
+  /connect irc.rizon.net
+  /join #microvaporwave
+
+
+
+  Yup, only 4 commands
+
+
+  Now just pray that I'm online
+
+  AND ALSO
+
+  Don't spam it
+  Do not
+
+ ###############################################
+
+
+
+ // [ 1 ] -- Installing the client /////////////
+
+
+ $ sudo apt-get install irssi
+
+
+
+ // [ 2 ] -- Wating for the install to finish //
+
+ It's common sense but eh the longer this takes
+  you to read the better XDDDD
+ Kill yourself, my man, ok? :)
+
+
+ // [ 3 ] -- CLI & Basic stuff /////////////////
+
+ Enter the irssi CLI (Command Line Interface)
+ by typing in
+
+
+ $ irssi
+
+
+ The irssi CLI will appear for the first time.
+
+ Text channels start with a # (hashtag)
+ Oh yeah you probably realized it but there
+  aren't any other channels like voice 'n' stuff
+
+ // [ 4 ] -- Commands & joining the channel ////
+
+ All commands start with a /, and most are one 
+  word only, like /help
+
+ So, first of all you have to join a server
+ Do this by typing in
+
+
+ /connect irc.rizon.net
+
+
+ (    Rizon is the server that I personally    )
+ (                   prefer                    )
+
+ Now, to join my channel type in
+
+
+ /join #microvaporwave
+
+
+ Now just hope I'm online and there you have it
+
+ ALSO
+
+ Don't spam the fucking server, please
+ Just please ok
+ Don't
+ Spam
+ The server
+
+
+ ALSO, HERE'S A REALLY, REALLY COOL SIG
+
+ I want to die
+
+
+ =     =
+ =     =
+ -> H <-
+ =     =
+ =     =

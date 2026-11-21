@@ -1,0 +1,108 @@
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('/assets/fonts/en/Roboto-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Droid';
+	src: url('/assets/fonts/en/DroidSans.ttf');	
+}
+
+@font-face {
+	font-family: 'Courgette';
+	src: url('/assets/fonts/en/Courgette-Regular.ttf');
+}
+
+body {
+	background: url('/assets/media/gdm_background_noise.png') #303638;
+	color: #EEE;
+	font-family: 'Droid';
+	padding-top: 180px;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+section a {
+	font-family: 'Courgette';
+	font-weight: lighter;
+	color: lightseagreen;
+}
+
+header {
+	position: fixed;
+	top:  0;
+	left: 0;
+	width:  100%;
+	height: 120px;
+	background: rgba( 0, 0, 0, .6 );
+	z-index: 1;
+}
+
+header ul {
+	position: relative;
+	top: 18px;
+	font-family: 'Roboto';
+	font-size: 26px;
+	list-style-type: none;
+}
+
+header li {
+	float: left;
+	padding: 0 24px;
+}
+
+.block {
+	position: relative;
+	left: 50%;
+	max-width: 800px;
+	background: rgba( 0, 0, 0, .6 );
+	text-align: justify;
+	padding: 40px;
+	margin: 60px 0;
+	transform: translateX( -50% );
+}
+
+.block hr {
+	width: 4px;
+	height: 4px;
+	border-color: #DDD;
+	background: #DDD;
+	border-radius: 180px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.block p {
+  line-height: 22px;
+}
+
+.nsfw {
+	position: relative;
+	bottom: 3px;
+	text-transform: uppercase;
+	color: #C00;
+	font-size: 14px;
+	border: solid 1px #C00;
+	border-radius: 2px;
+	padding: 1px 4px;
+	margin-left: 8px;
+}
+
+
+.hmm { 
+	font-weight: bold; 
+	cursor: pointer; 
+}
+
+p.dirty { display: none; }
+.hmm.red { color: #C00; }
+.hmm.green { color: lightseagreen; }
+a:hover { text-decoration: underline; }
+header img { border-radius: 180px; }
+header a { color: #EEE; }
+section table td:nth-child(1) { padding-right: 20px; }
+/*.block hr { width: 280px; border-color: #AAA; }/*

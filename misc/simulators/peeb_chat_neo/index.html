@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+  	* {
+     box-sizing: border-box;
+    }
+
+  	body {
+     	width: 100vw;
+     	height: 100vh;
+      font-size: 10pt;
+      font-family: sans-serif;
+      line-height: 1.5;
+      margin: 0;
+  	}
+
+  	main {
+      max-width: 600px;
+      height: 100vh;
+  	  margin: auto;
+      padding: 2ch;
+
+  		display: flex;
+  		flex-flow: column nowrap;
+  	}
+
+  	#messages {
+      flex-grow: 1;
+      overflow: auto;
+  	}
+
+    .time {
+      font-size: xx-small;
+      color: gray;
+    }
+
+    .username {
+      font-weight: bold;
+    }
+
+    #user-input {
+      border: solid 1px #ddd;
+      border-radius: 8px;
+      padding: .5ch;
+
+      gap: 1ch;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    #user-input button {
+      background: none;
+      width: 4ch;
+      height: 4ch;
+      aspect-ratio: 1 / 1;
+      border: none;
+      border-radius: 8px;
+    }
+    #user-input button:hover {
+      background: #ddd;
+    }
+
+    input {
+      flex-grow: 1;
+      background: none;
+      border: none;
+    }
+    input:focus {
+      outline: none !important;
+    }
+    input::placeholder {
+      color: #aaa;
+    }
+	</style>
+
+</head>
+<body>
+
+  <main>
+    <div id="messages"></div>
+
+    <div id="user-input">
+      <button>十</button>
+      <input type="text" placeholder="#generalへメッセージを送信">
+    </div>
+  </main>
+
+  <script>
+    const RESPONSES = [
+      ['Caitlyn', 'waow'],
+      ['Caitlyn', ':3'],
+      ['Caitlyn', 'sry'],
+      ['Caitlyn', 'ohp'],
+      ['Caitlyn', 'ohsss'],
+      ['Caitlyn', 'okee'],
+      ['Caitlyn', 'same'],
+
+      ['Jade', 'lmao someone just killed another CEO <a href="#">https://girlcockx.com/diaperfetish1488/0182345778238</a>'],
+      ['Jade', '<a href="#">https://girlcockx.com/lessonsinbenadryl/0182345778238</a>'],
+      ['Jade', '<a href="#">https://girlcockx.com/thejewsdidit/10801230048</a>'],
+      ['Jade', '<a href="#">https://girlcockx.com/13percent/803757101245</a>'],
+      ['Jade', '<a href="#">https://x.com/babyfurcollective3/0171248719269</a>'],
+      ['Jade', 'i fucking love beer'],
+      ['Jade', '17 quintillion km today lets go'],
+      ['Jade', '?'],
+
+      ['yurtmaster87', 'would you rather have 1 dollars or 2 dollars tho'],
+      ['yurtmaster87', 'i genuinely believe the earth is going to explode'],
+      ['yurtmaster87', 'what if were all just like little ai people or something'],
+      ['yurtmaster87', 'wo de shou wo de shou'],
+      ['yurtmaster87', 'did you guys know we have this romanian expression to fuck the horse in the pussy it means to mess up like real bad style yk pretty funny'],
+      ['yurtmaster87', 'jus kill everyone and leave lowk'],
+      ['yurtmaster87', 'calc is short for calculator btw'],
+      ['yurtmaster87', 'it\'s over'],
+      ['yurtmaster87', 'nothing ever happens'],
+      ['yurtmaster87', 'six seven'],
+      ['yurtmaster87', 'reminder that it\'s pronounced cly-pee'],
+      ['yurtmaster87', 'what the fuck is today\'s word dawg'],
+      
+      ['nats', 'cat just dragged his shitting ass all over the living room'],
+      ['nats', 'lily fucking punched me in the stomach'],
+      ['nats', 'pepsi is sleeping so cute right now'],
+      ['nats', 'baz is so little you guys wouldn\'t believe it'],
+      ['nats', 'little girl sliced open one of my carotid arteries'],
+      ['nats', 'what'],
+      ['nats', 'bike'],
+      ['nats', 'motorcycle'],
+      ['nats', 'america bad'],
+      ['nats', 'europe good'],
+      ['nats', 'we are in complete financial ruin'],
+
+      ['Mathfreak', 'ts is umazing'],
+      ['Mathfreak', 'the java is scriptin'],
+      ['Mathfreak', 'game engine update: everything broke (it didnt) (it did)'],
+      ['Mathfreak', 'giraffe combat'],
+      ['Mathfreak', 'it don\'t get better than this'],
+      ['Mathfreak', 'the tiantui star'],
+
+      ['TheNordicToast', 'greetings from the north pole'],
+      ['TheNordicToast', 'just arrived in transnistria'],
+      ['TheNordicToast', 'north korea is surprisingly nice to visit'],
+      ['TheNordicToast', 'i\'m in siberia today'],
+      ['TheNordicToast', 'boat'],
+    ]
+
+    const PERSONA = 'pablito'
+
+    const Input = document.querySelector('input')
+    const Messages = document.querySelector('#messages')
+
+    function randomInteger(limit) {
+      return Math.floor(Math.random() * limit)
+    }
+
+    function randomItem(array) {
+      const index = randomInteger(array.length)
+      return array[index]
+    }
+
+    function sendMessage(user, content) {
+      const timestamp = new Date().toLocaleTimeString('us').slice(0, 5)
+
+      const Element = document.createElement('div')
+      Element.className = 'message'
+      Element.innerHTML = `
+        <span class="time">${timestamp}</span>
+        <span class="username">${user}</span>
+        <span class="content">${content}</span>
+      `
+      Messages.append(Element)
+      
+      Messages.scrollTop = Messages.scrollHeight
+
+    }
+
+    Input.addEventListener('keyup', (event) => {
+      if (event.key !== 'Enter')
+        return
+
+      sendMessage(PERSONA, Input.value.trim())
+      Input.value = ''
+    })
+
+    setInterval(() => {
+      const [user, content] = randomItem(RESPONSES)
+      const delay = (content.length * 100) + randomInteger(100)
+
+      setTimeout(() => sendMessage(user, content), delay)
+    }, 2000)
+  </script>
+
+</body>
+</html>

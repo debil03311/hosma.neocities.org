@@ -1,0 +1,123 @@
+:root {
+  --dark0: #1e2124;
+  --dark1: #282b30;
+  --dark2: #36393e;
+  --dark3: #424549;
+  --accent: #7289da;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  --size: 8px;
+  width: var(--size);
+  background-color: var(--dark2);
+  border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-corner
+{
+  background-color: var(--dark0);
+  border-radius: 1em;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark3);
+  color: #EEE;
+  font: 400 11pt sans-serif;
+  margin: 0;
+  padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+body > * {
+  width: min(100%, 600px);
+}
+
+#history {
+  overflow-y: auto;
+  gap: 1em;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  /* background-color: var(--dark2); */
+  border-radius: 4px;
+  padding: .4em .6em;
+
+  display: grid;
+  grid-template-areas:
+    "pfp username timestamp"
+    "pfp content  content";
+  grid-template-columns: min-content max-content 1fr;
+  align-items: center;
+  gap: .2em .6em;
+}
+
+.pfp
+  {grid-area: pfp;
+   grid-row-start: 1;
+   grid-row-end: 3;}
+.username
+  {grid-area: username;}
+.timestamp
+  {grid-area: timestamp;}
+.content
+  {grid-area: content;
+   column-span: all;}
+
+.pfp {
+  --size: 2.4em;
+  place-self: start;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.timestamp {
+  font-size: .8em;
+  opacity: .4;
+}
+
+.emoji {
+  --size: 22px;
+  width: var(--size);
+  height: var(--size);
+}
+
+.emoji.big {
+  --size: 48px;
+}
+
+.media {
+  max-height: 12em;
+  border-radius: 4px;
+  margin-top: 4px;
+  display: block;
+}
+
+input {
+  background-color: var(--dark1);
+  color: #FFF;
+  border: none;
+  border-radius: 12px;
+  padding: 1em;
+  font: inherit;
+}

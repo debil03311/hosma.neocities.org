@@ -1,0 +1,59 @@
+
+@font-face {
+	font-family: 'XXII';
+	src: url('/assets/fonts/en/XXII_BM_W.ttf');
+}
+
+@font-face {
+	font-family: 'IBM Plex';
+	src: url('/assets/fonts/en/IBMPlexCondensed.ttf');
+}
+body {
+	background: url('/assets/media/album_covers/high_res/magic_wands__aloha_moon.jpg') fixed top center #000;
+	background-size: cover;
+	color: #DDD;
+	font-family: 'IBM Plex', sans;
+	font-size: 18px;
+	padding: 0 140px;
+}
+
+.dirt  { cursor : pointer; }
+.dirty { display: none   ; }
+
+section {
+	background: rgba( 0, 0, 0, .92 );
+	border: solid 3px #552461;
+	text-align: justify;
+	box-shadow: -2px 2px 10px rgba( 0, 0, 0, .4 );
+	padding: 1px 28px;
+	margin-bottom: 28px;
+}
+
+.navi {
+	position: relative;
+	top: -8px;
+	text-align: center;
+	border: solid 3px #552461;
+	border-top: none;
+	padding: 10px;
+}
+
+.navi a { margin: auto 4px; }
+
+.nsfw {
+	position: relative;
+	top: -4px;
+	color: #7e3390;
+	font-size: 14px;
+	border: solid 1px #7e3390;
+	border-radius: 2px;
+	padding: 0 3px 0px 2px;
+	margin: auto 4px;
+}
+
+a {
+	color: #9d3bb4;
+	text-decoration: none;
+}
+
+a:active { text-decoration: underline; }

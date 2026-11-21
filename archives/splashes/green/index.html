@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<!--
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=https://neocities.org">
+  </head>
+</html>
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="theme-color" content="#47B897">
+    <meta name="author" content="hosma">
+    <meta name="description" content="I also go by debil sometimes. You might known me as either the fauux ARG guy, the SOUP guy, or the >lone_meme hogger.">
+    <meta name="image" content="/hosma_circle_transparent.png">
+    
+    <meta property="og:site_name" content="Neocities">
+    <meta property="og:title" content="hosma">
+    <meta property="og:description" content="I also go by debil sometimes. You might known me as either the fauux ARG guy, the SOUP guy, or the >lone_meme hogger.">
+    <meta property="og:image" content="/hosma_circle_transparent.png">
+    
+    <title>hosma</title>
+    <style>
+      @font-face {
+        font-family: "Noto Sans JP";
+        src: url("/assets/fonts/Noto/NotoSansJP-VariableFont_wght.ttf");
+      }
+      
+      @keyframes fadeIn {
+      	from { transform: rotate(-4deg); opacity: 0; }
+      	to   { transform: rotate(var(--slice-angle)); opacity: 1; }
+      }
+      
+      @keyframes fromLeft {
+      	from { opacity: 0; bottom: -100px; }
+      	to   { opacity: 1; bottom: -40px; }
+      }
+      
+      @keyframes fromRight {
+      	from { opacity: 0; top: -100px; }
+      	to   { opacity: 1; top: -40px; }
+      }
+
+      :root {
+      	--accent: #47B897;
+      	--slice-angle: -1deg;
+      }
+      
+      body {
+      	height: 100vh;
+      	background: #151515;
+      	font: 2em 'Noto Sans JP', sans-serif;
+      	margin: 0;
+      	overflow: hidden;
+      
+      	user-select: none;
+      	-moz-user-select: none;
+      	-webkit-user-select: none;
+      }
+      
+      .hidden {
+        display: none !important;  
+      }
+      
+      #wrapper {
+      	position: fixed;
+      	width: 100vw;
+      	height: 100vh;
+      	overflow: hidden;
+      
+      	display: flex;
+      	flex-direction: column;
+      	align-items: center;
+      	justify-content: space-between;
+      }
+      
+      h1 {
+      	text-align: center;
+      	animation: .6s forwards;
+      	animation-iteration-count: 1;
+      	text-shadow: 0 0 10px #000;
+      	white-space: nowrap;
+      }
+      
+      a {
+      	color: var(--accent);
+      	text-decoration: none;
+      	transition: letter-spacing 1s;
+      }
+      
+      a:hover {
+      	letter-spacing: .2em;
+      }
+      
+      .top {
+      	position: relative;
+      	top: -40px;
+      	transform: rotate( calc(180deg + var(--slice-angle)) );
+      	animation: .6s;
+      }
+      
+      .bottom {
+      	position: relative;
+      	bottom: -40px;
+      	transform: rotate( var(--slice-angle) );
+      	animation: .6s;
+      }
+      
+      .slice {
+      	width: 104vw;
+      	height: 40%;
+      	background: url('/assets/media/forest_green.jpg') center center;
+      	background-size: cover;
+      	border-top: solid 1px var(--accent);
+      	box-shadow: 0 0 10px 2px #000;
+      	animation-iteration-count: 1;
+      }
+      
+      #load {
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	width: 100%;
+      	height: 100%;
+      	background: #080808;
+      	color: #DDD;
+      	z-index: 1;
+      
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+    	<div class="slice top"></div>
+    	<h1><a href="/">hosma</a></h1>
+    	<div class="slice bottom"></div>
+    </div>
+    
+    <div id="load" class="hidden">Now loading...</div>
+    
+    <script>
+      const $=(x)=> document.querySelector(x);
+      const rRng=(max)=> Math.floor(Math.random() * Math.floor(max));
+      const rArr=(arr)=> arr[rRng(arr.length)];
+      
+      const loadDiv = $("#load");
+      const h1a = $("h1 a");
+      
+      const captions = [
+        "hosma",
+        "(´・ω・`)",
+        ":3",
+        "it's lowercase",
+        "If you can read this entire paragraph with default page zoom, I really want to know what your screen resolution is",
+        "繧ｨ蜿よ轟螢ｱ謐碁匣繧ｨ蜿よ轟螢ｱ邇厄ｼ｢繧ｨ蜿よ轟蠑先轟?､",
+        "packing up (literally & metaphorically)",
+        "You can't read this on mobile!",
+        "bruh",
+        "Tried reloading yet?",
+        "😳",
+        "god is here, rodent vein",
+        "Sponsored by RAID",
+        "Special thanks to all my patreons:",
+        "ホスマ",
+        "しんどきます",
+        "耨【ほすま】",
+        "rArr(captions.length)",
+        "captions[rRng(captions.length)]",
+        "captions[Math.floor(Math.random()*captions.length)]",
+        "undefined",
+        "[object Object]",
+        "Uncaught SyntaxError: Invalid or unexpected token"
+      ];
+      
+      // The pains I go through for y'all retards out there disablin js
+      loadDiv.classList.remove("hidden");
+      
+      h1a.innerText = rArr(captions);
+      // document.title = rArr(captions);
+      
+      document.body.onload=()=> {
+        loadDiv.remove();
+        $(".top").style.animationName = "fromRight";
+        $(".bottom").style.animationName = "fromLeft";
+        $("h1").style.animationName = "fadeIn";
+      }
+      
+      // I have no fucking idea what works or not below this line.
+      
+      // I think adblockers and brave shield both block the shit out
+      // of my requests to ipify so yeah fuck idk what I could possibly do
+      // but screenjesus shouldn't have any extensions on it so I'm hoping
+      // it's just gonna work.
+      
+      const screenjesusIPs = ["69.195.131.58","66.85.74.162"];
+      
+      // thx mace
+      // fetch("https://api.ipify.org/?format=json")
+      //   .then((resp)=> resp.json())
+      //   .then((data)=> {
+      //     // console.log(data.ip);
+      //     if (screenjesusIPs.includes(data.ip))
+      //       h1a.innerHTML = "hosma";
+      //   });
+      
+      // Lastest resort here
+      
+      // const xh = new XMLHttpRequest();
+      // xh.open("GET","https://api.ipify.org/?format=jsonp",true);
+      // xh.send();
+      
+      // setTimeout(()=> {
+      //   const data = xh.responseText.match(/{.+}/g)[0];
+      //   const ip = JSON.parse(data).ip;
+      //   if (screenjesusIPs.includes(data.ip))
+      //     $("h1 a").innerHTML = "hosma";
+      // },800);
+    </script>
+  </body>
+</html>

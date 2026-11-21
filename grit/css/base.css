@@ -1,0 +1,358 @@
+@import url("./fonts.css");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  accent-color: lightcoral;
+
+  --accent: lightcoral;
+  --accent-alt: gold;
+  --shadow: #333;
+
+  --background: #201f1f;
+  --background-alt: #201f1f;
+  --foreground: #efefef;
+
+  --fonts-sans:
+    'Noto Sans',
+    'Noto Sans JP',
+    'Noto Sans KR',
+    'Noto Sans TC',
+    'Noto Sans SC',
+    sans-serif;
+
+  --fonts-serif: 
+    'Noto Serif',
+    'Noto Serif JP',
+    'Noto Serif KR',
+    'Noto Serif TC',
+    'Noto Serif SC',
+    serif;
+
+  --fonts-dyslexic:
+    'OpenDyslexic',
+    sans-serif;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  accent-color: darkred;
+
+  --accent: darkred;
+  --accent-alt: hsl(140deg, 100%, 20%);
+  /* --shadow: #d0d0d0; */
+  --shadow: #fff8;
+
+  --background: linear-gradient(
+    to bottom,
+    #3960ca,
+    dodgerblue 5vh,
+    #87CEEB 35vh,
+    #abd3e2 80vh
+  );
+  --background-alt: #efefef;
+  --foreground: #0f0f20;
+}
+
+/* GENERICS */
+
+[lang="ja"], [lang="ja"] *,
+[lang="kr"], [lang="kr"] *,
+[lang="zh"], [lang="zh"] *
+{
+  font-style: normal;
+}
+
+p {
+  text-wrap: pretty;
+}
+/* WHAT THE ACTUAL FUCK CSS */
+p::after {
+  content: "";
+  display: inline-block;
+}
+
+a {
+  position: relative;
+  color: var(--accent);
+  text-decoration: none;
+}
+a:not(:has(img)):hover {
+  color: var(--accent-alt);
+  text-decoration: underline;
+}
+a:not(:has(img))[href^="http"]::after {
+  content: "▴";
+  color: var(--accent-alt);
+  line-height: 0;
+  vertical-align: super;
+  font-style: normal;
+}
+
+section {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+hr {
+  height: 1px;
+  background: var(--shadow);
+  border: none;
+}
+hr.dot {
+  aspect-ratio: 1 / 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  text-align: center;
+  place-self: center;
+  margin: 64px auto;
+}
+
+small {
+  text-align: inherit;
+  font-size: smaller;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+em {
+  font-weight: 600;
+}
+
+q {
+  font-style: italic;
+}
+
+q.block {
+  font-style: normal;
+  border-left: solid 1ch var(--shadow);
+  padding-left: 2ch;
+  display: block;
+}
+q.block::before,
+q.block::after
+{
+  content: "";
+}
+
+rt {
+  color: var(--accent-alt);
+}
+
+code {
+  background: var(--shadow);
+  border: solid 1px var(--background);
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
+pre {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+img[title] {
+  border: dotted 1px var(--foreground);
+}
+
+button {
+  cursor: pointer;
+}
+
+details details {
+  margin-left: 3.6ch;
+}
+
+summary {
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 500;
+}
+summary:hover {
+  color: var(--accent-alt);
+}
+
+table {
+  text-align: left;
+  border-spacing: 1px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: var(--shadow);
+}
+
+tr:hover {
+  background: var(--shadow);
+}
+
+td, th {
+  max-width: 20ch;
+  vertical-align: top;
+  padding: 0 4px;
+}
+
+/* CLASSES */
+
+[title] {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: gray;
+  cursor: help;
+}
+
+[data-font="sans"] {
+  font-family: var(--fonts-sans);
+}
+
+[data-font="serif"] {
+  font-family: var(--fonts-serif);
+  font-variant-ligatures: discretionary-ligatures;
+  hyphens: auto;
+}
+
+[data-font="dyslexic"] {
+  font-family: var(--fonts-dyslexic);
+}
+
+.block {
+  display: block;
+}
+
+.float-left {
+  max-width: 256px;
+  float: left;
+  margin: 0 2ch 1ch 0;
+}
+.float-right {
+  max-width: 256px;
+  float: right;
+  margin: 0 0 1ch 2ch;
+}
+
+.clickable {
+  color: var(--accent);
+}
+.clickable:hover {
+  color: var(--accent-alt);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.subtle:not(:hover) {
+  opacity: .5;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.incipit {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+p:has(.incipit)::first-letter {
+  font-size: 3em;
+  float: left;
+  line-height: 1;
+  font-weight: bold;
+  margin-right: .5ch;
+}
+
+.spoiler:not(:hover) {
+  color: transparent;
+  /* background: black; */
+  background: repeating-linear-gradient(
+    -45deg,
+    #222 0 16px,
+    #444 16px 32px
+  ) black;
+}
+.spoiler:not(:hover) * {
+  color: transparent;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background: var(--background-alt, var(--background));
+  box-shadow: 0 0 8px 4px var(--background);
+  z-index: 1;
+}
+
+.accent {
+  color: var(--accent-alt);
+  font-style: italic;
+  border-color: var(--accent-alt);
+  text-decoration-color: var(--accent-alt);
+}
+
+/* INFOBOX */
+
+.infobox {
+  width: 100%;
+  background: var(--shadow);
+  border-radius: 3px;
+  padding: 1ch 3ch;
+}
+
+.infobox hr {
+  background: var(--foreground);
+}
+
+/* BODY */
+
+body {
+  width: 60vw;
+  max-width: 100ch;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  text-align: justify;
+  font: 300 10pt var(--fonts-serif);
+  line-height: 1.75;
+  letter-spacing: .2px;
+  margin: 80px auto 300px auto;
+}
+:root[data-theme="light"] body {
+  font-weight: 500;
+}
+
+body > * {
+  margin: 32px 0;
+}
+
+/* VERTICAL SCREENS */
+
+@media only screen and (orientation: portrait) {
+  body {
+    width: 80vw;
+  }
+}
+
+/* FIREFOX HACKS */
+
+@media screen and (min--moz-device-pixel-ratio:0) {
+  p:has(.incipit)::first-letter {
+    margin-top: .4ch;
+  }
+}

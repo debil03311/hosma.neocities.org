@@ -1,0 +1,79 @@
+/* NOTO SANS */
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("/assets/fonts/Noto/NotoSans-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("/assets/fonts/Noto/NotoSans-Italic-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/assets/fonts/Noto/NotoSansJP-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/assets/fonts/Noto/NotoSansKR-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("/assets/fonts/Noto/NotoSansSC-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("/assets/fonts/Noto/NotoSansTC-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+/* NOTO SERIF */
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("/assets/fonts/Noto/NotoSerif-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif";
+  src: url("/assets/fonts/Noto/NotoSerif-Italic-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Serif JP";
+  src: url("/assets/fonts/Noto/NotoSerifJP-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif KR";
+  src: url("/assets/fonts/Noto/NotoSerifKR-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif SC";
+  src: url("/assets/fonts/Noto/NotoSerifSC-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif TC";
+  src: url("/assets/fonts/Noto/NotoSerifTC-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}

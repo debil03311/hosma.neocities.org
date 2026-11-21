@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  
+  <!-- No cow level here. -->
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" content="#f08080">
+  <meta name="author" content="hosma on neocities">
+  <meta name="description" content="HTML Element Display Test Page">
+  <!-- <meta name="image" content="/hosma_circle_transparent.png"> -->
+  
+  <meta property="og:site_name" content="Neocities">
+  <meta property="og:title" content="hosma on neocities">
+  <meta property="og:description" content="HTML Element Display Test Page">
+  <!-- <meta property="og:image" content="/hosma_circle_transparent.png"> -->
+  
+  <title>element display test &middot; hosma</title>
+  
+  <link rel="stylesheet" href="/grit/css/base.css">
+  <style>
+    body > * {
+      margin: 1ch 0;
+    }
+
+    body {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+    }
+
+    hr {
+      width: 100%;
+    }
+  </style>
+
+  <script defer src="/grit/js/localstorage.js"></script>
+  
+</head>
+<body>
+
+  <div class="infobox">
+    <p>
+      <a href="../" class="back">&LeftTeeArrow; Home</a>
+    </p>
+  </div>
+
+  <hr>
+  <hr class="dot">
+
+  <p>Paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ratione nobis quasi odio maiores beatae, ea, iure deleniti eligendi blanditiis nam temporibus esse repellat obcaecati similique molestiae accusamus! Rerum cumque dolorum optio!</p>
+  <span data-font="sans">Sans-serif text</span>
+  <span data-font="serif">Serif text</span>
+  <span title="Description.">Element with [title]</span>
+  <span class="accent">Accented text</span>
+
+  <i>Italic text</i>
+  <em>Emphasized text</em>
+  <b>Bold text</b>
+  <strong>Strong text</strong>
+  <strike>Strikethrough text</strike>
+  <small>Small text</small>
+
+  <q>Quote</q>
+  <q class="block">Block quote</q>
+
+  <q lang="ja">日本語の引用</q>
+  <q lang="ja" class="block">日本語のブロック引用</q>
+
+  <span lang="ja" class="vertical">縦書きテキスト<br>あと珍紛漢紛</span>
+
+  <code>Code</code>
+
+  <pre>|''. |''. |'''
+|..' |..' |..
+|    | '. |...</pre>
+
+  <h1>Header 1</h1>
+  <h2>Header 2</h2>
+  <h3>Header 3</h3>
+  <h4>Header 4</h4>
+  <h5>Header 5</h5>
+  <h6>Header 6</h6>
+
+  <a>Empty anchor</a>
+  <a href="./">Internal anchor</a>
+  <a href="https://example.com">External anchor</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Table</th>
+        <th>Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Some</td>
+        <td>Cells</td>
+      </tr>
+      <tr>
+        <td>Another Row</td>
+        <td>Of<br>Cells</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <details>
+    <summary>Details with summary</summary>
+
+    <details>
+      <summary>Nested details with summary</summary>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti provident ullam totam labore architecto cum esse voluptatum reiciendis veniam? Laudantium, facilis! Dolore ab sint rerum temporibus quae aliquam soluta aperiam eaque hic!</p>
+    </details>
+
+    <details>
+      <p>Nested details without summary.</p>
+    </details>
+  </details>
+
+  <ul>
+    <li>Unordered</li>
+    <li>List</li>
+  </ul>
+
+  <ol>
+    <li>Ordered</li>
+    <li>List</li>
+  </ol>
+
+  <img src="https://placehold.co/64">
+  <img src="https://placehold.co/64" title="Image with title.">
+  <img src="" alt="Broken image with alt text.">
+
+  <input type="text" placeholder="Text input">
+  <input type="number" placeholder="1234">
+  <input type="date" value="0001-01-01">
+  <input type="time" value="12:34">
+  <input type="color" value="#f08080">
+  <input type="file">
+  <input type="checkbox">
+  <input type="checkbox" checked>
+  <input type="radio" name="radio">
+  <input type="radio" name="radio" checked>
+  <input type="range" value="4" max="10" step="2">
+
+  <progress value="25" max="100"></progress>
+
+  <textarea placeholder="Textarea"></textarea>
+
+  <button>Button</button>
+
+</body>

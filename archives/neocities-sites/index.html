@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The NeoCodex</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <script src="./js/Sites.js"></script>
+  <script src="./js/alpine.init.js"></script>
+
+  <script defer src="https://unpkg.com/alpinejs"></script>
+  <!-- <script defer src="./js/index.js"></script> -->
+
+</head><body onload="document.getElementById('loading').remove()"
+             x-data="body">
+
+  <div id="loading">
+    Loading...
+  </div>
+
+  <main>
+    <div id="intro">
+      <p>
+        A collection of (hopefully) all <span x-text="NEOCITIES_WEBSITES.length"></span> websites hosted on Neocities as of July 24, 2022. The raw JSON data can be found at <a href="./js/Sites.js" style="color: gold">./js/Sites.js</a>
+      </p><p>
+        Type in at least 3 characters and press Enter to search in usernames, custom domains and tags.
+      </p><p>
+        Alternatively, you can leave the input field blank and press Enter to see everything, though it may take a while to render depending on your hardware.
+      </p>
+
+      <input type="text"
+             placeholder="Type in at least 3 characters and press Enter to search"
+             :class="{ invalid: input.length < 3 }"
+             @keydown.enter="filterSites()"
+             x-model="input">
+    </div>
+
+    <template x-for="site in sites">
+    <article class="site">
+      <header>
+        <a class="domain"
+           :href="`//${site.domain || `${site.sitename}.neocities.org`}`"
+           x-text="site.domain || site.sitename"></a>
+
+        <a class="sitename"
+           :href="`${ORIGINS.site}/${site.sitename}`"
+           x-text="`@${site.sitename}`"></a>
+      </header>
+
+      <section class="tags">
+        <template x-for="tag in site.tags">
+        <span class="tag"
+              @click="input = tag; filterSites()"
+              x-text="tag || '&nbsp;'"></span>
+        </template>
+      </section>
+
+      <section class="details">
+        <span x-text="`${site.views} views`"></span>
+        <span x-text="`${site.hits} hits`"></span>
+
+        <span x-text="`Created on ${new Date(site.created_at).toLocaleDateString()}`"></span>
+        <span x-text="`Updated on ${new Date(site.last_updated).toLocaleDateString()}`"></span>
+
+        <template x-if="site.latest_ipfs_hash">
+        <span x-text="`Latest IPFS hash: ${latest_ipfs_hash}`"></span>
+        </template>
+      </section>
+    </article>
+    </template>
+  </main>
+
+</body></html>

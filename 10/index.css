@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Pushster&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import "./index.m.css";
+@import "./index.anim.css";
+
+@import "./css/console.css";
+@import "./css/hcb.css";
+
+@import "./css/home.css";
+@import "./css/blog.css";
+@import "./css/dreams.css";
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --border-radius: 8px;
+    --fade-in-speed: 600ms;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.invisible {
+    opacity: 0 !important;
+}
+
+.noselect {
+    user-select: none !important;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.clickable.secret:not(:hover) {
+    color: unset !important;
+}
+
+.centered {
+    text-align: center;
+}
+
+.full-fixed {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0;
+
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.fixed-button {
+    /* --size: 1.4em; */
+
+    position: fixed;
+    border-radius: var(--border-radius);
+    font-size: 2em;
+    padding: 8px;
+    transition: 128ms opacity, 100ms transform;
+    z-index: 1;
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+}
+
+.fixed-button:hover {
+    text-decoration: none;
+    transform: scale(1.04);
+}
+
+.fixed-button:active {
+    transform: scale(.98);
+}
+
+#jump-to-top {
+    bottom: 8px;
+    right: 18px;
+}
+
+#toggle-nsfw {
+    top: 8px;
+    right: 18px;
+}
+
+nav {
+    flex-shrink: 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden auto;
+    animation: var(--fade-in-speed) slide-in-left forwards;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+nav::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+nav a {
+    text-decoration: none !important;
+}
+
+.nav-button {
+    --label-opacity: 0;
+    --nav-button-size: 64px;
+    flex-shrink: 0;
+
+    position: relative;
+    width: var(--nav-button-size);
+    height: var(--nav-button-size);
+    font-size: 1.8rem;
+    border-radius: var(--border-radius);
+    margin: 4px;
+    transition: 100ms opacity;
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+}
+
+.nav-button:hover {
+    --label-opacity: 1;
+    opacity: 1 !important;
+}
+
+.nav-button[data-redirect]::before,
+.nav-button[data-number]::after,
+.nav-button[data-toggled]::after
+{
+    --inset: 6px;
+    --size: 1.32em;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    font-size: .8rem;
+    font-weight: bold;
+    border-radius: 100%;
+
+    display: grid;
+    place-items: center;
+}
+
+.nav-button[data-redirect]::before {
+    content: "◳";
+    top: var(--inset);
+    right: var(--inset);
+}
+
+.nav-button[data-number]::after {
+    content: attr(data-number);
+    bottom: var(--inset);
+    right: var(--inset);
+}
+
+.nav-button .label {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    font-size: .74rem;
+    text-align: center;
+    opacity: var(--label-opacity);
+    transition: 100ms opacity;
+}
+
+section {
+    --padding-v: 16px;
+    --padding-h: 32px;
+
+    position: relative;
+    text-align: justify;
+    border-radius: var(--border-radius);
+    padding: var(--padding-v) var(--padding-h);
+}
+
+section h1 {
+    /* font-style: italic; */
+    text-align: center;
+    margin-top: .4em;
+}
+
+section img {
+    max-width: 100%;
+}
+
+section small {
+    font-size: .68em;
+}
+
+main {
+    flex-grow: 1;
+    height: 100vh;
+    overflow: hidden auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main header {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    /* font-style: italic; */
+    animation: var(--fade-in-speed) slide-in-left forwards;
+    margin: 2rem;
+    margin-top: 3rem;
+
+    transform: skewY(-1deg);
+}
+
+main section {
+    --padding-v: 16px;
+    --padding-h: 32px;
+
+    width: clamp(128px, 90%, 920px);
+    animation: var(--fade-in-speed) slide-in-bottom forwards;
+    margin: 24px;
+}
+
+.separator {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    font-weight: 600;
+    margin: 2.4em 0;
+
+    display: grid;
+    place-items: center;
+}
+
+.separator::after {
+    content: attr(data-text);
+
+    position: absolute;
+    padding: 4px 16px;
+}
+
+.separator.gap::after {
+    content: "GAP";
+}
+
+.separator.nsfw::after {
+    content: "NSFW";
+}
+
+code,
+.inline-kb {
+    margin: 0 2px;
+    border-radius: 3px;
+}
+
+code {
+    padding: 4px 8px;
+}
+
+.inline-kb {
+    min-width: 1.6em;
+    font-weight: 600;
+    padding: 0 8px;
+
+    display: inline-grid;
+    place-items: center;
+}
+
+#theme-picker {
+    transition: 200ms opacity;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#theme-picker.invisible {
+    pointer-events: none !important;
+}
+
+#theme-picker section {
+    position: fixed;
+    top: 0;
+    left: 72px;
+    width: max-content;
+    height: 100vh;
+    border-radius: 0;
+    transition: 400ms left, 400ms top, 200ms opacity;
+    transition-timing-function: ease-out;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#theme-picker.invisible section {
+    left: 0;
+}

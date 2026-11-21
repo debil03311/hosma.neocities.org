@@ -1,0 +1,21 @@
+@media only screen and (max-width: 738px) {
+    body {
+        flex-direction: column;
+    }
+
+    .bg-blur {
+        background: #000D;
+    }
+
+    #panels-wrap {
+        margin-top: 16px;
+    }
+
+    #time > section,
+    #panels-wrap > section,
+    #panels
+    {
+        max-width: 100%;
+        width: 100%;
+    }
+}

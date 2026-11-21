@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'JA';
+  src: url('/assets/fonts/ja/A-OTF-KyokaICAPro-Regular.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[data-invisible] {
+  opacity: 0 !important;
+}
+
+body {
+  height: 100vh;
+  background: url('https://img.freepik.com/premium-photo/paper-texture-seamless-square-texture_463999-4366.jpg');
+  font: 400 14pt sans-serif, 'JA';
+  margin: 0;
+  padding: 1em;
+
+  display: grid;
+  grid-template-rows: min-content min-content 1fr;
+  place-content: center;
+}
+
+b {
+  color: #D0104C;
+}
+
+main {
+  place-self: center;
+  text-align: center;
+}
+
+#results {
+  text-align: right;
+}
+
+#kanzi {
+  font-weight: 800;
+  font-size: min(100pt, 90vw);
+  line-height: 1.5em;
+  transition: 100ms;
+}
+
+#playing #kanzi {
+  color: #D0104C;
+  cursor: pointer;
+}
+
+#playing #kanzi:hover {
+  color: #FFC408;
+  text-shadow: 2px 2px 0 #D0104C;
+}
+
+#finished #kanzi {
+  color: #00896C;
+}
+
+#details {
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+}
+
+button {
+  font-weight: 600;
+  font-size: 12pt;
+  font-family: inherit;
+  border: solid 1px #000;
+  border-radius: 4px;
+  padding: 4px 1em;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#button-reset:hover,
+#button-fail
+{
+  background-color: #D0104C;
+  color: #EEE;
+}

@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+body {
+  height: 100vh;
+	background: url('https://68.media.tumblr.com/a818df2d2aa93a68b129c9d41132cd7e/tumblr_oetmprsX7G1sk0xezo1_500.gif') #000;
+	color: #DDD;
+	font-family: 'VT323';
+	padding: 0;
+	margin:  0;
+	cursor: default;
+}
+
+#road {
+	position: relative;
+	width: 100%;
+	height: 124px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAWklEQVRYR+2WQQoAMAjD7P8f7fAH3UC6Q3YWLZkEVeGn8PwiAATU3Z1cxPkCAkAAAhCwCdw4S/Isb4toY/gY2A6wpWsCQAACeQI/nGRbjrH6esK2Wr0VEQACB/zPIAffPcCBAAAAAElFTkSuQmCC');
+	background-color: blue;
+	background-size: 200px;
+	background-position: 0 -38px;
+	image-rendering: pixelated;
+}
+
+#street {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+#post {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAABPklEQVRYR2NkGCDAOED2MlDd4rCwsP/Inlm1ahVWO6hqMchSiQhflEB8sWIzAzbLqWYxsqWTgmLB5uatWwz2PYyP7CKqWIzLUsVAD7Bd99fvwLCcYothcQoKYpjPVM5t+J9taM2gy8ABtvgyww+GqeePMtwxCoDbRxWLYfGKHKQgy5GDFtlSkDjVLMYWj/iy6tC1GF/KpamPQRaTGsxUieNRi4mtdChO1aNBPRrUuEJgNHERmzbg6kazE7FBNnCJq7GxEaWJQqyLYere6ioxCF++B+Yq+7sTpf3uxp0MjBs2INpGFy9eZNDX1yeoGaZu2bJlDLD2lr+3D4a+59dvMkhqqmM1D24xOZbCTMRmOT5LwQ0BkI8psRSb5YQsBVsMimNSghdbuPF62sOFibH08/aDEIsJRioRCkhJWCDjALCrxCA2+i/YAAAAAElFTkSuQmCC');
+	background-size: contain;
+	image-rendering: pixelated;
+}
+
+#city {
+	position: relative;
+	bottom: -164px;
+	left: 0;
+	width: 100%;
+	height: 250px;
+	background: url('city.png');
+	background-size: cover;
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+#extra {
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	text-align: center;
+	font-size: 24px;
+	transform: translate( -50% );
+}
+
+#opt {
+	padding: 20px;
+	font-size: 24px;
+	opacity: 0;
+	transition: .4s;
+}
+
+#opt:hover {
+	opacity: 1;
+}
+
+#opt span {
+	display: block;
+	margin: 8px;
+}
+
+input[type=range] { height: 16px; }
+#extra p { margin: 14px; }

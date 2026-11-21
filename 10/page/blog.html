@@ -1,0 +1,238 @@
+<script src="../js/screenjesus.js"></script>
+<div id="top"></div>
+
+<header id="page-title">words</header>
+
+<!-- Adding another paragraph because this post is tiny and sad. -->
+<!-- ^ Gonna go in a future post. Humor isn't free. -->
+
+<!-- Next up (at some point):
+    - Why 20+ minute youtube videos are a cancer on the platform
+    - Facebook is just as bad as twitter, but in a different way
+-->
+
+<section id="May-11-2022">
+    <span class="blog-timestamp" data-goto="May-11-2022">
+        May 11, 2022
+    </span>
+
+    <h1>Discord interactions, a nightmare</h1>
+    <p>
+        Just remembered I have a blog, hi!
+    </p><p>
+        So, I decided I'd make a Discord bot a few months ago. And I did, by throwing away the official discord.js guide because it was using slash commands, which I didn't want. And all was well and good.
+    </p><p>
+        But then, utterly clueless, I stumbled upon a different bot's slash commands by accident and took a gander at the arguments. It was beautiful, so I thought you know what? I'm going to completely rewrite my bot to use slash commands. Unbeknownst to me, the nightmare had already begun to unfold.
+    </p><p>
+        Let's talk about interactions. Not the real, human-to-human kind, those are good and boring. I'm of course talking about <i>Discord</i> interactions. You can set up an event listener in your app that does something whenever it receives one, and you can send one through some Discord interfaces like commands or buttons. Of course, you must register your commands or send a message with buttons on it first. But once you figure that out it's all smooth sailing from there... or so I thought.
+    </p><p>
+        The cool thing about all of this is that, yes, arguments are really fucking cool. You can make required or optional ones, you can give the user a list of pre-written values or let them type whatever, you can put attachments on them like images and videos and whatnot, the list goes on! And it appears as though Discord are really happy with this system and love to encourage everyone to switch to it over plain text commands (i.e. <code>?help</code>, <code>;;join</code>, <code>s!stats</code> etc.) but there's a catch. No, there are a <b><i>ton</i></b> of catches.
+    </p><p>
+        First of all, arguments. Yes, very cool and good. You can only have up to 25 but that should be more than enough. What isn't cool and good, however, is that when it comes to commands themselves, you can only have 50 of them. That is not a lot. If you've ever made a general-purpose or all-in-one bot you should know that commands pile up <i>fast</i>. From what I've seen there aren't any plans for increasing the limit any time soon, so just be aware of that, I guess. And you can also only have up to like 50 pre-determined argument values, have fun with your translation command.
+    </p><p>
+        Another cool thing is sub-commands. You can kinda use these like putting a space in your command name. Like you could have a <code>/ping</code> for the bot and <code>/ping minecraft &lt;address&gt;</code>. The uncool thing is that you can only have one level of sub-commands and a maximum of 10 for every base command... Yeah, what I'm trying to say is that these limits are kinda ridiculous.
+    </p><p>
+        But then again, attachments! Sending attachments to a bot has never been easier! Except it has, because it literally doesn't fucking work with slash commands. Not in DiscordJS at least. There's a method for adding attachment arguments to your command, but the only thing you get from the actual command interaction is the attachment parameter with its name, a type that's apparently <code>undefined</code> and a "value" that you don't even know what it represents. Maybe it's the attachment ID, but you'll need way more than that to figure out its URL. Good luck looking up literally anything about slash command attachments when it comes to DiscordJS.
+    </p><p>
+        I could go on and on and on about why DiscordJS sucks ass, so allow me to summarize everything as "fuck the devs." They keep changing and deprecating everything all the time and I don't understand why. Man, just plan ahead or something. If I were to try and guess, <code>MessageEmbed.setTitle()</code> or <code>MessageEmbed.setDescription()</code> are going to, like, require Object parameters rather than Strings in the future.
+    </p><p>
+        And as a final thing, button interactions are also ass. You have 3 entire seconds to respond to them, otherwise they fail. So like, wanna make a refresh button for your embed? Have fun.
+    </p>
+
+    <h1>Publishing to NPM, a different kind of nightmare</h1>
+    <p>
+        Tying in with the above rant, I've decided to move the dangeru command from that bot to it's own /u/ bot. I'm still working on it but it uses the <a href="https://dangeru.us">danger/u/</a> API extensively so I made my own local module to deal with that. It also scrapes the website itself for some additional data that isn't included in the API. But then I thought "Hey, this seems like something someone should have already made. Shit." and proceeded to look up similar packages on <a href="https://npmjs.com">npmjs.com</a> and there was, surprisingly enough, nothing. There's an <a href="https://github.com/dangeru/api-wrappers/blob/master/js/dangeru.js">official JavaScript API wrapper</a> on the danger/u/ GitHub, but it's old and ugly and for web browsers. It even uses <code>var</code>s 🤢. Anyway, point is that Node doesn't have fetch so I win.
+    </p><p>
+        But then I thought, why don't I try being a good samaritan for once and upload my module to npm so everyone can use the /u/ API easily. I mean, there aren't too many people that would want to, but someone might! So I <code>npm publish</code>ed it and everything worked out perfectly. I even had JSdoc comments on everything for that sweet, sweet IntelliSense. Life was good.
+    </p><p>
+        It was good. Until I tried downloading and using it, that is. Because for some reason it now had this weird ass warning about some declaration file not being found. Looking it up, I found out that it's some TypeScript thing, leaving me absolutely befuzzled since my entire module consists of a single <code>index.js</code> file that had no traces of TypeScript anywhere in it.
+    </p><p>
+        Anyway, some googling and suffering later, I decided to just say "fuck it" and write that damn declaration file or whatever and be done with it. For some reason that fixed everything so I'm happy. Have an asynchronous <a href="https://www.npmjs.com/package/dangeru-js">dangeru-js</a> and check out <a href="https://github.com/debil03311/dangeru-js/commits/main">the commit history</a> for some funnies.
+    </p>
+
+    <h1>Romanian cyrillic keyboard update</h1>
+    <p>
+        I got it to work. For some reason I'd never thought of simply trying to reboot. Man. Anyway, кам аста-й тoт чє-ам авѹт дє ꙟмпъртъшит, нє вєдєм дата виитoарє кынд сє стрикъ чєва.
+    </p>
+</section>
+
+<section id="Mar-1-2022">
+    <span class="blog-timestamp" data-goto="Mar-1-2022">
+        Mar 1, 2022
+    </span>
+
+    <h1>What's been happening</h1>
+    <p>
+        Things certainly have been happening for a while, and people are talking about them, so I figured that I might as well give my two cents, at least they're currently worth more than a ruble. But I'll start off with a lighter topic that everyone here loves: me! That's right, here's your monthly to bi-yearly update. Not sure if that's a real word.
+    </p><p>
+        Recently, my Windows 10 HDD had been chugging what I feared might its last breaths. So yes, I had finally built up enough willpower and decided that I'd reinstall the OS. I went out, bought an SSD, did the deed, and lo and behold! Random BSODs whenever something tries to write to the drive.
+    </p><p>
+        I've spent countless hours debugging without any crash logs to be found anywhere, and the only conclusion I've managed to come to is that it's gotta be the motherboard. It's like two decades old, so yeah... I tried using my dad's SSD instead of mine but the same random BSODs were happening, so I don't really know what else it could be. Anyway, I'll have to go buy a new MB I guess, let's see how that goes.
+    </p><p>
+        Meanwhile, I've been stuck on Linux for the past two weeks or so. I decided to go with Arch because it's light, the least pain in the ass to install, and Ubuntu Server refused to let me press the Alt key. I'm not even gonna go there. Anyway, for some reason or other the nVidia drivers for Arch annihilate the X server, so I can't even play Minecraft right now. In fact, anything nVidia-related that I install annihilates the X server, even just the utils or settings. I don't want to spend a day figuring out how to fix it, so I'll just wait everything out until I get the new MB and I can go back to comfiness. I can't stream either without the drivers and even VSCode sucks, I'm using the OSS variant right now and neither this nor the normal one would let me log in. Fun.
+    </p><p>
+        In other news, I've been thinking about trying Matrix, Mastodon and/or Pleroma. As far as I know only techy schizos and furries, which for some reason happen to overlap quite a lot, use these platforms regularly, so I'm thinking I could potentially have a bunch of fun interactions on them. Like some sort of VRChat but without the VR, or game. Yes, I'm this bored.
+    </p><p>
+        Now on to the meat of this post. Ukraine is exploding, Europe is kinda, more-or-less freaking out, Twitter users are being the most themselves they can be, as we all sit by and watch the spectacle unfold, wondering whether the Ghost of Kyiv's existence is at all plausible (nah). As morbid as it might sound, I find the entire situation rather amusing. I mean, isn't this the most 2020s war? It goes to show you how hard people are struggling to comprehend what's actually going on because no one's used to this. Some are sending thoughts and prayers, others willingly ignoring it, others memeing about it, and others are somehow making it all about themselves. It gets me to wonder how many of them actually understand or care and don't see it as just another trendy talk-of-the-town story.
+    </p><p>
+        Some would say, what about the other wars that have been going on for much longer? Why doesn't anyone care about those, huh? Maybe if they weren't trying to be a one-upping holy bastard so hard, they'd understand that we do, but there's still nothing that the general population can do. And what, are you trying to say that the Ukraine war isn't worth any fuss because there are other wars going on? I don't get these people, it's like the all lives matter thing all over again.
+    </p><p>
+        Either way, while it's basically nothing, my heart still goes out to both the Ukrainians that have to stay and fight or flee to survive, and all the innocent Russian citizens who everyone's trying to cut off from the rest of the world right now. It's all very much a nightmare, the only thing we can do is hope that it doesn't escalate further.
+    </p><p>
+        For all anyone knows, Moldova could be next and then us. But as much as Moldova might be praying right now, we're part of NATO so I don't know if Putin would go that far. He doesn't really have anything to gain from us other than massive GDP debt.
+    </p><p>
+        That's about it for now, happy <a href="/assets/media/MartisorCat.jpg">Mărțișor</a>! (please imagine that the cat is orange and this is an epic Neocities reference)
+    </p>
+</section>
+
+<section id="Jan-10-2022">
+    <span class="blog-timestamp" data-goto="Jan-10-2022">
+        Jan 10, 2022
+    </span>
+
+    <h1>I failed at making a keyboard layout</h1>
+    <p>
+        I've been fascinated with <a href="https://en.wikipedia.org/wiki/Romanian_Cyrillic_alphabet">Romanian Cyrillic</a> for a while now, a writing system that was somehow used for a mostly romantic language. No one ever seems to talk about it and information is scarce, even in Romanian, but I thought it would be pretty cool if I had a way to type with it whenever I pleased. Like, whenever some random Russian adds me on Discord I could scare him away with my forbidden letters.
+    </p><p>
+        I first had this idea months ago, but I thought I'd have to write my own IME or some shit like that so I instantly gave up. Some time later, however, I realized that there's this thing called Microsoft Keyboard Layout Creator from a billion years ago that somehow still works, so I got it and started mapping keys. Small problem though: I had no fucking idea what I was doing. I still don't know how people come up with shit like QWERTY or DVORAK, but I remembered that there's a <a href="http://kbdlayout.info/KBDRUM/">mnemonic Russian layout</a> that attemps to map Russian Cyrillic to QWERTY as best as it can. Maybe I could do the same thing. And so, after <i>much</i> trial and error, here's what I've come up with:
+    </p><p class="centered">
+        <img src="/assets/media/OldRomanianCyrillicLayout.png">
+    </p><p>
+        The key combos are as follows:
+        <ul>
+            <li>Єє + Аа = Ѣѣ</li>
+            <li>Йй + Аа = Ѧѧ</li>
+            <li>Ии + Аа = Ѩѩ</li>
+            <li>Ии + Ꙋꙋ = Юю</li>
+            <li>Ии + Єє = Ѥѥ</li>
+            <li>Шш + Тт = Щщ</li>
+            <li>Ӡӡ + Гг = Џџ</li>
+        </ul>
+    </p>
+    
+    <h1>Design choices</h1>
+    <p>
+        It attempts to preserve the regular Romanian typing flow as much as possible so you don't have to think about what key combos to do and whatnot. However, the writing system itself is full of stupid shit that I can't do much about. For example, И, Й, І and Ь are ALL "i" (ee) sounds, some <i>ever</i> so slightly different from each other, and some solely because of stupid-ass ortography rules.
+    </p><p>
+        You may also be wondering to yourself "Why Ӡ and Г?" and the answer to that question is ain't no one gonna use the shitty <span class="inline-kb">\</span> key for Џ. Ѯ and Ѱ might also be questionable choices, but there's no Q or W in Romanian, so putting something else there would feel weird. Also Ѱ kinda looks like W so yeah.
+    </p><p>
+        I initially wanted to include every single letter in the Wikipedia table linked above, but I've decided against key combo pollution. Now, if you're ever gonna try making your own layout, you're likely going to rip your hair out when it comes to dead keys, so let me teach you.
+    </p>
+
+    <h1>Dead keys</h1>
+    <p>
+        These are basically keys that produce either their assigned letter or a different one via key combinations. So for example, say I had the letter <strong>Ш</strong> assigned to the <span class="inline-kb">;</span> key, and this key was also marked as a "dead key." It has its dead key "Base" set to <strong>Т</strong> and the "Composite" to <strong>Щ</strong>. Now, when I press this key nothing will happen because it's waiting for a potential combination. If I now press the <span class="inline-kb">T</span> key, the <strong>Щ</strong> character will appear. If I press any other key or <span class="inline-kb">Space</span> then <strong>Ш</strong> followed by that key's assigned character will appear instead (even if it's another dead key). Yes, it's a pretty stupid system, but it's all we have other than IMEs in the year of our lord 2022.
+    </p>
+    
+    <h1>The pain</h1>
+    <p>
+        In the end, after all is said and done, I validated the layout, got a pretty chunky log file, installed it, and it didn't show up in the language bar. I have no idea how to fix that, I think it might have something to do with it being based on the standard ROU layout and that not having cyrillic shit in it. I'm too burnt out to scour the web for ancient sites that may or may not have a solution though, so I will admit my defeat here. If anyone ever finds this post and wants to try bring the Romanian cyrillic keyboard into existence once and for all, I'm passing you the torch. It's all so tiring.
+    </p>
+</section>
+
+<section id="Jan-09-2022">
+    <span class="blog-timestamp" data-goto="Jan-09-2022">
+        Jan 9, 2022
+    </span>
+
+    <h1>Y'all remember the Alice games??</h1>
+    <p>
+        TL;DR: Did you know that the word "jail" used to be spelled "<a href="https://en.wiktionary.org/wiki/gaol">gaol</a>"? That's fucked up. Some <a href="https://en.wikipedia.org/wiki/Ghoti">ghoti</a> shit right there. Also, dresses are kinda cool and I might have a hiccup fetish now.
+    </p><p>
+        I've been replaying the Alice games these past few days. And yes, by replaying I mean watching two long-plays on YouTube, 17 hours total. And yes, by 17 hours I mean I made a userscript for controlling the video player's <code>playbackRate</code> with the <span class="inline-kb">-</span> and <span class="inline-kb">=</span> keys and then constantly altered it throughout the video because I am unable to comprehend speech at 3.25x speed. So I guess you could say that I <i>did</i> somewhat play them after all.
+    </p><p>
+        This is probably the first candidate for unexplicable things I did this year. I just kinda, suddenly remembered that Alice: Madness Returns was a real video game that <i>did</i> in fact exist at a certain point in time, and that I was gonna watch PewDiePie play it way back when I was a wee ol' chap. However, unbeknownst to me back then, was that the first thing I'd see upon clicking the accursed video was kids with stitched-up faces. That shit ended up scaring the absolute crap out of me, so I immediately closed the video, blocking the entire game from my mind in the process.
+    </p><p>
+        Well anyway, I rediscovered it a few days ago and it's fucking cool as balls and now I'm a bit obsessed with it. It's like Psychonauts if <a href="https://www.youtube.com/watch?v=Ford0MGvWIc">Milla's burning kids room</a> was made into its own entire game. While the first game&mdash;American McGee's Alice&mdash;is a strong meh leaning towards ugh, Madness Returns is simply brimming with <strong><i><b>STYLE</b></i></strong> and <strong><i><b>CHARM</b></i></strong> and I think Alice Liddell might just be the first woman to combine being British with being attractive.
+    </p><p>
+        Go bloody figure!
+    </p>
+
+    <h1>The weird thing is</h1>
+    <p>
+        I think Madness Returns is quite popular. I mean, you've probably heard about it at some point, right? But nobody seems to remember this series at all. Maybe my perspective is warped because I subconsciously expect everyone to have had similar experiences, or maybe it really is in this weird-ass video game limbo of sorts.
+    </p><p>
+        Anyway, <a href="https://www.youtube.com/watch?v=NOhcwf8Yj5c">go see if it's your thing</a> NOW!!! You don't even have to sit through the first game, just watch the beginning and ending cutscenes if you're interested in the lore and then move on to Madness Returns. There are also some weird-ass shorts on YouTube with <a href="https://www.youtube.com/watch?v=7RoOnfC2Cao">fucking Jules Verne in one of them</a>?? Idfk what that's all about but his baguette accent is fucking terrible and Alice's 3D model looks like it was made in MikuMikuDance by your average deviantArt user. I dare say those videos have liminal vibes to them. Weird shit.
+    </p><p>
+        Also, it seems that McGee really wants to make a new Alice game but EA is a big, scary corporation so he wants to approach them with a boulder of a script and concept art and all sorts of shit to get approval. Yes, Alice: Asylum is <a href="https://www.patreon.com/posts/60652477">still only a concept in 2022</a>, and I wouldn't put it past EA to just go "lol no."
+    </p><p>
+        My pain is unimaginable, immeasurable.
+    </p>
+
+    <h1>Current year bideo games</h1>
+    <p>
+        Watching Madness Returns in 2022 made me realize just how different things are compared to back then. This game is an entire experience with beautiful visuals and quirky mechanics. It's tons of fun and even has some replay value, you can clearly see the passion that's gone into making it. And this is EA we're talking about. <i>That</i> EA. In contrast, AAA titles nowadays singleplayer or not come rushed, unfinished, bug-ridden, and with a most strange fixation on hyperrealism.
+    </p><p>
+        I might be growing into the grumpy adult that I always told myself I'd never become, but I just can't help but feel disappointed. We could have had many near-masterpieces by now, but they're all flawed to the core because of how rushed they had to be. I don't even know who's to blame here. My advice to developers and companies, of which neither is gonna see or care about this, is to never announce a release date until they think that their game is almost finished, because it almost never actually is. I get that hype is important, but man, please give yourselves some time.
+    </p>
+
+    <h1>In conclusion</h1>
+    <p>
+        What the hell is up with all these creepy-ass reimagined Alice in Wonderland games?? Like there was also that <a href="https://www.youtube.com/watch?v=xDx3w-k68GM">Alice is Dead</a> shit on Newgrounds, surely you remember that one. Was the book weird or something? I've only ever seen the movie so this shit makes little to no sense to me.
+    </p>
+</section>
+
+<section id="Jan-03-2022">
+    <span class="blog-timestamp" data-goto="Jan-03-2022">
+        Jan 3, 2022
+    </span>
+
+    <h1>Encore! (but fr this time)</h1>
+    <p>
+        Ok, look, I was gonna release this on new year's, it's just that there was a... tiny amount of itty bitty bugs that I had failed to anticipate. But theoretically speaking, everything should be more or less functional now.
+    </p><p>
+        <i>Sigh...</i> You know, I've been hearing a lot of good things about Vue... but I'm still holding strong and not learning a reactive framework or whatever they're called. I am a JavaScript purist, not because I like it or anything but because I can't afford to make my code any slower than it already is.
+    </p><p>
+        Anyway, there are a few easter eggs scattered around here and there so see if you can find them without cheating or something. See ya.
+    </p>
+</section>
+
+<section id="Jan-01-2022">
+    <span class="blog-timestamp" data-goto="Jan-01-2022">
+        Jan 1, 2022
+    </span>
+
+    <h1>Encore!</h1>
+    <p>
+        Welcome back to the least interesting part of the site, where I record all my woes and whatnot! You could say that this is where the magic happens. Here's to hoping that the complaining will span various other topics besides entropy from here on out! Like language! Oh and by the way, the reader is advised not to ponder the woe to whatnot ratio too much.
+    </p><p>
+        Right then, I couldn't fucking bear thinking about the previous design anymore. It was a nice idea, executed in a much too horrible manner. This one, however, although not perfect, should be MUCH easier to maintain. I will finally be able to sleep at night, knowing that whenever someone stumbles upon my site they will have something pretty to look at. I've gone through a lot of potential candidates for /10/ and they all started looking like trash a week later, but man, just look at this one: minimalistic, pastel, <i>and</i> responsive!? I can hardly believe that this is my crafting.
+    </p><p>
+        What I'm not so happy with right now would be the URL parameter system, but I can't think of a better way to distinguish between pages. These are the perils of single-page websites, I guess. Also some of the JS could also be better, but it's leagues above how I used to write it, so I guess it's fine for now.
+    </p><p>
+        Something I want to add next is themes and some kind of pagination and search system for the blog and dream diary. I have a few ideas so I'm hoping it won't be too much of a headache, but I know all too well how my ideas tend go.
+    </p><p>
+        Oh, and I pimped up the 404 page a little. Gone is the if-else monkey code ripped from the depths of hell. I'm not entirely sure how seizures work, but I think the CRT flickering effect is subtle enough not to induce one. Please let me know if it kills you though.
+    </p>
+
+    <h1>hosma lore, unearthed</h1>
+    <p>
+        If you're planning on keeping up with this thing, I suggest that you get to know my much too humble self a little better first.
+    </p><p>
+        I'm your average guy living in smack-dab nowhere, god-awful post-communist country, Europe. Wages are low, prices high, our government's debt is going to the moon! Yadda yadda yadda, you should know the spiel by now. I'll spare you all the juicy details this time.
+    </p><p>
+        I used to be really into music theory and composing stuff, but then my audio interface decided to kick the bucket, leaving me stranded with no hobby, because everything is in a continuous state of breaking down around me. Ah, ruthless entropy. <i>*elegantly sips pilk and smashes glass against forehead*</i>
+    </p><p>
+        Here's a fun fact: My English accent is naturally british because that's how I was forced to speak at school. However, I get the feeling that it's way too heavy and unintelligible for most people, so I always use a pitiable anglo-american accent when speaking to others. But is that any better, you ask? It probably depends on whether or not the concept of an "anglo-american accent" makes any sense to you.
+    </p><p>
+        And hey, despite everything, I'm no "doomer" or whatever the trendy word for "dispirited male" happens to be right now, as I've discovered some would believe me to be. I have a lovely <span class="clickable secret" onclick='toggleReimu()'>Reimu</span> fumo by my side, I'm unstoppable.
+    </p>
+    
+    <h1>My relationship with moonrunes</h1>
+    <p>
+        I have no idea why, but I decided to learn Japanese a few years ago, an experience that has since opened many new doors of abhorrence for me. If you're the type of person to write random anime words, kana gibberish, romaji paragraphs, or larp as a native with your either broken or stiffy grammar on social media, then not only are you likely from Spain or SEA, but you should also gun it for dear life if our paths ever happen to cross.
+    </p><p>
+        As for my current level, it's somewhere around N3 or so I'd guess. I'm only saying this because the N5 and N4 tests on the JLPT website seemed really easy. I also haven't really tried communicating with any natives as of yet, because I have a weird mental stop that I can't seem to get rid of for whatever reason. More than that, however, is the fact that coming across natives here in the boonies of Europe is not the easiest thing to do.
+    </p><p>
+        You see, the thing is that my vocabulary is extemly varied. I know my fair share of slang and field-specific jargon, but you wouldn't think so because of how lacking my general vocab is. It's really quite the phenomenon. I'm also not as good at generating language as I am at understanding it, but here, I'll demo myself in the next paragraph.
+    </p><p>
+        …とは言ったんだけど何書こっか全然知らん。これを書いてる今の日はまだ1/1なのでとりあえず読者よ、良いお年をな！でもいやぁ…全然なんも出ねえなぁ。なんかハズい………ま、これだって大体は分かるんだよね？ただ、一つのこと覚えとけ、バンドリというのは世界一、最高のシリーズだぜ。そして氷川紗夜はオイラの妻なんだ。だから手など出すなよ。……んじゃ、いろいろ詰め込んでみて何やら乱雑というか、やりすぎた感じが伝えられちゃった可能性もあるけど、現在こーゆーレベルでございます。
+    </p><p>
+        Nowadays, I mostly use my accumulated knowledge to read spicy ero-doujinshi and shitpost on a Discord server full of schizos from all around the world. Good times!
+    </p>
+    
+    <h1>And with all that being said</h1>
+    <p>
+        Happy new year y'all! Let's make it a great one. Surely this isn't an unforeseeably nightmarish omen!
+    </p>
+</section>

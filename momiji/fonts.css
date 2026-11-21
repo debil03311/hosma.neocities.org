@@ -1,0 +1,52 @@
+/* @font-face {
+  font-family: "ja-sans";
+  src: url("/assets/fonts/ja/");
+}
+@font-face {
+  font-family: "ja-serif";
+  src: url("/assets/fonts/ja/");
+} */
+@font-face {
+  font-family: "ja-brush";
+  src: url("/assets/fonts/ja/tamanegikaishogeki_free.ttf");
+}
+
+/* @font-face {
+  font-family: "tok-sans";
+  src: url("/assets/fonts/tok/");
+} */
+@font-face {
+  font-family: "tok-brush";
+  src: url("/assets/fonts/tok/VeryLegibleSP-tan-jan-Kimeki.ttf");
+}
+
+@font-face {
+  font-family: "en-sans";
+  src: url("/assets/fonts/en/");
+}
+@font-face {
+  font-family: "en-serif";
+  src: url("/assets/fonts/en/");
+}
+/* @font-face {
+  font-family: "en-cursive";
+  src: url("/assets/fonts/en/");
+} */
+@font-face {
+  font-family: "en-brush";
+  src: url("/assets/fonts/en/ProtestRevolution-Regular.ttf");
+}
+
+:root {
+  --font-ja-sans: "ja-sans", "Noto Sans CJK JP", "Noto Sans JP", sans;
+  --font-ja-serif: "ja-serif", "Noto Serif CJK JP", "Noto Serif JP", serif;
+  --font-ja-brush: "ja-brush", cursive;
+
+  --font-tok-sans: "tok-sitelen", sans;
+  --font-tok-brush: "tok-brush", cursive;
+
+  --font-en-sans: "en-sans", sans;
+  --font-en-serif: "en-serif", serif;
+  --font-en-cursive: "en-cursive", cursive;
+  --font-en-brush: "en-brush", cursive;
+}

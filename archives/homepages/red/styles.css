@@ -1,0 +1,112 @@
+
+@font-face {
+	font-family: "Roboto";
+	src: url("/assets/fonts/en/Roboto-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Kirvy";
+	src: url("/assets/fonts/en/Kirvy-Regular.otf");
+}
+
+@font-face {
+	font-family: "Gidole";
+	src: url("/assets/fonts/en/Gidole-Regular.ttf");
+}
+
+
+
+body {
+	background-color: #000;
+	color: #DDD;
+}
+
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("bg.jpg") rgb( 10, 10, 40 ) center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	opacity: .6;
+	filter: blur( 6px );
+	z-index: -1;
+}
+
+#time {	
+	position: absolute;
+	top: 12%;
+	left: 10%;
+	font-family: "Roboto"; 
+	opacity: .6
+}
+
+.day {
+	font-size: 30px;
+	margin-top: -60px;
+}
+
+#player {
+	position: fixed;
+	bottom: 20%;
+	left: 10%;
+	text-shadow: 0 0 12px #000;
+}
+
+#player #img {
+	width: 206px;
+	height: 206px;
+	background: crimson;
+	box-shadow: 0 0 20px #000;
+}
+
+#player #img iframe {
+	position: relative;
+	top: 3px;
+	left: 3px;
+	width: 200px;
+	height: 200px;
+}
+
+.play { 
+	font-size: 20px;
+	font-family: "Kirvy";
+	color: #A81531;
+}
+
+.tracks  { 
+	font-size: 36px;
+	font-family: "Gidole";
+	color: crimson;
+	margin-top: -10px;
+}
+
+#drawer {
+	position: fixed;
+	top: 50%;
+	right: 8%;
+	width: 30px;
+	height: auto;
+	padding: 30px;
+	transform: translate( 0, -50% );
+}
+
+#drawer img {
+	width: inherit;
+	opacity: .6;
+	display: block;
+	margin-bottom: 40px;
+	transition: 1s;
+}
+
+#drawer img:hover {
+	opacity: 1;
+}
+
+
+
+#drawer a {	width: inherit;  }
+.clock    { font-size: 60px; }

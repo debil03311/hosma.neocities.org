@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>hosma's miscellany</title>
+
+  <style>
+    body {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 4ch;
+
+      display: grid;
+      grid-template-columns: min-content max-content 1fr;
+    }
+
+    article {
+      grid-column: 1 / -1;
+
+      gap: 0 2ch;
+      display: grid;
+      grid-template-columns: subgrid;
+    }
+    article:nth-child(odd) {
+      background: #f8f8f8;
+    }
+    article:hover {
+      background: #fea;
+    }
+
+    article::before, .filename {
+      font-family: monospace;
+    }
+
+    header {
+      font-weight: bold;
+    }
+
+    a {
+      font-weight: 600;
+    }
+    a:not(:hover) {
+      text-decoration: none;
+    }
+
+    /*  */
+    /*  */
+    /*  */
+
+    article::before {
+      content: "";
+    }
+
+    article:has(
+      a[href$=".html"]
+    )::before {
+      content: "HTML";
+      color: orangered;
+    }
+
+    article:has(
+      a[href$=".png"],
+      a[href$=".jpg"],
+      a[href$=".jpeg"],
+      a[href$=".webp"],
+      a[href$=".bmp"]
+    )::before {
+      content: "IMG";
+      color: green;
+    }
+
+    article:has(
+      a[href$=".png"],
+      a[href$=".jpg"],
+      a[href$=".jpeg"],
+      a[href$=".webp"],
+      a[href$=".bmp"]
+    )::before {
+      content: "IMG";
+      color: green;
+    }
+  </style>
+
+</head>
+<body>
+
+  <article>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <header>---- DIRECTORIES ----</header>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      cirp
+      ▶ <a href="./cirp/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Code in random places.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      guitarhero
+      ▶ <a href="./guitarhero/index.html">index.html</a>
+    </span>
+    <span class="label">
+      My GH3 high scores! Not very many of them!
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      kot
+      ▶ <a href="./kot/index.html">index.html</a>
+    </span>
+    <span class="label">
+      JUST
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      language
+      ▶ japanese
+      ▶ fukuzatu
+      ▶ <a href="./language/japanese/fukuzatu/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Bikku kanji! Many many storoku!
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      language
+      ▶ japanese
+      ▶ josuushi
+      ▶ <a href="./language/japanese/josuushi/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Yappanese counters, because fuck all of us, I guess. Thanks, China.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      language
+      ▶ japanese
+      ▶ zyouyou-test
+      ▶ <a href="./language/japanese/zyouyou-test/index.html">index.html</a>
+    </span>
+    <span class="label">
+      <i>J&ocirc;y&ocirc;</i> kanji recognition test.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      language
+      ▶ tokipona
+      ▶ flashcards
+      ▶ <a href="./language/tokipona/flashcards/index.html">index.html</a>
+    </span>
+    <span class="label">
+      lipu sona pi toki pona a! mi pali e ilo ni kepeken toki Vue. ilo ni li ike mute. tenpo kama<sup>[tenpo seme?]</sup> la mi wile pali e ilo sin!
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      night
+      ▶ <a href="./night/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Put on some tunes, kick back, and take in the endless expanse of the city.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      powermetal
+      ▶ <a href="./powermetal/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Galloping quickly inside shining darkness ice<br>
+      Enlightening solemnly under graceful dream mountains<br>
+      Power bravely beyond soulful sunlight fire<br>
+      Crying franatically under shining battlecry.<br>
+      (Inspired by one of Stevie T's videos!)
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      riffs
+      ▶ 1
+      ▶ <a href="./riffs/1/index.html">index.html</a>
+    </span>
+    <span class="label">
+      A list of riffs I used to know how to play...
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      riffs
+      ▶ 2
+      ▶ <a href="./riffs/2/index.html">index.html</a>
+    </span>
+    <span class="label">
+      ........................number two...
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      seum
+      ▶ <a href="./seum/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Lists of secrets scattered around the various levels of SEUM: Speedrunners from Hell. Man, I used to be so into this game. Check it out if you're a fan freerunning or platforming&mdash;or both!
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      simulacra
+      ▶ 98
+      ▶ <a href="./simulacra/98/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Unfinished replica of Windows 98.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      simulacra
+      ▶ phone
+      ▶ <a href="./simulacra/phone/index.html">index.html</a>
+    </span>
+    <span class="label">
+      This is what my Nexus 5 looked like at some point.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      simulacra
+      ▶ plasma
+      ▶ <a href="./simulacra/plasma/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Unfinished replica of KDE Plasma.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      simulators
+      ▶ obc-clicker
+      ▶ <a href="./simulators/obc-clicker/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Made this one on the job. The multiplier rates are abysmal just like the company's management. Fuck 'em.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      simulators
+      ▶ peeb_chat
+      ▶ <a href="./simulators/peeb_chat/index.html">index.html</a>
+    </span>
+    <span class="label">
+      A spot-on true-to-life snapshot of a certain Discord server...
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      simulators
+      ▶ peeb_chat_neo
+      ▶ <a href="./simulators/peeb_chat_neo/index.html">index.html</a>
+    </span>
+    <span class="label">
+      ........................part two...
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      ttm2json
+      ▶ <a href="./ttm2json/index.html">index.html</a>
+    </span>
+    <span class="label">
+      Might be the most useful thing I've made, to help someone make a custom Minecraft resource pack. It was used exactly once.
+    </span>
+  </article>
+
+  <article>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <header>---- FILES ----</header>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./bigburd.html">bigburd.html</a>
+    </span>
+    <span class="label">
+      I failed at drawing a nice hand, so instead I added a bunch of instruments to Jack's a cappella thing.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./carat.html">carat.html</a>
+    </span>
+    <span class="label">
+      Extremely important. :^)
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./cards.html">cards.html</a>
+    </span>
+    <span class="label">
+      It is an absolute fucking marvel of engineering that this shit manages to work at all.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./fauuxmidi.html">fauuxmidi.html</a>
+    </span>
+    <span class="label">
+      One of the gifs from the 2019 fauux ARG as a midi and played through some default FL Studio synth.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./god.png">god.png</a></span>
+    <span class="label">
+      Please update your account to enable 3rd party hosting.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./index.html">index.html
+      </a>
+    </span>
+    <span class="label">
+      You are here! :)
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./lol.html">lol.html</a>
+    </span>
+    <span class="label">
+      I SAID PLEASE UPDATE YOUR ACCOUNT TO ENABLE 3RD PARTY HOSTING.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./owlman_com.html">owlman_com.html</a>
+    </span>
+    <span class="label">
+      Every single occurence of the sequence of characters ".com" on OwlMan's entire website.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./owlman_png.html">owlman_png.html</a>
+    </span>
+    <span class="label">
+      Every single occurence of the sequence of characters ".png" on OwlMan's entire website.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./stabwound.html">stabwound.html</a>
+    </span>
+    <span class="label">
+      I still can't tell what the fucking lyrics to this song are.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./thisthing.png">thisthing.png</a></span>
+    <span class="label">
+      Observe the decadence.
+    </span>
+  </article>
+
+  <article class="file">
+    <span class="filename">
+      <a href="./when.html">when.html</a>
+    </span>
+    <span class="label">
+      NOW!!!!!!
+    </span>
+  </article>
+
+</body>
+</html>

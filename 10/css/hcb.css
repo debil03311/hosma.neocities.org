@@ -1,0 +1,88 @@
+#HCB_comment_box h3,
+#HCB_comment_box .home-desc,
+#hcb_msg,
+#hcb_subscribe,
+#hcb_form small,
+#HCB_comment_box .admin-link,
+#HCB_comment_box a[href*="rss_clean"]
+{
+    display: none !important;
+}
+
+#hcb_form_name_container {
+    margin: 0 !important;
+}
+
+#HCB_comment_box,
+#HCB_comment_box input,
+#HCB_comment_box textarea,
+#HCB_comment_box .submit.btn
+{
+    font-family: var(--hcb-font) !important;
+    font-size: 1em !important;
+}
+
+#hcb_form_name,
+#HCB_comment_box .commentbox,
+#HCB_comment_box .btn
+{
+    background-color: var(--hcb-bg) !important;
+    color: var(--hcb-text) !important;
+    border: none !important;
+}
+
+#HCB_comment_box input {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+#HCB_comment_box .submit.btn {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+#hcb_form_name {
+    width: 100% !important;
+    margin-bottom: 1px !important;
+}
+
+#HCB_comment_box .commentbox {
+    resize: none !important;
+}
+
+#HCB_comment_box .comment {
+    margin-bottom: 1em !important;
+}
+
+.hcb-comment-body {
+    font-size: 1rem !important;
+}
+
+.hcb-comment-tb button {
+    color: var(--hcb-btn-bg) !important;
+    font-family: var(--hcb-font) !important;
+}
+
+.hcb-link.del {
+    float: left !important;
+}
+
+#HCB_comment_box .btn {
+    background-color: var(--hcb-btn-bg) !important;
+    cursor: pointer !important;
+    font-weight: 800 !important;
+    transition: 100ms color, 100ms background-color !important;
+}
+
+#HCB_comment_box .submit.btn,
+#HCB_comment_box .btn.btn-secondary
+{
+    width: 100% !important;
+}
+
+#HCB_comment_box .btn:hover {
+    background-color: var(--hcb-btn-active-bg) !important;
+    color: #000 !important;
+}
+
+#HCB_comment_box .likes img {
+    filter: invert(var(--hcb-invert-img)) !important;
+}

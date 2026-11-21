@@ -1,0 +1,14 @@
+[data-sort="DEFAULT"] th.sorting::after {
+  content: "";
+}
+[data-sort="DESCENDING"] th.sorting::after {
+  content: "▾";
+}
+[data-sort="ASCENDING"] th.sorting::after {
+  content: "▴";
+}
+
+th {
+  border-bottom: solid 1px var(--background);
+  cursor: pointer;
+}

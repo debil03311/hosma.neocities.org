@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Refresh to reset</title>
+	<style>
+
+		@keyframes DUUUUDE {
+			0%   { transform: translate( -50%, -80% ) rotate( 4deg); }
+			20%  { transform: translate( -50%, -80% ) rotate(-4deg); }
+			40%  { transform: translate( -50%, -80% ) rotate( 4deg); }
+			60%  { transform: translate( -50%, -80% ) rotate(-4deg); }
+			80%  { transform: translate( -50%, -80% ) rotate( 4deg); }
+			100% { transform: translate( -50%, -80% ) rotate(-4deg); }
+		}
+
+		body {
+			background:  #111;
+			color:       #444;
+			font-size:   40px;
+			font-family: sans-serif;
+		}
+		
+		h1 { 
+			position:    fixed;
+			top:         50%;
+			left:        50%;
+			transform:   translate( -50%, -80% );
+			animation-duration: .1s;
+			animation-iteration-count: infinite;
+		}
+	
+	</style>
+</head>
+<body>
+	<h1 id = "when">
+		Not yet
+	</h1>
+	<script>
+
+		time = Math.floor(Math.random() * (6000 - 3000 + 1) + 3000);
+		console.log(time);
+		
+		setTimeout( function() {
+			document.getElementById('when').innerHTML = 'NOW!';
+			document.getElementById('when').style.animationName = 'DUUUUDE';
+			document.getElementById('when').style.color = 'firebrick';
+			document.getElementById('when').style.textShadow = '0 0 10px darkred';
+		}, time );	
+
+	</script>
+</body></html>

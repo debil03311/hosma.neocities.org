@@ -1,0 +1,137 @@
+
+body {
+	height: 99%;
+	width: 96vw;
+	background: #121212;
+	color: #E0E0E0;
+	font-family: 'Arial', sans-serif;
+	display: flex;
+}
+
+#to-top {
+	position: fixed;
+	bottom: 0;
+	right:  0;
+	background: none;
+	border-top: dotted 2px #7a2531;
+	padding: 10px;
+}
+
+#to-top a {
+	color: inherit !important;
+}
+
+h1 {
+	color: #EFEFEF;
+	font-family: 'Edwardian Script';
+	font-size: 80px;
+	letter-spacing: -2px;
+	margin: 4px;
+	cursor: default;
+}
+
+h1:hover { animation: header .4s 1 forwards; }
+h2 { text-transform: lowercase; }
+h4 { margin: 10px 0; }
+
+a {
+	color: #96414D;
+	text-decoration: none;
+}
+
+section {
+	border: dotted 0px #7a2531;
+	padding: 2px;
+	margin: 10px;
+}
+
+#blog { 
+	line-height: 20px;
+	cursor: default;
+}
+
+#side {
+	position: relative;
+	flex-shrink: 0;
+	flex-basis: 22%;
+	animation: fadeIn 1s 1 forwards;
+}
+
+#content {
+	flex-basis: 75%;
+	text-align: justify;
+	border-top-width: 3px;
+	padding: 24px;
+}
+
+#side div {
+	margin-bottom: 40px;
+}
+
+#side ul {
+	list-style-type: none;
+	padding: 4px;
+}
+
+#side #list li {
+	padding-left: 6px;
+	border: solid 0px #7a2531;
+	animation: 1s 1 forwards;
+	text-transform: lowercase;
+}
+
+#side #list li:hover {
+	animation-name: listbox;
+}
+
+.update ul { margin-top: -8px; }
+.update li { padding: 2px 0; }
+
+#side a { color: #E0E0E0; }
+#extra a:hover { color: #96414D; }
+
+.update * {
+	display: block;
+	line-height: 10px;
+	font-size: 12px;
+}
+
+.update b {
+	font-weight: normal;
+	color: #888;
+}
+
+#separate { 
+	text-align: center;
+	margin: 40px 0;
+}
+
+#separate hr {
+	display: inline-block;
+	width: 2px;
+	height: 2px;
+	background: #7a2531;
+	border: solid 2px #7a2531;
+	border-radius: 360px;
+	margin: 0 4px;
+}
+
+.date {
+	float: right;
+	margin-top: -42px;
+}
+
+.prog { 
+	word-spacing: 4px;
+	border-bottom: solid 1px #7a2531;
+	padding: 2px 2px 1px 2px;
+}
+
+.prog:hover {
+	border-bottom-color: firebrick;
+	cursor: pointer;
+}
+
+p span {
+	text-decoration: underline;
+}

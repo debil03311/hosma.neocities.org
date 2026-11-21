@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+  <!-- The cow level is not real. -->
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#f08080">
+  <meta name="author" content="hosma on neocities">
+  <meta name="description" content="mmmh . . . carot">
+  <!-- <meta name="image" content="/hosma_circle_transparent.png"> -->
+  
+  <meta property="og:site_name" content="Neocities">
+  <meta property="og:title" content="hosma on neocities">
+  <meta property="og:description" content="mmmh . . . carot">
+  <!-- <meta property="og:image" content="/hosma_circle_transparent.png"> -->
+  
+  <title>hosma on neocities</title>
+  
+  <link rel="stylesheet" href="./css/base.css">
+  <style>
+    #preferences {
+      text-align: center;
+    }
+
+    #preferences button {
+      all: unset;
+      color: var(--accent);
+      cursor: pointer;
+    }
+    #preferences button:hover {
+      color: var(--accent-alt);
+    }
+
+    #main-header {
+      text-align: center;
+    }
+
+    #hosma {
+      font-size: 60pt;
+      line-height: 1;
+      margin: 0;
+    }
+
+    #subtitle {
+      text-align: center;
+      word-wrap: break-word;
+      margin: 0 0 0 20ch;
+      display: inline-block;
+    }
+
+    #blog-entries li {
+      margin: 1ch 0;
+    }
+
+    .buttons {
+      gap: 1ch;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .buttons a img:hover {
+      box-shadow:
+        0 0 0 1px var(--background-alt, var(--background)),
+        0 0 0 3px var(--accent);
+    }
+  </style>
+
+  <script defer src="./js/localstorage.js"></script>
+  
+</head>
+
+<!-- 
+  TODO:
+  - EVIL MODE
+  - MOBILE TOOLTIP
+  - PAGES
+    - FLOWER GALLERY
+    - COOL WEBSITES
+    - FAVORITE WORDS
+    - CJK TOKI PONA
+-->
+
+<body>
+  <header id="main-header" style="cursor: help;">
+    <h1 id="hosma">hosma</h1>
+    <i id="subtitle">and the featherly suggestion to enable JavaScript</i>
+  </header>
+
+
+  <section id="preferences">
+    <b>
+      [&nbsp;peruse
+      <button onclick="localStorage.setItem('font', document.body.dataset.font = 'serif')">
+        <span data-font="serif">with</span>
+      </button>
+      or
+      <button onclick="localStorage.setItem('font', document.body.dataset.font = 'sans')">
+        <span data-font="sans">without</span>
+      </button>
+      serifs; with the lights
+      <button onclick="localStorage.setItem('theme', document.documentElement.dataset.theme = 'light')">
+        on
+      </button>
+      or
+      <button onclick="localStorage.setItem('theme', document.documentElement.dataset.theme = 'dark')">
+        off
+      </button>
+      &nbsp;]
+    </b>
+  </section>
+  
+  
+  <div id="disclaimer">
+    <div class="infobox">
+      <h4>
+        Disclaimer
+      </h4>
+      
+      <hr>
+
+      <p>
+        This website&mdash;not unlike any other personal work out here on the webwaters&mdash;is host to <em class="accent">dangerously</em> subjective opinions, personal anecdotes, rather classy profanity, and will at times discuss topics which may not be suitable for the parasocial appreciation of each and every individual; that is to say: you are browsing, acknowledging, and comprehending this content at your own risk and discretion.
+      </p>
+      <p>
+        I am not affiliated with Fauux &OpenCurlyDoubleQuote;Serial Experiment&CloseCurlyDoubleQuote; Neocities &ndash; not after his war crimes in the Holy City.
+      </p>
+      <p>
+        AI bad.
+      </p>
+      <p style="text-align: center;">
+        <button id="btn-hide-disclaimer">
+          Like, what-everrr, like, get this out of my face!
+        </button>
+      </p>
+    </div>
+
+    <hr class="dot">
+  </div>
+
+
+  <main>
+    <p>
+      <a href="./archive/songs.html" style="float: right">archive</a>
+
+      Currently bumping:
+      <i class="song-title">Every Day Is Exactly The Same</i> by
+      <span class="song-artist">Nine Inch Nails</span>
+    </p>
+    <p class="song-lyrics">
+      <q class="block">
+        I'll write it on a little piece of paper... I'm hoping&mdash;someday&mdash;you might find<br>
+        Well, I'll hide it behind something... they won't look behind...
+      </q>
+    </p>
+
+    <hr>
+    
+    <p>
+      You may be looking for:
+    </p>
+    <section>
+      <ul>
+        <li>
+          <p>
+            the <a href="/misc/fauux">fauux thing</a>, or the
+            <a href="/misc/fauux21/index2.html">other fauux thing</a>;
+          </p>
+        </li>
+        <li>
+          the <a href="/10/">old website</a>:
+          <ul>
+            <li>
+              <a href="/10/?page=dreams">prophecies and delusions</a>;
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            the <a href="/10/?page=comments">old guestbook</a>
+            (or perhaps <a>the secret one</a>), <!-- shh... -->
+            or otherwise the <a href="/7/">older guestbook</a>,
+            or the <a href="/6/">yet older guestbook</a>,
+            or the <a href="/5/home">guestbook even older than the yet older guestbook</a> ...
+            <a href="https://users4.smartgb.com/g/g.php?a=s&i=g44-76604-ac">it just keeps going</a>;
+            or
+          </p>
+        </li>
+        <li>
+          <p>something else entirely.</p>
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <p>
+      Other things around here include:
+    </p>
+    <section>
+      <ul>
+        <li>
+          some <a href="./pages/books-reviews.html">book reviews</a>, or the
+          <a href="./pages/books-table.html">complete collection</a> (both <span class="small-caps lowercase">WIP</span>);
+        </li>
+        <li>
+          a frustratingly ever-growing list of <a href="./pages/english-lies.html">English things I've had all wrong</a>, as it turns out;
+        </li>
+        <!-- <li>
+          A personally-curated
+          <a href="./pages/websites.html">list of human websites</a> (<span class="small-caps lowercase">WIP</span>);
+        </li> -->
+        <!-- <li>
+          A <a href="./pages/websites.html">gallery of flowers</a> that I've met on various walks;
+        </li> -->
+        <li>
+          a list of coincidentally <a href="./pages/linguistic-coincidences.html">linguistic coincidences</a> that I've personally noticed&mdash;most of them mere homophones;
+        </li>
+        <li>
+          my collection of <a href="./pages/somethingwords.html">somethingwords</a>;
+        </li>
+        <!-- <li>
+          some <a href="./pages/recipes.html">low-cost and low-effort recipes</a>, for those also in need of guidance or otherwise poor of cooking; and last but not least
+        </li> -->
+        <li>
+          <a href="/misc/">miscellaneous whatnots</a> (<span class="small-caps lowercase">a.k.a.</span> the trash heap).
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <p>
+      Should you wish to reach out for whatever reason: do it! There are a few avenues you can take:
+      <!-- Well, anyone with this username is most likely me. Not everyone, though, so do exercise caution! -->
+    </p>
+    <section>
+      <ol>
+        <li>
+          <p>You can e-mail me at<sup>&starf;</sup> <code>hosma あ protonmail.com</code>;</p>
+        </li>
+        <li>
+          <p>You can <a href="https://neocities.org/site/hosma">leave a comment</a> on my Neocities profile;</p>
+        </li>
+        <li>
+          <p>
+            You can send me a letter or parcel (that hopefully doesn't explode or otherwise cause death or physical injury) at<sup>&starf;</sup> the following <span class="small-caps lowercase">P.O.</span> box:
+          </p>
+          <p class="infobox" style="font-family: monospace;">
+            (Coming when it's ready.)
+          </p>
+        </li>
+        <li>
+          <p>You can try your luck at aleatorily messaging the account with username &OpenCurlyQuote;hosma&CloseCurlyQuote; on a platform of your choosing. I'm not on social media much these days, so you're not guaranteed a response even if it is me.</p>
+        </li>
+      </ol>
+    </section>
+    <p>
+      <small>
+        <sup>&starf;</sup> Have you ever noticed how weird the British are with prepositions? For example, they like to say <q>e-mail me <i class="accent">on</i> [address]</q> or <q>I live <i class="accent">on</i> [address]</q> or <q>call me <i class="accent">on</i> [phone number]</q> &ndash; it just sounds <em>so</em> wrong to my unfortunately Americanized ears.
+      </small>
+    </p>
+
+    <hr>
+
+    <div>
+      <a href="./archive/oldblogs.html" style="float: right">archive</a>
+      <h3>Le Blawg&reg;</h3>
+    </div>
+    <section id="blog-entries">
+      <details>
+        <summary class="small-caps">Two Thousand and Twenty-Six, Anno Domini</summary>
+
+        <!-- <details>
+          <summary class="small-caps">Month&mdash;The Month of Something</summary>
+
+          <ul>
+            <li id="2026-mm-dd">
+              <p>
+                <a href="#2026-mm-dd"><b>dd</b></a>:
+                Placeholder
+              </p>
+            </li>
+          </ul>
+        </details> -->
+
+        <details>
+          <summary class="small-caps">January&mdash;The Month of Yule</summary>
+
+          <ul>
+            <li id="2026-01-31">
+              <p>
+                <a href="#2026-01-31"><b>31</b></a>:
+                I've been wanting to get into Touhou for the longest of time and, well, <i>carpe diem</i> or something&mdash;so I got RetroArch, and then got it more or less all set up&nbsp;... after finding out from an <span class="small-caps lowercase">LLM</span> that the <span class="small-caps lowercase">AUR</span> package is actually quirky and different, and so all the guides out there don't apply to me (because you need to download your cores <em>also</em> through the <span class="small-caps lowercase">AUR</span>, and not through the program itself&mdash;for whatever reason)&nbsp;... and I just finished playing the first game a few minutes ago!
+              </p>
+              <p>
+                I must say that I am taken aback by how different <i>Highly Responsive to Prayers</i> is from the other official releases, as it's not a scrolling <i>shmup</i> but a static one. (Think bullet-hell space invaders.) I found the game itself to be rather difficult, mostly owing to the weird controls and somehow poor pefromance of the emulator in spite of my efforts to improve it, but in the end I think it was just the right amount of challenging. Was it fun, though? Well, I'm unfortunately inclined to say that it wasn't; Though it was plenty interesting, it was not very entertaining as there isn't any dialogue or concrete overarching story present in the game. (At least as far as I know.)
+              </p>
+              <p>
+                Perhaps playing it on the original hardware would've offered a better experience, but the station's pretty hard to find&nbsp;... and also in the triple digits, from what I've seen. I can't lie, though: it's definitely made me interested in getting my hands onto a PC-98 in the future. I'm so looking forward to having my own place 
+              </p>
+            </li>
+          </ul>
+
+          <ul>
+            <li id="2026-01-29">
+              <p>
+                <a href="#2026-01-29"><b>29</b></a>:
+                <a href="https://archive.is/OKgGn">The internet is not for children</a>&mdash;nor should it ever be; You wouldn't send your kids off to play at a pub full of adult weirdos, or around an open corporate office, so I simply fail to understand why exactly so many parents are letting them run rampant on the internet, and from such a frail age at that &ndash; only for our governments to then sweep in and try to for some reason adapt it to better suit the children (let's just go with that), when not only is it not their business, but also when, again, the children don't belong here in the first place.
+              </p>
+              <p>
+                The internet has and will continue to be an adult-oriented space as long as nothing will come around to replace it (talking about mass adoption here) and anyone who tries to sell you the idea that it should just be heavily censored and barely usable so that the children could also <em>enjoy</em> it is either deluded or trying to delude and make a quick buck off of you and your little consumers.
+              </p>
+              <p>
+                Children and adults do not enjoy the same things, so they shouldn't be lumped together into the same recreational spaces, and I don't think anyone wants for the line between adults and children to get blurred&mdash;so then why is it? The best thing you can do is to be a parent for the sake of your children instead of your peers, and just do everyone a favor and keep them away from all the attention-hogging screens until they've grown up enough to figure out a bit of who they are in the real world &ndash; oh, and maybe teach them about the dangers of the internet and insatiable corporate greed too, yeah?
+              </p>
+              <p>
+                It's harder and harder not to lose hope in this world when these are the signs of what it's becoming. The internet should not be the norm.
+              </p>
+            </li>
+          </ul>
+        </details>
+      </details>
+
+      <details>
+        <summary class="small-caps">Two Thousand and Twenty-Five, Anno Domini</summary>
+        
+        <details>
+          <summary class="small-caps">December&mdash;The Month of Yule</summary>
+
+          <ul>
+            <li id="2025-12-09">
+              <p>
+                <a href="#2025-12-09"><b>9</b></a>:
+                Behold, a phonetic transcription of the alphabet song we were taught back in middle school English class:
+              </p>
+              <q class="block" style="font-family: monospace;">
+                <pre>A   B | C      D   | E     F      | G</pre>
+                <pre>H   I | J      K   | L  M  N  O   | P</pre>
+                <pre>Q   R | S      T   | U  V  double | U</pre>
+                <pre>Q   R | S      T   | U  V  double | U</pre>
+                <pre>U   V | double U   | X     Y      | Zed</pre>
+                <pre>Now I | know   the | al-   pha-   | bet</pre>
+              </q>
+              <p>
+                It's sung almost exactly to the melody of Twinkle Twinkle Little Star; does indeed repeat the third verse; does in fact have you sing &OpenCurlyQuote;U V W&CloseCurlyQuote; three whole times; and is in fact not the one you or anyone else knows. And every time I hear the standard version being sung, a curious piece of my quietly implodes into a kaleidoscope of frustrations that I sincerely doubt anyone could possibly understand.
+              </p>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary class="small-caps">November&mdash;The Month of Blood</summary>
+
+          <ul>
+            <li id="2025-11-27">
+              <p>
+                <a href="#2025-11-27"><b>27</b></a>:
+                We went out on this wonderful evening to an everythingburger of a store called <i>SoLow</i> today, where we had many a great chuckle at the&nbsp;... <em>varied</em> inventory, which included such things as several items displaying the word <i lang="nl">KUT</i> in gigantic capital letters; mugs proudly proclaiming: &OpenCurlyDoubleQuote;I &hearts; COCKS&CloseCurlyDoubleQuote;&mdash;or otherwise just <i>gewoon</i>-ly had cocks inside of them; a noggin-jogging assortment of freaky sex things; a tear-to-eye-bringing amount of beer-themed articles of clothing and other thingamabobs and so on and so forth &ndash; this is a store, by the way, that you can bring your children along to browse together with to.
+              </p>
+              <p>
+                Ah&nbsp;... but as exhilirating as that visit was, the main event only came afterwards, when we decided to stop by <i lang="nl`">Het Frietlokaal</i> to grab a bite, and I ordered something so culinarily perverse that the chap behind the counter had to switch to English in order to ascertain with the utmost certainty that my choice for a sauce to go on top of my burger&mdash;<i lang="nl">oorlogsaus</i> (&OpenCurlyQuote;war-sauce&CloseCurlyQuote;), which I was drawn to for no other reasons than that I had no idea what it was and that I thought it sounded ridiculously awesome&mdash;was not a mistake.
+              </p>
+              <p>
+                Yes, he was completely and utterly gobsmacked, in the purest sense of that word; and the chef's heart must have surely shattered into a nonillion little <i lang="nl">stukjes</i>, so much so that he must have implored the guy to ask me again before finalizing the burger&mdash;as he duly did. Nevertheless, I stood firm: My mind was made that I would try the war-sauce, whatever the cost&mdash;it was the least I could do to honor some soldier of another, despite their spirits surely having been begging the gods for a miracle that would cause my determination to falter&nbsp;... but alas.
+              </p>
+              <p>
+                I'm still alive, though! Not only that, but I can also confidently say that this taboo combination of burger and sauce was suprisingly delectable, a fact to which even Lynn&mdash;whom the Dacian palate for adorning pizza and spaghetti with ketchup causes to physically recoil&mdash;can attest.
+              </p>
+              <p>
+                I simply must be the first human to have ever attempted to create this blasphemous <i lang="nl">oorlog</i>-burger&mdash;and I stand proud! This burger is of my invention! Please, give it an honest try when you have the chance, and let me know what you think.
+              </p>
+
+              <hr>
+
+              <p>
+                On a different note, I also want to mention our subsequent stop at <i>McDonald's</i>, where we bore witenss to a juvenile creature exclaiming &OpenCurlyDoubleQuote;six sevennnn&CloseCurlyDoubleQuote;, as well as an elderly slavic gentleman making&nbsp;... um&nbsp;... <em>conspicuous</em> Donald Duck noises?&mdash;which I was unfortunately unable to make out.
+              </p>
+              <p>
+                I love it here.
+              </p>
+            </li>
+
+            <li id="2025-11-26">
+              <p>
+                <a href="#2025-11-26"><b>26</b></a>:
+                Rewatching <i>The Fourth Son Visits His Mother</i>, and I am absolutely gobsmacked to finally realize that <ruby lang="zh">杨<rt>Yang</rt>延<rt>Yan</rt>辉<rt>Hui</rt></ruby>'s false name&mdash;<ruby lang="zh">木<rt>Mu</rt>易<rt>Yi</rt></ruby>&mdash;comes from the two components of his original <span>杨 (simplified form of 楊)</span>! He even says so himself, so I'm not sure how it's managed to fly right over my head for all this time.
+              </p>
+              <p>
+                I must also incidentally express my frustration at no longer having someone to share all this <span class="small-caps lowercase">CJ</span> and occasionally <span class="small-caps lowercase">KV</span> nerdery with&mdash;instead having to just dump it here and call it a thought...! <span lang="zh">人生啊。</span>
+              </p>
+            </li>
+
+            <li id="2025-11-23">
+              <p>
+                <a href="#2025-11-23"><b>23</b></a>:
+                I'm really missing Shotover Hill back in Oxford as of late&mdash;with its lush woods and cute little gray bunnies, and that breathtaking view of the city, to which the prior 15-minute 45&deg;-angle<sup>[citation needed]</sup> walk must have only contributed.
+              </p>
+              <img src="/assets/media/irl/shotover_wheat_field.jpg" alt="The wheat field on Shotover Hill." class="float-right">
+              <p>
+                Oh, how I miss the serene walks to Wheatley, which made me feel like I was on top of the world&mdash;somewhere far removed from the vicissitudes of city life; and that beautiful blue-green wheat field sheltered from view by a somewhat thick row of bushes (although it had already turned a boastful gold by the time I'd up and left; and although I imagine that but the soil remains now); and passing by that towering windmill which I couldn't help but stop and admire; and the coming back down and around through Horspath, during which I'd stop at an angled little bus-stop library to see if there's anything eye-catching on the shelves.
+              </p>
+              <p>
+                And to think that I hadn't the slightest idea that such a beautiful place was so close to me for the years I had been living there.
+              </p>
+            </li>
+
+            <li id="2025-11-20">
+              <p>
+                <a href="#2025-11-20"><b>20</b></a>:
+                Lynn very often gets the hiccups for no apparent reason and, as of late, I have been enjoying leaving her incomprehensibly frustrated by &OpenCurlyQuote;stealing&CloseCurlyQuote; them away by saying something along the lines of &OpenCurlyDoubleQuote;You're not hiccupping right now&CloseCurlyDoubleQuote;&mdash;trying to get her to reflect upon the situation or prove that she's doing it. It works like a charm&mdash;or, well, it used to.
+              </p>
+              <p>
+                Although one may understandably be of the opnion that a cure to hiccuping is reason for celebration, Lynn is not just anyone&mdash;she's a spitefish &ndash; so much so that she's managed to evolve a mechanism that allows her to bypass my little psychogenic exploit&mdash;but hey, as long as she's happy! 
+              </p>
+            </li>
+
+            <li id="2025-11-17">
+              <p>
+                <a href="#2025-11-17"><b>17</b></a>:
+                No idea what I was on about when I wrote the previous entry, as it was neither October nor the 24th! With that amended, however: I was witness to a crime for the first time in my life! Of all places, I could have never expected it to happen in the Netherlands&mdash;and so soon after arriving here at that!
+              </p>
+              <p>It happened a few days ago at around 3 <span class="small-caps lowercase">AM</span>; Lynn couldn't sleep, and I remember being woken up and urged to look out the window: A car was repeatedly ramming into the shutter of a small Jewelry store across the street! This continued for about a minute, after which the perpetrators apparently managed to scooch inside the store, past the bent shutter, and take a number of items. We then saw them take off on a scooter, leaving the car behind&mdash;rear headlights illuminating our disbelief.</p>
+              <p>It was indeed quite the scene, and I'm disappointed to say that, to my knowledge, the two individuals have not been caught in spite of the streets having been empty in dead of night, and of us having called 112 while they were still inside the store, with others having done so even earlier.</p>
+
+              <hr>
+
+              <p>On a lighter note, I've had my first real-life Dutch conversation with a chap from the local <span title="Albert Heijn, a supermarket.">Appie</span> yesterday! Although he'd definitely smelled me out, and to my utter astonishment, he didn't turn English-mode on me the moment I said <i>FAY-khun</i> instead of just 'vegan' &ndash; or when I forgot how to say <i>doe mij maar een [ding]</i> or <i>ik wil graag wat [dingen]</i> when he asked me whether or not I wanted anything specific&mdash;but hey: no <i>dankjeblieft</i> this time around!</p>
+              <p>Indeed my confidence has been boosted; I have already achieved what I was never able to with Japanese, despite having a much better grasp of it than I do of the Dutch language &ndash; Anki <em>does</em> pay off... (Cue dramatic close-up of teardrop streaming down cheek.)</p>
+
+              <hr>
+
+              <p>In other news, I have alſo written a <a href="/assets/userscripts/orthographize.user.js">Tampermonkey uſerſcript</a> that replaces boring old <i>s</i>'es, where applicable, with my beloved long (or, ſhould you be ſo inclined, medial) <i>ſ</i>, which can be moſt appreciated within <i data-font="serif">ſerifed and italiciſed text</i>; and also every <i>TH/Th/th</i> sequence with <i>Þ/þ</i> as appropriate. (Note, however, that these conversions will be applied regardless of language, because most English-language webpages are unfortunately not marked with an appropriate <code>[lang="en"]</code> attribute; Boo webdevs and teaching resources!)</p>
+
+              <hr>
+
+              <p>Currently, I am doing some soul-seeking whilst moving my Spotify library to an <span class="small-caps lowercase">SSD</span>, and enjoying a nostalgic cup of <span class="small-caps">mpd</span> with <span class="small-caps lowercase">NCMPCPP</span>.</p>
+              <p>[Insert obligatory Sinterklaas mention here.]</p>
+            </li>
+
+            <li id="2025-11-10">
+              <p>
+                <a href="#2025-11-10"><b>10</b></a>:
+                Currently (still) trying to figure things out in the Netherlands. A longer (and also long due) post is in the works, but for now I feel the need to chronicle my little exchange with a courier from earlier tonight, wherein I thanked him off by saying&mdash;and very confidently at that&mdash;<i>dankjeblieft</i>. If you don't speak Dutch, I'm afraid that this little calque may be untranslatable, but if you do... let's just say: <span class="small-caps lowercase">IYKYK</span>.
+              </p>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary class="small-caps">September&mdash;The Holy Month</summary>
+          
+          <ul>
+            <li id="2025-09-27">
+              <p>
+                <a href="#2025-09-27"><b>27</b></a>:
+                My time in the land of mandatory tipping is drawing to a close, and I cannot help but feel somewhat regretful.
+              </p>
+              
+              <p>Once more I have brought with me the European plague, which swiftly spread to everyone else, and as a consequence of this contagion most of my time here has been spent inside a suburbian home in southern Illinois, which I believe you should be absolutely harrowed to hear if you are yourself an American; and harrowed still to learn that this is the third time that this has happened to me. Indeed: three times I have come to the United States, and three times I have seen but fields of corn and other agricultural plantations interspersed with fast food joints and gigantic billboard advertisments.</p>
+
+              <p>Woe is me, most certainly, but it wasn't all bad: I got to spend more time with my beloved and, on the few days that we were able to go outside, I got to see some pretty ridiculous things such as <em>the</em> ginormous ketchup bottle, a school bus labeled &OpenCurlyDoubleQuote;SHITTZENGIGGLES&CloseCurlyDoubleQuote; (those Germans!), <i>Dick's</i>, and a shop called <i>Cope Marine</i>, which were all worthy of a giggle, to say the least.</p>
+              
+              <hr>
+              
+              <p>Indoors, I have been enjoying&mdash;among other things, of course&mdash;playing <i>Ōkami</i> on the PlayStation 2, watching an <i>Armageddon</i> <span class="small-caps lowercase">VHS</span> tape on a <span class="small-caps lowercase">CRT TV</span>, and watching a lot of <i>Lost</i> on a regular <span class="small-caps lowercase">LCD TV</span>; and with all of that, my yearning for a complete return to analog is indubitably ablaze.</p>
+              
+              <p>For that very reason, I have also been looking for either a dumb- or feature-phone; however, it would seem that fucking <em>nobody</em> on this planet understands what the appeal of such a phone actually is; I do not, in fact, want an Android phone with a physical keyboard&mdash;Blackberries already exist, and they blow&mdash;wait... are those still a thing, actually?&mdash;no, what I want is a <em>barebones</em> mobile device with a physical T9 keyboard, no touchscreen, a 3.5mm headphone jack, and that supports WhatsApp and FM radio &ndash; am I asking for that much?</p>
+              
+              <p>Well whaddayaknow, KaiOS devices tick all those boxes&mdash;and whaddayaknow, WhatsApp stopped supporting KaiOS back in 2024 because, uh, muh security or something. Seems like my only options now are the <i>Xiaomi Qin F22</i>, which doesn't have a camera ... or a headphone jack ... or <em>anything</em> for that matter; or, the <i>Kyocera 902kc</i>, which is rather costly, but comes with an epic weeb keyboard. I guess it'll have to be the <i>Xiaomi</i>, as my priority is simplicity; I can live with the lack of basic amenities &ndash; maybe I'll get a physical camera later down the line, and an actual mini radio that I can carry around.</p>
+              
+              <p>I would also be interested to get myself an original <i>Jolla Phone</i>, as I was a huge fan of SailfishOS back in the day, but I'm not sure how functional they remain nowadays. The new <i>C2</i> community phones that have replaced them look pretty sloppy to me, so I don't really care much for them.</p>
+              
+              <hr>
+              
+              <p>Went to <i>Target</i> and saw kids' halloween costumes of hamburgers, hot dogs, ketchup & mustard bottles, pizzas, traffic lights, and the VLC logo. Yeehaw.</p>
+            </li>
+
+            <li id="2025-09-11">
+              <p>
+                <a href="#2025-09-11"><b>11</b></a>:
+                Finger sucked onto by fish.
+              </p>
+            </li>
+
+            <li id="2025-09-09">
+              <p>
+                <a href="#2025-09-09"><b>9</b></a>:
+                Laceration without foreign body of right index finger without damage to nail, initial encounter. Suture removal in 7&ndash;10 days. Keep clean and dry.
+              </p>
+            </li>
+
+            <li id="2025-09-06">
+              <p>
+                <a href="#2025-09-06"><b>6</b></a>:
+                Good afternoon, America! Had a little back-and-forth with some chap from O'Hare security, but it was all worth it for this wonderful view of the Chicago skies:
+              </p>
+              
+              <img src="/assets/media/irl/chicago.jpg" alt="A picture of a toilet in a parking lot, with a beautiful Chicago dusk behind.">
+            </li>
+
+            <li id="2025-09-01">
+              <p>
+                <a href="#2025-09-01"><b>1</b></a>:
+                I am just now realizing how many things are impossible to put inside a <code>&lt;p&gt;</code>, and I think that the reasoning is rather silly.
+              </p>
+
+              <hr>
+              
+              <p style="font-size: larger;" lang="ja">
+                秋の<ruby>颸<rt>かぜ</rt></ruby>。<ruby>紅葉<rt>もみじば</rt></ruby>散って、来たる冬。
+              </p>
+
+              <hr>
+
+              <p>
+                <span title="ヨコハマ買い出し紀行 Yokohama Kaidashi Kikou">YKK</span>'s been on my mind for a long time. I don't know anything about it other than that it's somewhat obscure and supposed to be comfy&mdash;so way up my alley. I shall be watching and reading it soon.
+              </p>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary class="small-caps">April&mdash;The Month of Weeds</summary>
+
+          <ul>
+            <li id="2025-04-30">
+              <p>
+                <a href="#2025-04-30"><b>30</b></a>:
+                I've added a bunch of 88&times;31 buttons for things and people that I find interesting down below. I've also made a few new ones for the new website (apt), and scoured others' collections for any previous ones that I'd lost. (I barely even remember making the one with a slashed 'S'.) I think it must've been good ol' <a href="https://kenny46140.neocities.org">Kenny</a> who made the one with the pulsating circle, but memory fails me yet again. It's a nice feeling, remembering past friendships and being proven that I've actually remained a part of those people's past, just as they have of mine.
+              </p>
+            </li>
+
+            <li id="2025-04-29">
+              <p>
+                <a href="#2025-04-29"><b>29</b></a>:
+                Just found out that Firefox, for some reason, doesn't have support for the <code>rch</code> CSS unit &ndash; even though it <em>does</em> support <code>ch</code>. It also doesn't handle <code>line-height</code> the same way WebKit does. Wow. Sure.
+              </p>
+            </li>
+
+            <li id="2025-04-28">
+              <p>
+                <a href="#2025-04-28"><b>28</b></a>:
+                Rest your little ears in peace, Patches. You were the silliest, funniest, gurpiest bun ever. Our little baby bunny. I hope you're hopping your heart out throughout all the greenest meadows, eating all the most delicious carrots and bananas that a bunny could ever want. We wanted to show you so many more things that you could lunge at and munch on. We love you.
+              </p>
+            </li>
+
+            <li id="2025-04-27">
+              <p>
+                <a href="#2025-04-27"><b>27</b></a>:
+                <a href="./blog/2025/08-26.01.html">Restoration Efforts Underway as hosma (with Intentionally Lowercase 'h') is Declared Critically Endangered</a>
+              </p>
+            </li>
+
+            <li id="2025-04-24">
+              <p>
+                <a href="#2025-04-24"><b>24</b></a>:
+                なんかやってきたで
+              </p>
+            </li>
+          </ul>
+        </details>
+      </details>
+    </section>
+    <p>Do also check out <a href="https://lynn-nl.bearblog.dev/">Lynn's emergent wordgarden</a> if time and interest permit!</p>
+
+    <hr>
+
+    <p>
+      Who do you see as your eyes raster over these words? Send me a portrait and mention how or whether you would like to be credited should I ever decide to compile a gallery. AI-generated media will be duly ignored.
+    </p>
+
+    <hr>
+
+    <p>
+      You look great today.
+    </p>
+  </main>
+
+  <hr class="dot">
+  
+  <div id="psa">
+    <style>
+      #strawpoll_iframe_NMnQNXbOwg6 {
+        height: 432px;
+        width: 100%;
+        border-radius: 7px;
+      }
+    </style>
+    <iframe id="strawpoll_iframe_NMnQNXbOwg6" src="https://strawpoll.com/embed/NMnQNXbOwg6" frameborder="0" allowfullscreen allowtransparency="true">Loading...</iframe>
+    <script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <hr class="dot">
+
+  <div class="infobox">
+    <h3>Around the Block</h3>
+
+    <hr>
+
+    <section class="buttons">
+      <a href="https://2bit.neocities.org">
+        <img src="/assets/media/buttons/people/2bit.png" alt="2bit">
+      </a>
+      <a href="https://anlucas.neocities.org">
+        <img src="/assets/media/buttons/people/anlucas.gif" alt="A.N. Lucas">
+      </a>
+      <a href="https://bytemoth.neocities.org">
+        <img src="/assets/media/buttons/people/bytemoth.png" alt="Bytemoth">
+      </a>
+      <a href="https://dawnvoid.neocities.org">
+        <img src="/assets/media/buttons/people/dawnvoid.gif" alt="dawn void">
+      </a>
+      <a href="https://emptyhalls.neocities.org">
+        <img src="/assets/media/buttons/people/emptyhalls.gif" alt="Empty Halls">
+      </a>
+      <a href="https://fauux.neocities.org">
+        <img src="/assets/media/buttons/people/fauux.gif" alt="fauux">
+      </a>
+      <a href="https://floppyjay.neocities.org">
+        <img src="/assets/media/buttons/people/floppyjay.gif" alt="FloppyJay">
+      </a>
+      <a href="https://gwtagacw.neocities.org">
+        <img src="/assets/media/buttons/people/gwtagacw.gif" alt="Caby (gwta gacw)">
+      </a>
+      <a href="https://jackomix.neocities.org">
+        <img src="/assets/media/buttons/people/jackomix.gif" alt="jackomix">
+      </a>
+      <a href="https://joppiesaus.neocities.org">
+        <img src="/assets/media/buttons/people/joppiesaus.png" alt="joppiesaus">
+      </a>
+      <a href="https://kenny46140.neocities.org">
+        <img src="/assets/media/buttons/people/kenny46140.gif" alt="kenny46140">
+      </a>
+      <a href="https://koyo.neocities.org">
+        <img src="/assets/media/buttons/people/koyo.gif" alt="WREN (Koyo)">
+      </a>
+      <a href="https://kryptonaut.neocities.org">
+        <img src="/assets/media/buttons/people/kryptonaut.gif" alt="krypto">
+      </a>
+      <a href="https://machetona.neocities.org">
+        <img src="/assets/media/buttons/people/machetona.gif" alt="MelonKing">
+      </a>
+      <a href="https://melonking.neocities.org">
+        <img src="/assets/media/buttons/people/melonking.gif" alt="MelonKing">
+      </a>
+      <a href="https://omnipresence.neocities.org">
+        <img src="/assets/media/buttons/people/omni.gif" alt="Omni (omnipresence)">
+      </a>
+      <a href="https://psychicnewborn.neocities.org">
+        <img src="/assets/media/buttons/people/psychicnewborn.gif" alt="psychic newborn">
+      </a>
+      <a href="https://satyrwoud.neocities.org">
+        <img src="/assets/media/buttons/people/satyrwoud.png" alt="'t Satyrwoud">
+      </a>
+      <a href="https://scarbyte.neocities.org">
+        <img src="/assets/media/buttons/people/scarbyte.png" alt="Mason Armand (Mace / scarbyte)">
+      </a>
+      <a href="https://strata.neocities.org">
+        <img src="/assets/media/buttons/people/strata.png" alt="Strata">
+      </a>
+      <a href="https://openbooks.neocities.org">
+        <img src="/assets/media/buttons/people/openbooks.gif" alt="OpenBooks">
+      </a>
+      <a href="https://owlman.neocities.org">
+        <img src="/assets/media/buttons/people/owlman.gif" alt="OwlMan">
+      </a>
+      <a href="https://warningnonpotablewater.neocities.org">
+        <img src="/assets/media/buttons/people/warningnonpotablewater.png" alt="Ruby Klover (Warning: Non-Potable Water / bruh.ltd)">
+      </a>
+    </section>
+  </div>
+
+  <div class="infobox">
+    <section class="buttons">
+      <a href="https://neocities.org/">
+        <img src="/assets/media/buttons/things/neocities.gif" alt="Neocities">
+      </a>
+      <a href="https://code.visualstudio.com/">
+        <img src="/assets/media/buttons/things/vscode.gif" alt="VS Code">
+      </a>
+      <a href="https://corru.observer">
+        <img src="/assets/media/buttons/things/corru.gif" alt="corru.observer">
+      </a>
+      <a href="https://yesterweb.org/no-to-web3/">
+        <img src="/assets/media/buttons/things/noweb3.gif" alt="Say no to Web3">
+      </a>
+      <a href="https://theonion.com/">
+        <img src="/assets/media/buttons/things/theonion.gif" alt="The Onion">
+      </a>
+      <a href="https://personally-comfy.net/poppy/">
+        <img src="/assets/media/buttons/things/poppy.png" alt="Poppy's Club">
+      </a>
+      <a href="https://ublockorigin.com/">
+        <img src="/assets/media/buttons/things/ublock.png" alt="uBlock Origin">
+      </a>
+      <a href="https://www.wikimedia.org/">
+        <img src="/assets/media/buttons/things/wikimedia.png" alt="Wikimedia Project"
+             title="Not actually a Wikimedia project, but these are the only buttons they seem to have.">
+      </a>
+      <!--  -->
+      <a href="https://2bit.neocities.org/docs/thorn.html">
+        <img src="/assets/media/buttons/things/bringbackthorn.png" alt="Bring back the letter þorn!">
+      </a>
+      <span>
+        <img src="/assets/media/buttons/things/bunnybrowser.gif" alt="Bunny Browser">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/things/fuckgoogle.gif" alt="Fuck Google">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/things/fuckie.gif" alt="Fuck Internet Explorer">
+      </span>
+    </section>
+  </div>
+
+  <hr class="dot">
+
+  <div class="infobox">
+    <h3>(Additional<sup>&starf;</sup>) Languages</h3>
+
+    <hr>
+
+    <p>
+      One is my mother tongue,
+      one I am learning,
+      one I can generally understand,
+      and two I can more or less speak:
+    </p>
+
+    <section class="buttons">
+      <img src="/assets/media/buttons/things/flag_ja.png" alt="Flag of Japan">
+      <img src="/assets/media/buttons/things/flag_nl.png" alt="Flag of the Netherlands">
+      <img src="/assets/media/buttons/things/flag_ro.png" alt="Flag of Romania">
+      <a href="https://occidental-lang.com/">
+        <img src="/assets/media/buttons/things/occidental.png" alt="Occidental (Toki Pona)">
+      </a>
+      <a href="https://tokipona.org/">
+        <img src="/assets/media/buttons/things/tokipona.png" alt="toki pona">
+      </a>
+    </section>
+
+    <p>
+      I can also read Cyrillic, Greek, the <span title="The Minecraft enchantment table alphabet, for the zoomers.">International Galactic Alphabet</span>, sitelen pona, and (kinda) Korean Hangul; and I am planning to learn more scripts in the future.
+    </p>
+
+    <hr>
+
+    <p>
+      <small>
+        <sup>&starf;</sup> English doesn't count because have you seen any of the flags.
+      </small>
+    </p>
+  </div>
+
+  <hr class="dot">
+
+  <div class="infobox">
+    <section class="buttons">
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_grit_cycle.gif" alt="hosma /grit/ button (cycling)">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_grit_dark_serif.png" alt="hosma /grit/ button (dark, serif)">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_grit_dark_sans.png" alt="hosma /grit/ button (dark, sans)-serif">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_grit_light_serif.png" alt="hosma /grit/ button (light, serif)">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_grit_light_sans.png" alt="hosma /grit/ button (light, sans)-serif">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_10.png" alt="hosma /10/ button">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_7.png" alt="hosma /7/ button">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_6.png" alt="hosma /6/ button">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_halloween_blue.png" alt="hosma halloween button (blue)">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_halloween_red.png" alt="hosma halloween button (red)">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_ancient.png" alt="ancient hosma button">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_cycle.gif" alt="hosma button (cycling)">
+      </span>
+      <span>
+        <img src="/assets/media/buttons/hosma/hosma_fanbutton.gif" alt="hosma fan-made button">
+      </span>
+    </section>
+
+    <hr>
+
+    <p>
+      <small>
+        THERE IS A MAN IN A CAVE THAT IS TRAINING FOR THE DAY THAT HE HAS TO FIGHT HOTLINKERS. HE HAS NO RUNNING WATER NO MEDICINE NO GYM AND NO GF. SOMEDAY THEY WILL FACE HIM IN THE FIELD OF BATTLE AND IF THEY DO NOT TRAIN FOR THAT DAY HE WILL DEFEAT THEM. WHILE THEY HOTLINK ON THE INTERNET <small>[THIS PART HAS BEEN REDACTED AS IT IS NOT VERY CLASSY OR RELEVANT]</small>, THE MAN IN THE CAVE CONTINUES TO PREPARE FOR THE INEVITABLE DAY OF BATTLE.
+      </small>
+    </p>
+  </div>
+
+  <hr class="dot">
+
+  <section id="memorial" class="small-caps center-text">
+    <p class="center-text" style="text-transform: lowercase;">
+      May your souls rest in eternal peace and happiness, and your memories endure forevermore.
+    </p>
+
+    <p class="center-text">
+      🕊️
+    </p>
+
+    <p>
+      Grandpa Gigi&mdash;2023
+    </p>
+    <p>
+      <a href="/assets/media/irl/tigger.jpg">Tigger &OpenCurlyDoubleQuote;Tiggy Bear&CloseCurlyDoubleQuote;</a>&mdash;2023
+    </p>
+    <p>
+      <a href="/assets/media/irl/riker.jpg">Riker &OpenCurlyDoubleQuote;Puppy Dawg&CloseCurlyDoubleQuote;</a>&mdash;2024
+    </p>
+    <p>
+      <a href="/assets/media/irl/patches.mp4">Patches &OpenCurlyDoubleQuote;pts&CloseCurlyDoubleQuote; Scratches</a>&mdash;2024
+    </p>
+    <p>
+      <a href="/assets/media/irl/scooter.jpg">Scooter &OpenCurlyDoubleQuote;Scoocher Poocher&CloseCurlyDoubleQuote;</a>&mdash;2026
+    </p>
+    <p>
+      Babi&mdash;2026
+    </p>
+  </section>
+
+  <!--  -->
+
+  <script type="module">
+    // I may not be a fan of convenience, but I am a lesser fan of cookies
+    import CookieManager from '/assets/js/CookieManager.js'
+
+    const cookieManager = new CookieManager()
+
+    // 
+    // Logic for hiding the disclaimer
+    // 
+
+    const Disclaimer = document.getElementById('disclaimer')
+
+    if (cookieManager.cookies.HIDE_DISCLAIMER)
+      Disclaimer.remove()
+    
+    document.getElementById('btn-hide-disclaimer')?.addEventListener('click', () => {
+      const expiry = 1000 * 60 * 60 * 24 * 30 * 1 // 1 month
+
+      cookieManager.create('HIDE_DISCLAIMER', '1', { 'Max-Age': String(expiry) })
+      Disclaimer.remove()
+    }, { passive: true, once: true })
+    
+
+    // 
+    // Logic for subtitles
+    // 
+
+    const SUBTITLES = [
+
+      /////////////////////////////////////////////
+      //                                         //
+      //                Boo!                     //
+      //  It'll ruin the whimsy if you look! :p  //
+      //                                         //
+      /////////////////////////////////////////////
+
+      // English
+      `and the search for meaning`,
+      `and the hundred thousand whys`,
+      `and the decently-sized words`,
+      `and the bare minimum`,
+      `and the lowercase 'h'`,
+      `and the lowercase 'h' – by design`,
+      `and the incidental use of Arch`,
+      `and the rodent vein`,
+      `and the rat cult`,
+      `and the hexagon`,
+      `and the crusty bastard`,
+      `and the inhaled hosmium`,
+      `and the niche reference`,
+      `and the esoteric knowledge`,
+      `and the trvth nuke`,
+      `and the pile of flashcards`,
+      `and the superior Nihon-siki`,
+      `and the times of yore`,
+      `and the literal & metaphorical packing-up`,
+      `and the [object Object]`,
+      `and the uncaught SyntaxError`,
+      `and the return to analog`,
+      `and the bunnies`,
+      `and the buns`,
+      `and the strange-looking lamp`,
+      `and the game you just lost`,
+      `and the ſimply ſublime long ſ`,
+      `and the legend of the black shawarma`,
+      `and the <a href="https://dangeru.us/">dangerous</a> opinions`,
+      `and þe awesomeness of þorn`,
+      `and ðe abominable eð`,
+      `and a keg full of beer`,
+      `and a certainly impostrous syndrome`,
+      `and a certain donkey's lack of melanin`,
+      `and an homage to <a href="https://scrob.wordpress.com/">Scrob</a>`,
+      `and whatever <a href="https://www.unicode.org/notes/tn43/tn43-3.pdf">these</a> are`,
+      `and his noisy guitar`,
+      `and his return to the dacha`,
+      `and that conspicuous lightbulb`,
+      `and ESL: English as a Second Language`,
+      `and Pepsi and Patches`,
+      `and Scooter and Baz`,
+      `and LG and Lucky`,
+      `and something or other`,
+      `and amateur linguistics`,
+      `and the lost plot`,
+      `and the harmonized vowels`,
+      `brick, baby&mdash;that's what I'm gonna throw upside your head`,
+      `crafted with \\u2665`, // ♥
+      `crafted with \\u2764`, // ❤
+      `crafted with <u>はーと</u>|`,
+      `crafted with live, laugh, love`,
+      `crafted with sweat, tears, and other bodily fluids`,
+      `on the web`,
+      `on the 'net`,
+      `on Neocities`,
+      `over yonder`,
+      `&mdash;, and the oxford comma`,
+      `fuck <code>[target="_blank"]</code>`,
+      `wake up`,
+      `use your rights`,
+      `lorem ipsum yadda yadda`,
+      `please come back, Native Construct`,
+      `his Yuropoorness`,
+      `hosma`,
+      `as above, so below`,
+      `4 8 15 16 23 42`,
+      `...you guys don't have phones?`,
+      `...you just never know`,
+      `...yup`,
+      `...?`,
+      ``,
+
+      // 日本語
+      `<span lang="ja">澱み終えて</span>`,
+      `<span lang="ja">うき世は忙しい</span>`,
+      `<span lang="ja">ディス活断薬</span>`,
+      `<span lang="ja">豊葦原千五百秋之瑞穂之国</span>`,
+      `<span lang="ja">我勃起不全</span>`,
+      `<span lang="ja">つれ〴〵なるまゝに</span>`,
+      `<span lang="ja">昔々………</span>`,
+      `<span lang="ja">ルビーちゃ～ん？</span>`,
+      `<span lang="ja">うまそうだな、カモ</span>`,
+      `<span lang="ja">ｳｯ ｳｰﾜｰﾜｰｳﾜｰ</span>`,
+      `<span lang="ja">遥か西、海の向こう</span>`,
+      `<span lang="ja">木幡駅で</span>`,
+      `<span lang="ja">驫麤驫麤驫麤～</span>`,
+      `<span lang="ja">えぐち、もろぼし、ろっ</span>`,
+      `<span lang="ja">だぁ～いすけ</span>`,
+      `<span lang="ja">5000兆円　欲しい！</span>`,
+      `<span lang="ja">上なる如く、下もまた然り</span>`,
+      `<span lang="ja">あと素早い茶色の狐に飛び越えられた鈍間な犬</span>`,
+      `<span lang="ja">山嶽、河川、草花、樹木</span>`,
+      // 四字
+      `<span lang="ja">起死回生</span>`,
+      `<span lang="ja">花鳥風月</span>`,
+      `<span lang="ja">飛花落葉</span>`,
+      `<span lang="ja">前途多難</span>`,
+      `<span lang="ja">前途多望</span>`,
+
+      // Română
+      `<span lang="ro">și baba învârtită</span>`,
+      `<span lang="ro">și soluția evazivă</span>`,
+      `<span lang="ro">și cele șapte păcate capitale</span>`,
+      `<span lang="ro">și sertarul la inimă pentru pusul chiloților</span>`,
+      `<span lang="ro">și imnul crizei</span>`,
+      `<span lang="ro">și puterea la -360°: Demon Genesis</span>`,
+      `<span lang="ro">și șerpii de pe comunitatea oldstyle.ro</span>`,
+      `<span lang="ro">și orezul cu lapte</span>`,
+      `<span lang="ro">și pula roz din fier cu luminițe</span>`,
+      `<span lang="ro">și infinitul <span lang="hu">kürtőskalács</span></span>`,
+      `<span lang="ro">și cozonacul secuiesc malefic</span>`,
+      `<span lang="ro">și sarmaua fermecată</span>`,
+      `<span lang="ro">și mălăiața pară din gura lui Nătăfleață</span>`,
+      `<span lang="ro">și fiii și copiii</span>`,
+      `<span lang="ro">en dă tri car of polis</span>`,
+      `<span lang="ro">în neeuclidiana Hârșovă</span>`,
+      `<span lang="ro">în Româneasca Basarabie</span>`,
+      `<span lang="ro">în statul independent Galați</span>`,
+      `<span lang="ro">în mai mult sau mai puțin existenta Transnistrie</span>`,
+
+      // Nederlands
+      `<span lang="nl">en de bepoepte cuckstoel</span>`,
+      `<span lang="nl">en de serieus probleem dat we hebben</span>`,
+      `<span lang="nl">en de langdurige animatie</span>`,
+      `<span lang="nl">en de zeeëend</span>`,
+      `<span lang="nl">en het meevaren met de VOC</span>`,
+      `<span lang="nl">en een papa-gegeven klap</span>`,
+      `<span lang="nl">zij zijn zijn broers</span>`,
+      `<span lang="nl">met liefde gemaakt</span>`,
+      `<span lang="nl">zo boven, zo beneden</span>`,
+
+      // toki pona
+      `<span lang="tok">sina moku e pipi!?</span>`,
+      `<span lang="tok">ojuta li seme?</span>`,
+      `<span lang="tok">mi lukin e sina</span>`,
+      `<span lang="tok">pakala a</span>`,
+
+      // Other
+      `<span lang="es">voy perdiendo el suelo</span>`,
+      `<span lang="es">se van a morir cabrones</span>`,
+      `<span lang="es">...el ya estas hasta la madre</span>`,
+
+      `<span lang="ig">ọgazị amaka ma ejighị ya a gọ mmụọ</span>`,
+
+      `<span lang="ps">اوبه په ډانګ نه بيلېږي</span>`,
+
+      `<span lang="ru">эн зе Рашн хи дазнт спик</span>`,
+      `<span lang="ru">вытри слёзы, отдохни немного</span>`,
+      `<span lang="ru">на всякого мудреца довольно простоты</span>`,
+      `<span lang="ru">сука блядь</span>`,
+      `<span lang="ru">я не знаю, иди в пизду</span>`,
+      `<span lang="ru">...велосипед, цирк, трактор!</span>`,
+
+      `<span lang="zh">我社保</span>`,
+      `<span lang="zh">我去，你太小了！</span>`,
+      `<span lang="zh">道可道，非常道</span>`,
+      `<span lang="zh">奥力给!!</span>`,
+      `<span lang="zh-Hant">𰻞𰻞麵</span>`,
+
+
+      // Memories
+      `and the memory of <a href="https://strata.neocities.org">Strata</a>`,
+      `and the memory of <a href="https://owlman.neocities.org">OwlMan</a>`,
+      `and the memory of <a href="https://joppiesaus.neocities.org">Job</a>`,
+      `and the memory of <a href="https://kenny46140.neocities.org">Kenny</a>`,
+      `and the memory of <a href="https://coolman.neocities.org">Jack</a>`,
+      `and the memory of <a href="https://scarbyte.neocities.org">Mace</a>`,
+      `and the memory of <a href="https://bytemoth.neocities.org">ByteMoth</a>`,
+      `and the memory of <a href="https://gwtagacw.neocities.org">Caby</a>`,
+      `and the memory of <a href="https://designchoices.neocities.org">Jake</a>`,
+      `and the memory of <a href="https://openbooks.neocities.org">Marin</a>`,
+      `and the memory of <a href="https://roseknight.neocities.org/">RoseKnight</a>`,
+      `and the memory of <a href="https://98plus.neocities.org">98plus</a>`,
+      `and the memory of <a href="/assets/media/patches.mp4">Patches</a>`,
+      `and the memory of <a href="/assets/media/tigger.jpg">Tigger</a>`,
+      `and the memory of <a href="https://x.com/NaruproOfficial">Narupro</a>`,
+      `and the memory of <a href="https:/lainon.life/">lainon.life</a>`,
+      `and the memory of <a href="https://classic.systemspace.network/">Systemspace</a>`,
+      `and the memory of himself`,
+    ]
+
+    // const MainHeader = document.getElementById('main-header')
+    const Subtitle = document.getElementById('subtitle')
+
+    // Generate a random number within the bounds of the subtitle array's length
+    function displayRandomSubtitle() {
+      const subtitleIndex = Math.floor(Math.random() * SUBTITLES.length)
+      Subtitle.innerHTML = SUBTITLES[subtitleIndex]
+    }
+    
+    document.getElementById('main-header').addEventListener('click', displayRandomSubtitle, { passive: true })
+
+    displayRandomSubtitle()
+  </script>
+
+</body>
+</html>

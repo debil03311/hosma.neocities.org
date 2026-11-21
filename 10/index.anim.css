@@ -1,0 +1,39 @@
+@keyframes slide-in-top {
+    from {
+        top: -64px;
+        opacity: 0;
+    } to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        bottom: -64px;
+        opacity: 0;
+    } to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        left: -64px;
+        opacity: 0;
+    } to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        right: -64px;
+        opacity: 0;
+    } to {
+        right: 0px;
+        opacity: 1;
+    }
+}

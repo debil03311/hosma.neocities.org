@@ -1,0 +1,8 @@
+.blog-timestamp {
+    position: absolute;
+    top: 32px;
+    right: var(--padding-h);
+    font-weight: 600;
+    transition: 100ms;
+    cursor: pointer;
+}

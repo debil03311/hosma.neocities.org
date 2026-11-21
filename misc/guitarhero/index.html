@@ -1,0 +1,528 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Guitar Hero 3 Scores</title>
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+</head>
+<body>
+
+<table id = "side">
+	<tr><td><img src = "logo.png"></td></tr>
+	<tr onclick="setlist();"><td><a>Setlist</a></td></tr>
+	<tr onclick="bonus();"  ><td><a>Bonus</a></td></tr>
+</table>
+
+<table id="bonus" style="display: none;">
+<tr>
+	<td>#</td> 
+	<td>Song Name</td> 
+	<td>Artist / Band</td> 
+	<td class = "med">Medium</td>
+</tr>
+
+
+
+<tr>
+	<td>1</td>
+	<td>Avalancha</td>
+	<td>Heroes del Silencio</td>
+	<td></td>
+</tr>
+<tr>
+	<td>2</td>
+	<td>In The Belly Of A Shark</td>
+	<td>Gallows</td>
+	<td></td>
+</tr>
+<tr>
+	<td>3</td>
+	<td>Can't Be Saved</td>
+	<td>Senses Fail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>4</td>
+	<td>Closer</td>
+	<td>Lacuna Coil</td>
+	<td>98%</td>
+</tr>
+<tr>
+	<td>5</td>
+	<td>Don't Hold Back</td>
+	<td>The Sleeping</td>
+	<td>97%</td>
+</tr>
+<tr>
+	<td>6</td>
+	<td>Down 'N Dirty</td>
+	<td>La Slum Lords</td>
+	<td>98%</td>
+</tr>
+<tr>
+	<td>7</td>
+	<td>F.C.P.R.E.M.I.X.</td>
+	<td>The Fall of Troy</td>
+	<td>86%</td>
+</tr>
+<tr>
+	<td>8</td>
+	<td>Generation Rock</td>
+	<td>Revolverheld</td>
+	<td></td>
+</tr>
+<tr>
+	<td>9</td>
+	<td>Go That Far</td>
+	<td>Bret Michaels Band</td>
+	<td></td>
+</tr>
+<tr>
+	<td>10</td>
+	<td>Hier Kommt Alex</td>
+	<td>Die Toten Hosen</td>
+	<td>98%</td>
+</tr>
+<tr>
+	<td>11</td>
+	<td>I'm In The Band</td>
+	<td>Hellacopters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>12</td>
+	<td>Impulse</td>
+	<td>An Endless Sporadic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>13</td>
+	<td>In Love</td>
+	<td>Scouts of St. Sebastian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>14</td>
+	<td>Mauvais Garçon</td>
+	<td>Naast</td>
+	<td></td>
+</tr>
+<tr>
+	<td>15</td>
+	<td>Metal Heavy Lady</td>
+	<td>Lions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>16</td>
+	<td>Minus Celsius</td>
+	<td>Backyard Babies</td>
+	<td>96%</td>
+</tr>
+<tr>
+	<td>17</td>
+	<td>My Curse</td>
+	<td>Killswitch Engage</td>
+	<td>96%</td>
+</tr>
+<tr>
+	<td>18</td>
+	<td>Nothing For Me Here</td>
+	<td>Dope</td>
+	<td></td>
+</tr>
+<tr>
+	<td>19</td>
+	<td>Prayer of the Refugee</td>
+	<td>Rise Against</td>
+	<td>98%</td>
+</tr>
+<tr>
+	<td>20</td>
+	<td>Radio Song</td>
+	<td>Superbus</td>
+	<td>98%</td>
+</tr>
+<tr>
+	<td>21</td>
+	<td>Ruby</td>
+	<td>The Kaiser Chefs</td>
+	<td>97%</td>
+</tr>
+<tr>
+	<td>22</td>
+	<td>She Bangs The Drums</td>
+	<td>The Stone Roses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>23</td>
+	<td>Take This Life</td>
+	<td>In Flames</td>
+	<td></td>
+</tr>
+<tr>
+	<td>24</td>
+	<td>The Way It Ends</td>
+	<td>Prototype</td>
+	<td></td>
+</tr>
+<tr>
+	<td>25</td>
+	<td>Through the Fire and the Flames</td>
+	<td>Dragonforce</td>
+	<td>72%</td>
+</tr>
+</table>
+
+<!---->
+
+<table id="setlist" style="display: all;">
+<tr>
+	<td>#</td> 
+	<td>Song Name</td> 
+	<td>Artist / Band</td> 
+	<td class = "med">Medium</td>
+</tr>
+
+
+
+<tr>
+	<td>1</td>
+	<td>Slow Ride</td>
+	<td>Foghat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>2</td>
+	<td>Talk Dirty to Me</td>
+	<td>Poison</td>
+	<td></td>
+</tr>
+<tr>
+	<td>3</td>
+	<td>Hit Me With Your Best Shot</td>
+	<td>Pat Benatar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>4</td>
+	<td>Story Of My Life</td>
+	<td>Social Distortion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>5</td>
+	<td>Rock and Roll All Nite</td>
+	<td>KISS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>6</td>
+	<td>Sabotage</td>
+	<td>Beastie Boys</td>
+	<td>98%</td>
+</tr>
+
+<tr><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+	<td>7</td>
+	<td>Mississippi Queen</td>
+	<td>Mountain</td>
+	<td></td>
+</tr>
+<tr>
+	<td>8</td>
+	<td>School's Out</td>
+	<td>Alice Cooper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>9</td>
+	<td>Sunshine of Your Love</td>
+	<td>Cream</td>
+	<td></td>
+</tr>
+<tr>
+	<td>10</td>
+	<td>Barracuda</td>
+	<td>Heart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>11</td>
+	<td>Bulls on Parade</td>
+	<td>Rage Against the Machine</td>
+	<td>99%</td>
+</tr>
+<tr>
+	<td>12</td>
+	<td>Reptilia</td>
+	<td>The Strokes</td>
+	<td></td>
+</tr>
+
+<tr><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+	<td>13</td>
+	<td>When You Were Young</td>
+	<td>The Killers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>14</td>
+	<td>Miss Murder</td>
+	<td>AFI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>15</td>
+	<td>The Seeker</td>
+	<td>The Who</td>
+	<td></td>
+</tr>
+<tr>
+	<td>16</td>
+	<td>Lay Down</td>
+	<td>Priestess</td>
+	<td></td>
+</tr>
+<tr>
+	<td>17</td>
+	<td>Paint It Black</td>
+	<td>The Rolling Stones</td>
+	<td></td>
+</tr>
+<tr>
+	<td>18</td>
+	<td>Suck My Kiss</td>
+	<td>Red Hot Chili Peppers</td>
+	<td></td>
+</tr>
+
+<tr><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+	<td>19</td>
+	<td>Paranoid</td>
+	<td>Black Sabbath</td>
+	<td>97%</td>
+</tr>
+<tr>
+	<td>20</td>
+	<td>Anarchy in the U.K.</td>
+	<td>The Sex Pistols</td>
+	<td></td>
+</tr>
+<tr>
+	<td>21</td>
+	<td>Kool Thing</td>
+	<td>Sonic Youth</td>
+	<td></td>
+</tr>
+<tr>
+	<td>22</td>
+	<td>My Name Is Jonas</td>
+	<td>Weezer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>23</td>
+	<td>Even Flow</td>
+	<td>Pearl Jam</td>
+	<td></td>
+</tr>
+<tr>
+	<td>24</td>
+	<td>Cities On Flame with Rock & Roll</td>
+	<td>Blue Oyster</td>
+	<td></td>
+</tr>
+
+<tr><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+	<td>25</td>
+	<td>Holiday In Cambodia</td>
+	<td>The Dead Kennedys</td>
+	<td>96%</td>
+</tr>
+<tr>
+	<td>26</td>
+	<td>Rock You Like A Hurricane</td>
+	<td>Scorpions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>27</td>
+	<td>Same Old Song and Dance</td>
+	<td>Aerosmith</td>
+	<td></td>
+</tr>
+<tr>
+	<td>28</td>
+	<td>La Grange</td>
+	<td>ZZ Top</td>
+	<td></td>
+</tr>
+<tr>
+	<td>29</td>
+	<td>Welcome To The Jungle</td>
+	<td>Guns N Roses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>30</td>
+	<td>Helicopter</td>
+	<td>Bloc Party</td>
+	<td></td>
+</tr>
+
+<tr><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+	<td>31</td>
+	<td>Black Magic Woman</td>
+	<td>Santana</td>
+	<td></td>
+</tr>
+<tr>
+	<td>32</td>
+	<td>Cherub Rock</td>
+	<td>The Smashing Pumpkins</td>
+	<td></td>
+</tr>
+<tr>
+	<td>33</td>
+	<td>Black Sunshine</td>
+	<td>White Zombie</td>
+	<td></td>
+</tr>
+<tr>
+	<td>34</td>
+	<td>The Metal</td>
+	<td>Tenacious D</td>
+	<td>98%</td>
+</tr>
+<tr>
+	<td>35</td>
+	<td>Pride and Joy</td>
+	<td>Stevie Ray Vaughan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>36</td>
+	<td>Monsters</td>
+	<td>Matchbook Romance</td>
+	<td></td>
+</tr>
+
+<tr><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+	<td>37</td>
+	<td>Before I Forget</td>
+	<td>Slipknot</td>
+	<td>99%</td>
+</tr>
+<tr>
+	<td>38</td>
+	<td>Stricken</td>
+	<td>Disturbed</td>
+	<td>94%</td>
+</tr>
+<tr>
+	<td>39</td>
+	<td>3's & 7's</td>
+	<td>Queens of the Stone Age</td>
+	<td></td>
+</tr>
+<tr>
+	<td>40</td>
+	<td>Knights of Cydonia</td>
+	<td>Muse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>41</td>
+	<td>Cult Of Personality</td>
+	<td>Living Colour</td>
+	<td></td>
+</tr>
+
+<tr><td></td><td></td><td></td><td></td></tr>
+
+<tr>
+	<td>42</td>
+	<td>Raining Blood</td>
+	<td>Slayer</td>
+	<td>92%</td>
+</tr>
+<tr>
+	<td>43</td>
+	<td>Cliffs of Dover</td>
+	<td>Eric Johnson</td>
+	<td></td>
+</tr>
+<tr>
+	<td>44</td>
+	<td>The Number of the Beast</td>
+	<td>Iron Maiden</td>
+	<td>93%</td>
+</tr>
+<tr>
+	<td>45</td>
+	<td>One</td>
+	<td>Metallica</td>
+	<td></td>
+</tr>
+</table>
+
+<button>
+	Menu
+</button>
+
+<script>
+
+var is_open = 1;
+
+setInterval(function(){
+	if ( is_open == 1 ) {
+		$( 'button' ).click(
+			function () {
+				$( '#side' ).css( 'left', '-200px' );
+				is_open = 0;
+			}
+		);
+	}
+
+	if ( is_open == 0 ) {
+		$( 'button' ).click(
+			function () {
+				$( '#side' ).css( 'left', '20px' );
+				is_open = 1;
+			}
+		);
+	}
+}, 900);
+
+
+
+function setlist() {
+	$( "#bonus"   ).css( "display", "none" );
+	$( "#setlist" ).css( "display", ""  );
+}
+
+function bonus() {
+	$( "#setlist" ).css( "display", "none" );
+	$( "#bonus"   ).css( "display", ""  );
+}
+
+</script>
+</body>
+</html>

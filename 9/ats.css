@@ -1,0 +1,25 @@
+
+@font-face {
+	font-family: 'Edwardian Script';
+	src: url('/assets/fonts/en/EdwardianScript.TTF');
+}
+
+@keyframes listbox {
+	0% {
+		border-left-width: 0px;
+		margin-left: 0px;
+	}
+	100% {
+		border-left-width: 2px;
+		margin-left: -2px;
+	}
+}
+
+@keyframes header {
+	0% {
+		color: #EFEFEF;
+	}
+	100% {
+		color: #7a2531;
+	}
+}

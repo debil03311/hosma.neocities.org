@@ -1,0 +1,185 @@
+@media only screen and (max-width: 800px) {
+    main header {
+        color: var(--text) !important;
+
+        text-shadow:
+             1px  1px 0 var(--bg),
+            -1px -1px 0 var(--bg),
+            -1px  1px 0 var(--bg),
+             1px -1px 0 var(--bg),
+             0 0 10px var(--shadow)
+        !important;
+    }
+}
+
+:root {
+    --bg: #504945;
+
+    --red: #832331;
+    --blue: #83a598;
+    --light-brown: #504945;
+    --dark-brown: #282828;
+    --light-gray: #969ba9;
+    --dark-gray: #6b7480;
+
+    --text: #ebdbb2;
+    --strong: #FFF;
+    --clickable: #c97b88;
+    --shadow: #00000068;
+
+    --font-main: "Source Sans 3", sans-serif;
+    --font-header: "Pushster";
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text);
+    box-shadow: inset 0 0 0 1px var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--clickable);
+}
+
+::selection {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+.clickable {
+    color: var(--clickable);
+}
+
+body {
+    background-color: var(--dark-brown);
+    color: var(--text);
+    font-family: var(--font-main);
+}
+
+a {
+    color: var(--clickable);
+    font-weight: bold;
+}
+
+strong {
+    color: var(--strong);
+    text-shadow: 0 0 8px #FFF6;
+}
+
+.fixed-button {
+    background-color: var(--bg);
+    box-shadow: 0 0 8px var(--shadow);
+}
+
+.nsfw-on {
+    color: var(--clickable) !important;
+}
+
+nav,
+main section {
+    box-shadow: 0 0 16px var(--shadow);
+}
+
+section h1 {
+    font-family: var(--font-header);
+}
+
+nav {
+    background-color: var(--bg);
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: #141414;
+    background-color: var(--blue);
+}
+
+nav a {
+    color: var(--text);
+}
+
+.nav-button {
+    transition: 64ms background-color, 200ms color;
+}
+
+.nav-button:hover {
+    background-color: var(--shadow);
+    color: #FFF;
+}
+
+.nav-button[data-redirect]::before,
+.nav-button[data-number]::after
+{
+    background-color: var(--bg);
+    color: var(--light-gray);
+    /* background-color: var(--light-gray);
+    color: var(--bg); */
+}
+
+.nav-button.toggled {
+    color: var(--clickable);
+}
+
+section {
+    background-color: var(--bg);
+}
+
+section small {
+    color: var(--light-gray);
+}
+
+main header {
+    color: var(--text);
+    text-shadow: 0 0 10px #0004;
+}
+
+.separator.gap {
+    background-color: var(--light-brown);
+}
+
+.separator.nsfw {
+    background-color: var(--red);
+}
+
+.separator::after {
+    background-color: var(--bg);
+}
+
+.blog-timestamp:hover,
+.dream-index:hover {
+    color: var(--clickable);
+}
+
+/*code {
+    background-color: var(--dark-brown);
+}*/
+
+code,
+.inline-kb {
+    background-color: var(--light-gray);
+    color: #000;
+}
+
+.inline-kb {
+    box-shadow: 0 3px 0 var(--dark-gray);
+}
+
+#theme-picker {
+    background: var(--shadow);
+}
+
+#HCB_comment_box {
+    --hcb-bg: var(--shadow);
+    --hcb-text: var(--text);
+    --hcb-btn-bg: var(--blue);
+    --hcb-btn-active-bg: var(--clickable);
+    --hcb-font: var(--font-main);
+    --hcb-invert-img: 1;
+}
+
+#HCB_comment_box .btn {
+    color: #000 !important;
+}

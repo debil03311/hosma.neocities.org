@@ -1,0 +1,37 @@
+
+body {
+	color: #F7F3F7;
+	cursor: default;
+}
+
+body, footer {
+	background: #1B181B;
+}
+
+#separate hr {
+	background: #776977;
+}
+
+section {
+	background: rgba( 0, 0, 0, .4 );
+}
+
+a {
+	color: #516AEC;
+}
+
+a:hover {
+	color: #CA402B;
+}
+
+footer, section {
+	border-color: #AB9BAB;
+}
+
+.prog {
+	border-color: #CA402B;
+}
+
+.prog:active {
+	border-color: #516AEC;
+}

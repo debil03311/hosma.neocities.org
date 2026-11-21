@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <script src="./index.js"></script>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+
+</head><body x-data="body">
+
+  <main>
+    <span id="setumei">
+      The file path is relative to the resource pack's <code>sounds/</code> folder, so for example if you had
+      <code>(pack)/assets/minecraft/sounds/<u>audio1</u>.ogg</code>
+      the file path would be <code>audio1</code>
+      and if you had
+      <code>(pack)/assets/minecraft/sounds/<u>yekonaip/audio2</u>.ogg</code>
+      the file path would be <code>yekonaip/audio2</code>
+    </span>
+
+    <button @click="save">💾 Save All</button>
+    <button @click="clear">🗑️ Clear All</button>
+
+    <template x-for="tValue, tKey in json">
+    <section class="trigger">
+      <span x-html="`Audio for <code>${tKey}</code>`"></span>
+      <button @click="tValue.sounds = []"> 🗑️ Clear </button>
+
+      <template x-for="sound, index of tValue.sounds">
+      <article class="sound">
+        <button class="remove-sound"
+                @click="removeSound(tValue.sounds, index)"> x </button>
+
+        <textarea placeholder="audio file path"
+                  spellcheck="false"
+                  x-model="sound.name"></textarea>
+
+        <textarea placeholder=""
+                  spellcheck="false"
+                  x-model.number="sound.weight"></textarea>
+      </article>
+      </template>
+
+      <button class="add-sound" @click="addSound(tValue.sounds)"> + </button>
+    </section>
+    </template>
+  </main>
+
+  <textarea spellcheck="false"
+            x-text="JSON.stringify(json, null, '  ')"></textarea>
+
+</body></html>

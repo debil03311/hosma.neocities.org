@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>You are lost.</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+<script src = "js/jquery-3.1.0.min.js"></script>
+<script src = "js/jquery-ui.js"></script>
+
+<script>
+$(function drag(){
+	$( "#app" ).draggable();
+	$( "#app" ).click(function(){
+		this.css( "transform", "translate(0, 0)" );
+	});
+});
+</script>
+
+</head>
+<body style="cursor: default;">
+
+<div id = "menucloser" onclick="menu('-500px', '0')"></div>
+
+<div id = "panel">
+	<div id = "windowlist">
+		<div id = "window" onclick="$('#app').css('opacity', '1')"><p>hosma.neocities</p></div>
+	</div>
+
+	<img class = "applauncher" src = "i/applauncher.png" onclick="menu('25px', '1')">
+	<img class = "paneltray" src = "i/paneltray.png">
+	<p class = "time">{ clock }</p>
+</div>
+
+<div id = "menu">
+	<div id = "categs">
+		<span class = "subcategs">
+			<img src = "i/menu/categ/favorites.png">
+			<p>Favorites</p>
+		</span>
+		<span class = "subcategs" style="border-bottom: solid 3px #1e92ff;">
+			<img src = "i/menu/categ/apps.png">
+			<p>Applications</p>
+		</span>
+		<span class = "subcategs">
+			<img src = "i/menu/categ/computer.png">
+			<p>Computer</p>
+		</span>
+		<span class = "subcategs">
+			<img src = "i/menu/categ/history.png">
+			<p>History</p>
+		</span>
+		<span class = "subcategs">
+			<img src = "i/menu/categ/leave.png">
+			<p>Leave</p>
+		</span>
+	</div>
+
+	<div id = "apps" style = "font-size: 12px;">
+		<h4 style="
+			position: absolute; 
+			top: 110px;
+			left: 20px;
+			color: #898e94;
+		"> All Applications </h4>
+
+		<div id = "appmenu">
+			<ul>
+				<li>
+					<img class = "thumb" src = "i/menu/apps/development.png">
+					<p>Development</p>
+					<img class = "arrow" src = "i/menu/apps/arrow.png">
+				</li>
+				<li>
+					<img class = "thumb" src = "i/menu/apps/internet.png">
+					<p>Internet</p>
+					<img class = "arrow" src = "i/menu/apps/arrow.png">
+				</li>
+				<li>
+					<img class = "thumb" src = "i/menu/apps/multimedia.png">
+					<p>Multimedia</p>
+					<img class = "arrow" src = "i/menu/apps/arrow.png">
+				</li>
+				<li>
+					<img class = "thumb" src = "i/menu/apps/settings.png">
+					<p>Settings</p>
+					<img class = "arrow" src = "i/menu/apps/arrow.png">
+				</li>
+				<li>
+					<img class = "thumb" src = "i/menu/apps/system.png">
+					<p>System</p>
+					<img class = "arrow" src = "i/menu/apps/arrow.png">
+				</li>
+				<li>
+					<img class = "thumb" src = "i/menu/apps/utilities.png">
+					<p>Utilities</p>
+					<img class = "arrow" src = "i/menu/apps/arrow.png">
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id = "user">
+		<img src = "i/menu/apps/user.png" style="cursor: pointer;">
+		<div id = "info">
+			<h3 style="color: #c8cacd;">hosma@neocities</h3>
+			<input placeholder="Type to search...">
+		</div>
+	</div>
+</div>
+
+<div id = "app" onclick="menu('-500px', '0')">
+	<div id = "titlebar">
+		<p class = "title">
+			hosma.neocities
+		</p>
+		<div id = "buttons">
+			<img class = "minimize" src = "i/buttons/minimize.png" onclick="$('#app').css('opacity','0')">
+			<img class = "maximize" src = "i/buttons/maximize.png">
+			<img class = "close" src = "i/buttons/close.png">
+		</div>
+	</div>
+	<div id = "darkener" style="overflow: auto;">
+
+	<div id = "text" style="padding: 20px;">
+		<p>Hello there!</p>
+	
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	
+		<p>New shit: You can now move this window around and show/hide it.</p>
+		
+	</div>
+	</div>
+</div>
+
+
+<!-- Scripts -->
+
+<script src="js/time.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/buttons.js"></script>
+
+</body>
+</html>

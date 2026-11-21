@@ -1,0 +1,74 @@
+################
+##            ##
+## [ as iso ] ##
+##            ##
+################
+
+fdisk -l                        # See /dev/disks
+cfdisk /dev/sd*                 # Delete all parts
+                                # New > Primary  > 512 MB        > End        (sda1)
+                                # New > Primary  > Rest of space > Bootable (sda2)
+                                # Swap partition > Type          > 82
+                                # Write > Yes
+
+mkfs.ext4 /dev/sd*2             # Make ext4 filesystem on main partition
+mount /dev/sd*2 /mnt            # Mount main to /mnt/
+
+mkswap /dev/sd*1                # Make the swap file on the swap partition
+swapon /dev/sd*1                # Utilize swap
+
+# wifi-menu                     # Optional: connect to wifi
+
+pacstrap /mnt base base-devel   # Install OS to main partition /dev/sd*2 mounted on /mnt
+
+arch-chroot /mnt                # Chroot to mounted OS partition
+
+
+
+###################
+##               ##
+## [ as chroot ] ##
+##               ##
+###################
+
+passwd                          # Set a root password
+
+nano /etc/locale.gen            # Set locale
+                                # Find #en_US.UTF-8 UTF-8
+                                       #en_US ISO-8859-1
+                                # Remove leading hashes
+                                # SAVE and quit (^X Y)
+locale-gen                      # Generate locales
+
+cd /usr/share/zoneinfo          #
+ls                              #    All these to set a placeholder timezone
+cd /usr/share/zoneinfo/Canada   #
+ln -s /usr/share/zoneinfo/Canada/Eastern /etc/localtime/
+
+echo HOSTNAME > /etc/hostname   # Set hostname
+
+pacman -S grub-bios             # Download grub
+grub-install /dev/sd*           # Pick whole hard drive
+mkinitcpio -p linux             # Generate image file
+grub-mkconfig -o /boot/grub/grub.cfg    # Generate grub config
+
+pacman -S NetworkManager sudo terminator vi vim nano chromium firefox xfce4 i3wm thunar keepassx pluma okteta libreoffice geeqie gimp filezilla electrum ssh ftp ncmpcpp mpd cmus kdenlive pavucontrol gparted os-prober dialog yaourt ping wget curl xorg-server xorg-server-utils xorg-xinit screenfetch cowsay ruby python python3 lolcat lynx links links2 figlet irssi xrandr yakuake deluge
+                                # Install misc packages before boot
+
+useradd -m -s /bin/bash debil   # Create user
+passwd debil                    # Set password for user
+ls /home                        # Check if it worked
+
+exit
+
+
+
+################
+##            ##
+## [ as iso ] ##
+##            ##
+################
+
+genfstab /mnt >> /mnt/etc/fstab # Make fstab file
+
+umount /mnt                     # Unmount system drive

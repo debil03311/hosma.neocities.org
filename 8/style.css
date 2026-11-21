@@ -1,0 +1,106 @@
+
+@font-face {
+	font-family: 'Lato';
+	src: url('/assets/fonts/en/Lato-Regular.woff');
+}
+
+@font-face {
+	font-family: 'Dancing';
+	src: url('/assets/fonts/en/dancing-script-v10-latin-regular.woff');
+}
+
+body {
+	font-family: 'Lato';
+	line-height: 20px;
+	padding: 30px;
+}
+
+.fancy {
+	font-family: 'Dancing';
+	font-size: 22px;
+}
+
+.fancy:hover {
+	font-family: 'Lato';
+	font-size: initial;
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	margin: 0 4px;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	border-top: solid 1px;
+	padding: 2px 4px;
+	padding-bottom: 4px;
+}
+
+.copy {
+	float: right;
+	margin-right: 10px;
+	opacity: 0.6;
+}
+
+#wrapper {
+	max-width: 1000px;
+	min-width: 400px;
+}
+
+section {
+	text-align: justify;
+	border-left: solid 4px;
+	padding: 10px 40px;
+	margin: 34px 0;
+}
+
+section header {
+	width: auto;
+}
+
+section header h1 {
+	display: inline-block;
+}
+
+section header .date {
+	text-align: right;
+	float: right;
+	margin-top: 24px; 
+}
+
+#separate {
+	margin-left: 46%;
+}
+
+#separate hr {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 360px;
+	margin: 0 4px;
+}
+
+small {
+	opacity: .6;
+}
+
+.prog {
+	font-style: normal;
+	font-weight: bold;
+	border-bottom: dotted 2px;
+	border-radius: 2px;
+	padding-left: 2px;
+	margin: 0 4px;
+	cursor: pointer;
+}

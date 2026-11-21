@@ -1,0 +1,121 @@
+
+
+
+@font-face {
+	font-family: 'Cicle';
+	src: url( '/assets/fonts/en/Cicle_Semi.ttf' );
+}
+
+@font-face {
+	font-family: 'Hattori';
+	src: url( '/assets/fonts/en/Hattori_Hanzo.otf' );
+}
+
+@font-face {
+	font-family: 'Vegur';
+	src: url( '/assets/fonts/en/Vegur-Light.otf' );
+}
+
+
+
+body {
+	position: relative;
+	left: 0;
+	background: url('/assets/media/galaxy_purple.jpg') center center fixed #140c35;
+	background-size: cover;
+	color: #CCC;
+	font-family: 'Vegur';
+	transition: left 2s;
+	overflow-x: hidden;
+}
+
+#darken {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba( 0, 0, 0, .6 );
+	z-index: -1;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: -220px;
+	height: 100%;
+	background: rgba( 12, 1, 18, .6 );
+	border-right: solid 4px #AAA;
+	transition: left 1s;
+	overflow: auto;
+	z-index: 4;
+}
+
+header a {
+	color: #FFF;
+	font-family: 'Cicle';
+	display: block;
+	text-decoration: none;
+	padding: 14px;
+	padding-right: 44px;
+	transition: background .6s;
+}
+
+header a:hover {
+	background: #402257;
+	border: none;
+}
+
+.title {
+	position: relative;
+	top: -44px;
+	font-style: italic;
+	padding-left: 60px;
+}
+
+.loc {
+	position: fixed;
+	bottom: -10px;
+	right: 14px;
+}
+
+#content {
+	position: relative;
+	top: 40px;
+	left: 50%;
+	width: 60%;
+	padding-bottom: 20px;
+	transform: translate( -50% );
+}
+
+p {
+	font-size: 20px;
+	text-align: justify;
+}
+
+h2 { 
+	font-size: 30px; 
+	padding-top: 20px;
+}
+
+table {
+	font-size: 20px; 
+	margin-top: 40px;
+}
+
+img { 
+  height: 100px; 
+  box-shadow: 0 0 10px indigo;
+  border-radius: 6px;
+  opacity: .4;
+  cursor: pointer;
+}
+
+
+table td:first-child { padding-right: 40px; }
+table td { padding: 0; margin: 0; }
+h1, h2, h3, h4 { font-family: 'Hattori'; color: #DDD; }
+h1 { font-size: 60px; }
+a {	color: hotpink; text-decoration: none; cursor: pointer; }
+a:hover { border-bottom: solid 2px #AAA; }
+img:hover { opacity: .6; }

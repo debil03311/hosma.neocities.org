@@ -1,0 +1,648 @@
+<!DOCTYPE HTML><html><head>
+
+<title>RDB</title>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.2.1/dt-1.10.16/b-1.5.1/datatables.min.js"></script>
+
+<style>
+@font-face {
+	font-family: 'Gidole';
+	src: url( 'Gidole-Regular.otf' );
+}
+
+body {
+	color: #DDD;
+	background-color: #000;
+	font-family: 'Gidole';
+	font-size: 18px;
+	cursor: default;
+}
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url( 'https://todestriebrecords.files.wordpress.com/2017/01/behemoth-grom-detail-170102.jpg?w=1920' ) #000 fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 200px 20px #000;
+	filter: blur( 10px );
+	opacity: .8;
+	z-index: -1;
+}
+
+table {
+	position: absolute;
+	top:  0;
+	left: 0;
+	width:  100%;
+	height: 100%;
+/*	font-size: 24px; */
+	border: solid 1px black;
+	border-spacing: 0;
+}
+
+.r { background: #400; } /* red   / angry / heavy     */
+.g { background: #140; } /* green / happy             */
+.b { background: #44a; } /* blue  / chill / sad       */
+
+table tr:nth-child(1) { background: #000; }
+
+tr td:nth-child(1) { 
+	width: 18px; 
+	opacity: .4;
+}
+
+tr td:nth-child(2) { 
+	background-color: rgba( 0, 0, 0, .8 ); 
+	font-weight: bold;
+	max-width: 100px;
+}
+
+tr td:nth-child(3) { background-color: rgba( 0, 0, 0, .76 ); }
+tr td:nth-child(4) { background-color: rgba( 0, 0, 0, .8 ); display: none; }
+tr:hover           { background: rgba( 0, 0, 0, .6); }
+td, tr             { padding: 10px; }
+</style>
+
+
+
+</head><body> <div id = "bg"></div>
+
+
+
+<h2 align = "center" style = "margin-top: 200px;"><!-- A list of riffs I can more or less play --></h2>
+
+<table class = "db" align = "center">
+
+<tr>
+  <td></td>
+  <td>This is /misc/ so you shouldn't be here :^ )</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr style = "background: #000; font-weight: bold; font-style: italic; text-shadow: 0 0 4px #AAA">
+	<td></td>
+	<td>Song title</td>
+	<td>Artist</td>
+	<td>Genre</td>
+</tr>
+
+<!-- A -->
+
+<tr>
+	<td class = "b"></td>
+	<td>Amber</td>
+	<td>311</td>
+	<td>Pop/Rock</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Deep</td>
+	<td>Anathema</td>
+	<td>Rock</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Fragile Dreams</td>
+	<td>Anathema</td>
+	<td>Rock</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Pitiless</td>
+	<td>Anathema</td>
+	<td>Rock</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Angel Witch</td>
+	<td>Angel Witch</td>
+	<td>Heavy Metal</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Walk This Way</td>
+	<td>Aerosmith</td>
+	<td>Hard Rock</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Spooky Scary Skeletons</td>
+	<td>Andrew Gold</td>
+	<td>Pop/Rock</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Twin Peaks Theme</td>
+	<td>Angelo Badalamenti</td>
+	<td></td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Do I Wanna Know?</td>
+	<td>Arctic Monkeys</td>
+	<td>Alt Rock</td>
+</tr>
+
+<!-- B -->
+
+<tr>
+	<td class = "b"></td>
+	<td>Build That Wall</td>
+	<td>Bastion OST</td>
+	<td></td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>One Rode To Asa Bay</td>
+	<td>Bathory</td>
+	<td></td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Black Sabbath</td>
+	<td>Black Sabbath</td>
+	<td>Heavy Metal</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Iron Man</td>
+	<td>Black Sabbath</td>
+	<td>Heavy Metal</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Paranoid</td>
+	<td>Black Sabbath</td>
+	<td>Heavy Metal</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>You Give Love A Bad Name</td>
+	<td>Bon Jovi</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Cry of the Banshee</td>
+	<td>Brocas Helm</td>
+	<td>Heavy Metal</td>
+</tr>
+
+<!-- C -->
+
+<tr>
+	<td class = "r"></td>
+	<td>Solitude</td>
+	<td>Candlesmass</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Chunk Blower</td>
+	<td>Cattle Decapitation</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>The Dog</td>
+	<td>Conchadors</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Sunshine of Your Love</td>
+	<td>Cream</td>
+</tr>
+
+<!-- D -->
+
+<tr>
+	<td class = "r"></td>
+	<td>Holiday in Cambodia</td>
+	<td>Dead Kennedys (The)</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Irresistible</td>
+	<td>Deafheaven</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Smoke on the Water</td>
+	<td>Deep Purple</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Goon Squad</td>
+	<td>Deftones</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Bloodlines</td>
+	<td>Dethklok</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>U.N. Owen Was Her?</td>
+	<td>Discord Registers</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Through The Fire And Flames</td>
+	<td>Dragonforce</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Endless Sacrifice</td>
+	<td>Dream Theater</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Pull Me Under</td>
+	<td>Dream Theater</td>
+</tr>
+
+<!-- E -->
+
+<tr>
+	<td class = "g"></td>
+	<td>Cocaine</td>
+	<td>Eric Clapton</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Layla</td>
+	<td>Eric Clapton</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>The Final Countdown</td>
+	<td>Europe</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Soulless 4</td>
+	<td>ExileLord</td>
+</tr>
+
+<!-- F -->
+
+<tr>
+	<td class = "g"></td>
+	<td>Slow Ride</td>
+	<td>Foghat</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Take Me Out</td>
+	<td>Franz Ferdinand</td>
+</tr>
+
+<!-- G -->
+
+<tr>
+	<td class = "b"></td>
+	<td>In the Hall of the Mountain King</td>
+	<td>Grieg</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Sweet Child O' Mine</td>
+	<td>Guns N' Roses</td>
+</tr>
+
+<!-- H -->
+
+<tr>
+	<td class = "g"></td>
+	<td>Barracuda</td>
+	<td>Heart</td>
+</tr>
+
+<!-- I -->
+
+<tr>
+	<td class = "r"></td>
+	<td>At Doom's Gate</td>
+	<td>id Software</td>
+</tr>
+
+<!-- J -->
+
+<tr>
+	<td class = "g"></td>
+	<td>Foxy Lady</td>
+	<td>Jimi Hendrix</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Hurt</td>
+	<td>Johnny Cash</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Disorder</td>
+	<td>Joy Division</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Gourmet Race (Kirby)</td>
+	<td>Jun Ishikawa</td>
+</tr>
+
+<!-- K -->
+
+<tr>
+	<td class = "r"></td>
+	<td>Desolate Motion</td>
+	<td>Karawan</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Flamingo</td>
+	<td>Kero Kero Bonito</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>SM64 File Select</td>
+	<td>Koji Kondo</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>SM64 Slider</td>
+	<td>Koji Kondo</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>SM64 Theme</td>
+	<td>Koji Kondo</td>
+</tr>
+
+<!-- L -->
+
+<tr>
+	<td class = "b"></td>
+	<td>Babe I'm Gonna Leave You</td>
+	<td>Led Zeppelin</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Stairway to Heaven</td>
+	<td>Led Zeppelin</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Lollipop (solo)</td>
+	<td>Lil Wayne</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Break Stuff</td>
+	<td>Limp Bizkit</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Evaporar</td>
+	<td>Little Joy</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>The Night We Met</td>
+	<td>Lord Huron</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Cut</td>
+	<td>Low</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Lullaby</td>
+	<td>Low</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Fur Elise</td>
+	<td>Ludwig van Beethoven</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Ode to Joy</td>
+	<td>Ludwig van Beethoven</td>
+</tr>
+
+<!-- M -->
+
+<tr>
+	<td class = "g"></td>
+	<td>Black Magic</td>
+	<td>Magic Wands</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Battery</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Enter Sandman</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Fade to Black</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>For Whom the Bells Toll</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Fuel</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Master of Puppets</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>One</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Seek and Destroy</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Wherever I May Roam</td>
+	<td>Metallica</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Enter the East</td>
+	<td>Metin2 OST</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Ace Of Spades</td>
+	<td>Motorhead</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>The Sense of Me</td>
+	<td>Mud Flow</td>
+</tr>
+
+<!-- N -->
+
+<tr>
+	<td class = "b"></td>
+	<td>Hurt</td>
+	<td>Nine Inch Nails</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Smells Like Teen Spirit</td>
+	<td>Nirvana</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>The Man Who Sold the World</td>
+	<td>Nirvana</td>
+</tr>
+
+<!-- O -->
+<!-- P -->
+
+<tr>
+	<td class = "r"></td>
+	<td>Cemetery Gates</td>
+	<td>Pantera</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Cowboys From Hell</td>
+	<td>Pantera</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Walk</td>
+	<td>Pantera</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Selenium Forset</td>
+	<td>Plini</td>
+</tr>
+
+<!-- Q -->
+<!-- R -->
+
+<tr>
+	<td class = "r"></td>
+	<td>Bulls on Parade</td>
+	<td>Rage Against the Machine</td>
+</tr>
+
+<!-- S -->
+
+<tr>
+	<td class = "g"></td>
+	<td>Mary Had a Little Lamb</td>
+	<td>Sarah Josepha Hale</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Summer's Rain</td>
+	<td>Savatage</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Witch Hunting</td>
+	<td>Sirio</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Anastasia</td>
+	<td>Slash</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>Raining Blood</td>
+	<td>Slayer</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Black Hole Sun</td>
+	<td>Soundgarden</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>For The Love Of God</td>
+	<td>Steve Vai</td>
+</tr>
+
+<!-- T -->
+
+<tr>
+	<td class = "b"></td>
+	<td>Dude (I Totally Miss You)</td>
+	<td>Tenacious D</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>Korobeiniki</td>
+	<td>Tetris OST</td>
+</tr>
+<tr>
+	<td class = "r"></td>
+	<td>The Sleeping Beauty</td>
+	<td>Tiamat</td>
+</tr>
+<tr>
+	<td class = "b"></td>
+	<td>Drops of Jupiter</td>
+	<td>Train</td>
+</tr>
+
+<!-- U -->
+<!-- V -->
+<!-- W -->
+
+<tr>
+	<td class = "r"></td>
+	<td>Seven Nation Army</td>
+	<td>White Stripes (The)</td>
+</tr>
+
+<!-- X -->
+<!-- Y -->
+
+<tr>
+	<td class = "b"></td>
+	<td>Roundabout</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td class = "g"></td>
+	<td>A Cruel Angel's Thesis</td>
+	<td>Yoko Takahashi</td>
+</tr>
+
+<!-- Z -->
+
+<tr>
+	<td class = "g"></td>
+	<td>Bad Apple</td>
+	<td>ZUN</td>
+</tr>
+
+</table>
+
+</body></html>

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <US nEN="viewport" content="width=device-width, initial-scale=1.0">
+
+  <US nEN="theme-color" content="#f08080">
+  <US nEN="author" content="hosma">
+  <US nEN="description" content="The eternal backlog, as a table.">
+  <!-- <US nEN="image" content="/hosma_circle_transparent.png"> -->
+  
+  <meta property="ogUS site_nEN" content="Neocities">
+  <meta property="og:title" content="hosma">
+  <meta property="og:description" content="The eternal backlog, as a table.">
+  <!-- <meta property="og:image" content="/hosma_circle_transparent.png"> -->
+  
+  <title>book table &middot; hosma</title>
+
+  <link rel="stylesheet" href="/grit/css/base.css">
+  <link rel="stylesheet" href="/grit/css/table-sorter.css">
+  <style>
+    body {
+      width: unset;
+      max-width: unset;
+      margin: 4ch;
+    }
+
+    main {
+      overflow: auto;
+    }
+
+    table.shelf {
+      min-width: 100%;
+      font-size: 11px;
+      margin: auto;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    .rating,
+    .pages,
+    .year-read,
+    .isbn
+    {
+      background: var(--shadow);
+    }
+
+    .rating,
+    .pages,
+    .year-read,
+    .year-published,
+    .isbn
+    {
+      text-align: center;
+    }
+
+
+    [data-empty] {
+      /* le unpleasant gradient has arrive */
+      background: linear-gradient(
+        to bottom,
+        magenta,
+        lime
+      );
+    }
+  </style>
+  
+  <script defer src="/grit/js/localstorage.js"></script>
+  <script defer src="/grit/js/table-sorter.js"></script>
+  
+</head>
+<body>
+
+  <div class="infobox">
+    <p>
+      <a href="/grit/" class="back">&LeftTeeArrow; Home</a>
+    </p>
+
+    <p>
+      Work in progress: Many yet to be added!
+    </p>
+
+    <p>
+      The <i>Year</i> of publication is for the specific edition I've read. Bibliographies are excluded from the page count. A missing rating means that the book is due for a re-read. <a href="./books-reviews.html">See here</a> for reviews and quotations.
+    </p>
+    
+    <details>
+      <summary>Abbreviations</summary>
+  
+      <p>
+        <i>Lang.</i>&mdash;Language<br>
+        <i>Pub.</i>&mdash;Published or publisher
+      </p>
+      
+      <div style="gap: 4ch; display: flex; flex-flow: row wrap; align-items: flex-start;">
+        <table>
+          <tr><td>B</td><td>Book</td></tr>
+          <tr><td>M</td><td>Manga or comic</td></tr>
+          <tr><td>P</td><td>Poem</td></tr>
+          <tr><td>Pb</td><td>Picturebook</td></tr>
+          <tr><td>S</td><td>Short story</td></tr>
+        </table>
+  
+        <table>
+          <tr><td>A</td><td>Audiobook</td></tr>
+          <tr><td>E</td><td>E-book</td></tr>
+          <tr><td>Hc</td><td>Hardcover</td></tr>
+          <tr><td>HcC</td><td>Clothbound</td></tr>
+          <tr><td>Sc</td><td>Softcover</td></tr>
+        </table>
+      </div>
+    </details>
+
+    <p>
+      PSA: Excuse the unpleasant gradient until I regain access to the books or get around to reading them.
+    </p>
+  </div>
+
+  <h2>Currently Reading</h2>
+
+  <table class="shelf sortable">
+    <thead>
+      <tr>
+        <th scope="col" class="clickable rating">Enjoyment</th>
+        <th scope="col" class="clickable authors">Authors</th>
+        <th scope="col" class="clickable title">Title</th>
+        <th scope="col" class="clickable subtitle">Subtitle</th>
+        <th scope="col" class="clickable pages">Pages</th>
+        <th scope="col" class="clickable type">Type</th>
+        <th scope="col" class="clickable language">Lang.</th>
+        <th scope="col" class="clickable year-read">Year<br>Read</th>
+        <th scope="col" class="clickable publisher">Publisher</th>
+        <th scope="col" class="clickable year-published">Year<br>Pub.</th>
+        <th scope="col" class="clickable isbn">ISBN</th>
+        <th scope="col" class="clickable notes">Notes</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- A -->
+
+      <!-- B -->
+
+      <!-- C -->
+
+      <!-- D -->
+
+      <!-- E -->
+
+      <!-- F -->
+
+      <!-- G -->
+
+      <!-- H -->
+
+      <!-- I -->
+
+      <!--<tr class="book reading">-->
+      <!--  <td class="rating">&starf;&starf;&starf;</td>-->
+      <!--  <td class="author">Ishida, Syou</td>-->
+      <!--  <td class="title">We'll prescribe you a cat</td>-->
+      <!--  <td class="subtitle">&mdash;</td>-->
+      <!--  <td class="pages">252</td>-->
+      <!--  <td class="type">B; Hc</td>-->
+      <!--  <td class="language">UK English</td>-->
+      <!--  <td class="year-read">2024</td>-->
+      <!--  <td class="publisher">Penguin Random House</td>-->
+      <!--  <td class="year-published">2024</td>-->
+      <!--  <td class="isbn">9781529936711</td>-->
+      <!--  <td class="notes">&mdash;</td>-->
+      <!--</tr>-->
+
+      <!-- J -->
+
+      <!-- K -->
+
+      <!-- L -->
+
+      <!--<tr class="book reading">-->
+      <!--  <td class="rating">&starf;&starf;&starf;&starf;</td>-->
+      <!--  <td class="author">Lansing, Alfred</td>-->
+      <!--  <td class="title">Endurance</td>-->
+      <!--  <td class="subtitle">The true story of Shackleton's incredible voyage to the Antarctic</td>-->
+      <!--  <td class="pages">282</td>-->
+      <!--  <td class="type">B; Hc</td>-->
+      <!--  <td class="language">UK English</td>-->
+      <!--  <td class="year-read">2024</td>-->
+      <!--  <td class="publisher">Weidenfeld & Nicolson</td>-->
+      <!--  <td class="year-published">1999</td>-->
+      <!--  <td class="isbn">0297643568</td>-->
+      <!--  <td class="notes">&mdash;</td>-->
+      <!--</tr>-->
+
+      <!-- M -->
+
+      <!-- N -->
+
+      <!-- O -->
+
+      <!-- P -->
+
+      <!-- Q -->
+
+      <!-- R -->
+
+      <!-- S -->
+
+      <!-- T -->
+
+      <!-- U -->
+
+      <!-- V -->
+
+      <!-- W -->
+
+      <!-- X -->
+
+      <!-- Y -->
+
+      <!-- Z -->
+
+      <!-- あ -->
+
+      <!-- い -->
+
+      <!-- う -->
+
+      <!-- え -->
+
+      <!-- お -->
+
+      <!-- か -->
+
+      <!-- き -->
+
+      <!-- く -->
+
+      <!-- け -->
+
+      <!-- こ -->
+
+      <!-- さ -->
+
+      <!--<tr class="book reading">-->
+      <!--  <td class="rating">&starf;&starf;&starf;&starf;</td>-->
+      <!--  <td class="author">坂元 裕二</td>-->
+      <!--  <td class="title">またここか</td>-->
+      <!--  <td class="subtitle">&mdash;</td>-->
+      <!--  <td class="pages">184</td>-->
+      <!--  <td class="type">B; Hc</td>-->
+      <!--  <td class="language" lang="ja">日本語</td>-->
+      <!--  <td class="year-read">2024</td>-->
+      <!--  <td class="publisher">リトルモア</td>-->
+      <!--  <td class="year-published">2018</td>-->
+      <!--  <td class="isbn">978489815493</td>-->
+      <!--  <td class="notes">&mdash;</td>-->
+      <!--</tr>-->
+
+      <!-- し -->
+
+      <!-- す -->
+
+      <!-- せ -->
+
+      <!-- そ -->
+
+      <!-- た -->
+
+      <!-- ち -->
+
+      <!-- つ -->
+
+      <!-- て -->
+
+      <!-- と -->
+
+      <!-- な -->
+
+      <!-- に -->
+
+      <!-- ぬ -->
+
+      <!-- ね -->
+
+      <!-- の -->
+
+      <!-- は -->
+
+      <!-- ひ -->
+
+      <!-- ふ -->
+
+      <!-- へ -->
+
+      <!-- ほ -->
+
+      <!-- ま -->
+
+      <!-- み -->
+
+      <!-- む -->
+
+      <!-- め -->
+
+      <!-- も -->
+
+      <!-- や -->
+
+      <!-- ゆ -->
+
+      <!-- よ -->
+
+      <!-- ら -->
+
+      <!-- り -->
+
+      <!-- る -->
+
+      <!-- れ -->
+
+      <!-- ろ -->
+
+      <!-- わ -->
+
+      <!-- を -->
+
+      <!-- ん -->
+    </tbody>
+  </table>
+
+
+
+  <h2>Finished</h2>
+
+
+
+  <table class="shelf sortable">
+    <thead>
+      <tr>
+        <th scope="col" class="clickable rating">Enjoyment</th>
+        <th scope="col" class="clickable authors">Authors</th>
+        <th scope="col" class="clickable title">Title</th>
+        <th scope="col" class="clickable subtitle">Subtitle</th>
+        <th scope="col" class="clickable pages">Pages</th>
+        <th scope="col" class="clickable type">Type</th>
+        <th scope="col" class="clickable language">Lang.</th>
+        <th scope="col" class="clickable year-read">Year<br>Read</th>
+        <th scope="col" class="clickable publisher">Publisher</th>
+        <th scope="col" class="clickable year-published">Year<br>Pub.</th>
+        <th scope="col" class="clickable isbn">ISBN</th>
+        <th scope="col" class="clickable notes">Notes</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- A -->
+
+      <!-- B -->
+
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          The Book of Sand
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">9</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          The Circular Ruins
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">12</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          Death and the Compass
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">22</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;</td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          Funes, His Memory
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">15</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          The Garden of the Forking Paths
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">21</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          The Library of Babel
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">16</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          The Lottery in Babylon
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">12</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          Pierre Menard, Author of the Quixote
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">17</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          Shakespeare's Memory
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">12</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">Borges, Jorge L.</td>
+        <td class="title">
+          Tlön, Uqbar, Orbis Tertius
+          <small>(from The Library of Babel)</small>
+        </td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">16</td>
+        <td class="type">S; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241630860</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;</td>
+        <td class="author">Bunker, Nick</td>
+        <td class="title">The Mayflower Pilgrims</td>
+        <td class="subtitle">The Essential Guide<br>1620</td>
+        <td class="pages">128</td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Vintage Classics</td>
+        <td class="year-published">2020</td>
+        <td class="isbn">9781784876494</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- C -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;</td>
+        <td class="author">Campbell, Nancy</td>
+        <td class="title">Fifty Words for Snow</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">207</td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Elliott & Thompson</td>
+        <td class="year-published">2021</td>
+        <td class="isbn">9781783966035</td>
+        <td class="notes">Signed</td>
+      </tr>
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;&starf;</td>
+        <td class="author">Coelho, Paulo</td>
+        <td class="title">The Alchemist</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages"><i>?</i></td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2025</td>
+        <td class="publisher"><i>?</i></td>
+        <td class="year-published"><i>?</i></td>
+        <td class="isbn"><i>?</i></td>
+        <td class="notes"><a href="#[1]">[1]</a></td>
+      </tr>
+
+      <!-- D -->
+
+      <!-- E -->
+
+      <!-- F -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;&starf;</td>
+        <td class="author">Frankl, Viktor E.</td>
+        <td class="title">Man's Search For Meaning</td>
+        <td class="subtitle">The classic tribute to hope from the Holocaust</td>
+        <td class="pages">154</td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Rider</td>
+        <td class="year-published">2004</td>
+        <td class="isbn">9781844132393</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- G -->
+
+      <!-- H -->
+
+      <tr>
+        <td class="rating">&starf;&starf;&starf;</td>
+        <td class="author">Horse, Harry</td>
+        <td class="title">The Last Polar Bears</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">75</td>
+        <td class="type">S; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Puffin Books</td>
+        <td class="year-published">1996</td>
+        <td class="isbn">0140363823</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- I -->
+
+      <!-- J -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;&starf;</td>
+        <td class="author">Joyce, Rachel</td>
+        <td class="title">The Unlikely Pilgrimage of Harold Fry</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">357</td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Transworld Publishers</td>
+        <td class="year-published">2013</td>
+        <td class="isbn">9780552778091</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- K -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;&starf;</td>
+        <td class="author">Keynes, Daniel</td>
+        <td class="title">Flowers for Algernon</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">238</td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Orion Publishing</td>
+        <td class="year-published">2022</td>
+        <td class="isbn">9781399607766</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- L -->
+
+      <!-- M -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;</td>
+        <td class="author">Mountford, Karl J.</td>
+        <td class="title">The Circles in the Sky</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">154</td>
+        <td class="type">Pb; Hc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Walker Books</td>
+        <td class="year-published">2022</td>
+        <td class="isbn">9781529502572</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- N -->
+
+      <!-- O -->
+
+      <!-- P -->
+
+      <!-- Q -->
+
+      <!-- R -->
+
+      <!-- S -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author">Steinbeck, John</td>
+        <td class="title">Of Mice and Men</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">153</td>
+        <td class="type">B; HcC</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Penguin Classics</td>
+        <td class="year-published">2023</td>
+        <td class="isbn">9780241620236</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- T -->
+
+      <tr>
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author">Truss, Lynne</td>
+        <td class="title">Eats, Shoots & Leaves</td>
+        <td class="subtitle">The Zero Tolerance Approach to Punctuation</td>
+        <td class="pages">204</td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">Fourth Estate</td>
+        <td class="year-published">2009</td>
+        <td class="isbn">9780007329069</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- U -->
+
+      <!-- V -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;</td>
+        <td class="author">Videen, Hana</td>
+        <td class="title">The Wordhord</td>
+        <td class="subtitle">Daily Life in Old English</td>
+        <td class="pages">270</td>
+        <td class="type">B; Sc</td>
+        <td class="language">UK English</td>
+        <td class="year-read">2024</td>
+        <td class="publisher">Profile Books</td>
+        <td class="year-published">2022</td>
+        <td class="isbn">9781788166119</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">(Various)</td>
+        <td class="title">RWBY Official Manga Anthology 1</td>
+        <td class="subtitle">Red Like Roses</td>
+        <td class="pages">178</td>
+        <td class="type">M; Sc</td>
+        <td class="language">US English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">VIZ Media</td>
+        <td class="year-published">2018</td>
+        <td class="isbn">9781974701575</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">(Various)</td>
+        <td class="title">RWBY Official Manga Anthology 2</td>
+        <td class="subtitle">Mirror, Mirror</td>
+        <td class="pages">170</td>
+        <td class="type">M; Sc</td>
+        <td class="language">US English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">VIZ Media</td>
+        <td class="year-published">2019</td>
+        <td class="isbn">9781974701582</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">(Various)</td>
+        <td class="title">RWBY Official Manga Anthology 3</td>
+        <td class="subtitle">From Shadows</td>
+        <td class="pages">156</td>
+        <td class="type">M; Sc</td>
+        <td class="language">US English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">VIZ Media</td>
+        <td class="year-published">2018</td>
+        <td class="isbn">9781974702817</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating"></td>
+        <td class="author">(Various)</td>
+        <td class="title">RWBY Official Manga Anthology 4</td>
+        <td class="subtitle">I Burn</td>
+        <td class="pages">158</td>
+        <td class="type">M; Sc</td>
+        <td class="language">US English</td>
+        <td class="year-read">2023</td>
+        <td class="publisher">VIZ Media</td>
+        <td class="year-published">2019</td>
+        <td class="isbn">9781974702824</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- W -->
+
+      <!-- X -->
+
+      <!-- Y -->
+
+      <!-- Z -->
+
+      <!-- あ -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author" lang="ja">あずま きよひこ</td>
+        <td class="title" lang="ja">よつばと！ 1</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">224</td>
+        <td class="type">M; Sc</td>
+        <td class="language" lang="ja">日本語</td>
+        <td class="year-read">2025</td>
+        <td class="publisher" lang="ja">角川文庫</td>
+        <td class="year-published">2024</td>
+        <td class="isbn">9784048690669</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- い -->
+
+      <!-- う -->
+
+      <!-- え -->
+
+      <!-- お -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;&starf;</td>
+        <td class="author" lang="ja">大今 良時</td>
+        <td class="title" lang="ja">不滅のあなたへ 1</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">191</td>
+        <td class="type">M; Sc</td>
+        <td class="language" lang="ja">日本語</td>
+        <td class="year-read">2025</td>
+        <td class="publisher" lang="ja">講談社</td>
+        <td class="year-published">2022</td>
+        <td class="isbn">9784063958423</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author" lang="ja">大今 良時</td>
+        <td class="title" lang="ja">不滅のあなたへ 2</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">191</td>
+        <td class="type">M; Sc</td>
+        <td class="language" lang="ja">日本語</td>
+        <td class="year-read">2025</td>
+        <td class="publisher" lang="ja">講談社</td>
+        <td class="year-published">2022</td>
+        <td class="isbn">9784063958874</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;&starf;</td>
+        <td class="author" lang="ja">大今 良時</td>
+        <td class="title" lang="ja">不滅のあなたへ 3</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">207</td>
+        <td class="type">M; Sc</td>
+        <td class="language" lang="ja">日本語</td>
+        <td class="year-read">2025</td>
+        <td class="publisher" lang="ja">講談社</td>
+        <td class="year-published">2022</td>
+        <td class="isbn">9784063959550</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;</td>
+        <td class="author" lang="ja">大今 良時</td>
+        <td class="title" lang="ja">不滅のあなたへ 4</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">191</td>
+        <td class="type">M; Sc</td>
+        <td class="language" lang="ja">日本語</td>
+        <td class="year-read">2025</td>
+        <td class="publisher" lang="ja">講談社</td>
+        <td class="year-published">2021</td>
+        <td class="isbn">9784065101896</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- か -->
+
+      <!-- き -->
+
+      <!-- く -->
+
+      <!-- け -->
+
+      <!-- こ -->
+
+      <!-- さ -->
+
+      <!-- し -->
+
+      <!-- す -->
+
+      <!-- せ -->
+
+      <!-- そ -->
+
+      <!-- た -->
+
+      <!-- ち -->
+
+      <!-- つ -->
+
+      <!-- て -->
+
+      <!-- と -->
+
+      <!-- な -->
+
+      <!-- に -->
+
+      <!-- ぬ -->
+
+      <!-- ね -->
+
+      <!-- の -->
+
+      <!-- は -->
+
+      <!-- ひ -->
+
+      <!-- ふ -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;&starf;</td>
+        <td class="author" lang="ja">藤本 タツキ</td>
+        <td class="title" lang="ja">ファイアパンチ</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">224</td>
+        <td class="type">M; Sc</td>
+        <td class="language" lang="ja">日本語</td>
+        <td class="year-read">2025</td>
+        <td class="publisher" lang="ja">角川文庫</td>
+        <td class="year-published">2024</td>
+        <td class="isbn">9784048690669</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- へ -->
+
+      <!-- ほ -->
+
+      <tr class="book">
+        <td class="rating">&starf;&starf;</td>
+        <td class="author" lang="ja">星 新一</td>
+        <td class="title" lang="ja">宇宙の声</td>
+        <td class="subtitle">&mdash;</td>
+        <td class="pages">206</td>
+        <td class="type">B; Sc</td>
+        <td class="language" lang="ja">日本語</td>
+        <td class="year-read">2025</td>
+        <td class="publisher" lang="ja">角川文庫</td>
+        <td class="year-published">2022</td>
+        <td class="isbn">9784088807317</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+
+      <!-- ま -->
+
+      <!-- み -->
+
+      <!-- む -->
+
+      <!-- め -->
+
+      <!-- も -->
+
+      <!-- や -->
+
+      <!-- ゆ -->
+
+      <!-- よ -->
+
+      <!-- ら -->
+
+      <!-- り -->
+
+      <!-- る -->
+
+      <!-- れ -->
+
+      <!-- ろ -->
+
+      <!-- わ -->
+
+      <!-- を -->
+
+      <!-- ん -->
+    </tbody>
+  </table>
+
+  <hr>
+
+  <footer>
+    <p id="[1]">
+      [1] I'd bought it at an airport that same year, and have since left it at a bus stop bookshelf somewhere in Horspath for someone else to enjoy. While I can't verify which edition it was exactly, it looks like it could have perhaps been ISBN 9780722532935. Definitely not the 30th anniversary edition, as I specifically recall there not being any such mention on the cover, as well as the <i>&OpenCurlyQuote;Alchemist&CloseCurlyQuote;</i> part of the title being white.
+    </p>
+  </footer>
+
+  <!--  -->
+
+  <script>
+    // Highlight empty cells
+
+    for (const td of document.querySelectorAll('.shelf td')) {
+      if (!td.innerText.trim())
+        td.dataset.empty = true
+    }
+  </script>
+
+</body>

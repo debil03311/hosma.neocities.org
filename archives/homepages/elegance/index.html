@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portrait.css">
+    <link rel="shortcut icon" href="undefined">
+</head><body>
+
+    <div id="warning" class="hidden">
+        <div id="warning-inner">
+            <!-- <h1 style="text-transform: uppercase;"> -->
+            <h1>hey uhh</h1>
+
+            <p>This is <i>my</i> New Tab page, it gets data from other sites and displays it here for that sweet, sweet QoL. There might be some NSFW stuff if you happen to be from the future.</p>
+            <p>Extra timezones are calculated relative to yours. Mine is GMT+2 and yours probably isn't so they're all gonna be wrong lol!</p>
+            <p>I don't care in the slightest that you don't have the fonts installed. Cope.</p>
+
+            <div id="warning-buttons">
+                <button class="btn-warning" onclick="window.history.back()">
+                    yikes
+                </button>
+
+                <button class="btn-warning" onclick="closeWarning()">
+                    k
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="no-mouse"></div>
+    <div id="vignette" class="no-mouse"></div>
+
+    <section id="time" class="no-mouse">
+        <section id="time-main" class="bg-blur">
+            <div id="clock">
+                <span id="hour">00</span><span id="minute">00</span>
+            </div>
+
+            <div id="date-wrap">
+                <span id="day">〇曜日</span>
+                <span id="date">0000年00月00日</span>
+            </div>
+        </section>
+
+        <section id="time-other" class="bg-blur">
+            <div id="US">
+                <span class="timezone">US</span>
+                <span class="clock"> -8 </span>
+            </div>
+            <div id="NG">
+                <span class="timezone">NG</span>
+                <span class="clock"> -1 </span>
+            </div>
+            <div id="NO">
+                <span class="timezone">NO</span>
+                <span class="clock"> -1 </span>
+            </div>
+            <div id="PH">
+                <span class="timezone">PH</span>
+                <span class="clock"> +6 </span>
+            </div>
+            <div id="JP">
+                <span class="timezone">JP</span>
+                <span class="clock"> +7 </span>
+            </div>
+        </section>
+
+        <section id="calendar" class="bg-blur hidden">
+            <span id="calendar-text">Today is no one's birthday!</span>
+        </section>
+    </section>
+
+    <div id="panels-wrap">
+        <section id="panels" class="bg-blur">
+            <section id="kotd" class="japanese">
+                今日の漢字〖<span id="kotd-kanji">〇</span>〗
+            </section>
+
+            <!-- proof of concept, dont know what else to use -->
+            <section id="brainly" class="small-font"></section>
+            <!-- <section id="fanbox"></section> -->
+
+            <section id="todo">
+                <input id="todo-input" type="text" placeholder="メモ入力">
+                <div id="todo-list" class="small-font"></div>
+            </section>
+
+            <section id="fumo" class="japanese no-mouse">
+                <span>新品</span>
+                <span id="cirno-brand-new">?</span>
+                <span id="cirno-second-hand">?</span>
+                <span>中古</span>
+            </section>
+        </section>
+    </div>
+
+<script src="./js/kanji.js"></script>
+<script src="./js/cookie.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/calendar.js"></script>
+<script src="./js/time.js"></script>
+<script src="./js/fetch.js"></script>
+<script src="./js/todo.js"></script>
+</body></html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="theme-color" content="#66ffcc">
+    <meta name="author" content="hosma">
+    <meta name="description" content="You may know me as either the fauux ARG guy, the SOUP guy, or the >lone_meme hogger.">
+    <meta name="image" content="/hosma_circle_transparent.png">
+    
+    <meta property="og:site_name" content="Neocities">
+    <meta property="og:title" content="hosma">
+    <meta property="og:description" content="You may know me as either the fauux ARG guy, the SOUP guy, or the >lone_meme hogger.">
+    <meta property="og:image" content="/hosma_circle_transparent.png">
+
+    <title>hosma</title>
+    <link rel="stylesheet" href="./base.css">
+
+    <style>
+      @font-face {
+        font-family: "syodou";
+        src: url("./assets/fonts/ja/minamoji04.ttf");
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      time {
+        text-shadow: 2px -3px 0 #fff4;
+      }
+
+      body {
+        background: #262729 url("./assets/media/textures/black_marble_seamless.jpg");
+        color: #fff;
+        writing-mode: vertical-rl;
+        text-align: center;
+        mix-blend-mode: exclusion;
+      }
+
+      #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-flow: column-reverse nowrap;
+      }
+
+      #background > * {
+        width: 100%;
+      }
+
+      #left {
+        background: oldlace url("./assets/media/The_Great_Wave_off_Kanagawa-cutout.png");
+        background-position: left bottom;
+        background-repeat: no-repeat;
+
+        z-index: 0;
+        overflow: hidden;
+
+        display: grid;
+        place-content: center;
+      }
+
+      #year {
+        color: #000;
+        font-size: max(18vw, 18vh);
+        font-family: "syodou";
+      }
+
+      #right {
+        display: grid;
+        place-content: center;
+      }
+
+      #date {
+        font: 800 10vh "syodou";
+        letter-spacing: 10px;
+      }
+
+      main {
+        --size: max(30vw, 30vh);
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: var(--size);
+        height: var(--size);
+        transform: translate(-50%, -50%);
+
+        display: grid;
+      }
+      /* main:has(a:hover) {
+        filter: invert(1);
+      } */
+
+      #enter {
+        place-self: center;
+
+        width: 85%;
+        height: 85%;
+        background: #fff;
+        font: 400 max(10vw, 10vh) "syodou";
+        border-radius: 100%;
+
+        display: grid;
+        place-content: center;
+      }
+
+      #enter span {
+        transition: 150ms;
+      }
+      #enter:hover span {
+        color: orangered;
+      }
+
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(-360deg); }
+      }
+      #ensou {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font: 800 100px "syodou";
+        animation: spin 100s infinite forwards linear;
+        /* animation-timing-function: steps(1000); */
+        pointer-events: none;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        pointer-events: none;
+      }
+
+      #dust {
+        background: url("./assets/media/overlays/dust.gif") no-repeat;
+        /* opacity: .9; */
+        mix-blend-mode: lighten;
+      }
+
+      #embers {
+        background: url("./assets/media/overlays/embers.gif") no-repeat;
+        background-size: cover;
+        mix-blend-mode: lighten;
+      }
+
+      #vignette {
+        box-shadow: inset 0 0 32px #0008;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="background">
+      <section id="left">
+        <time id="year">或々</time>
+      </section>
+
+      <section id="right">
+        <time id="date">或月 或旬 或</time>
+      </section>
+    </div>
+
+    <main>
+      <a href="./momiji/" id="enter" title="continue to website・サイトへ進む・o tawa lipu">
+        <span>進</span>
+      </a>
+
+      <img src="./assets/media/ensou_black.png" id="ensou">
+    </main>
+
+    <!--  -->
+
+    <div id="overlays">
+      <!-- <div class="overlay" id="embers"></div> -->
+      <div class="overlay" id="dust"></div>
+      <div class="overlay" id="vignette"></div>
+    </div>
+
+    <!--  -->
+
+    <script>
+      const HOSMA = [
+        'hosma',
+        '𝔥𝔬𝔰𝔪𝔞',
+        '𝖍𝖔𝖘𝖒𝖆',
+        '𝕙𝕠𝕤𝕞𝕒',
+        '𝐡𝐨𝐬𝐦𝐚',
+        '𝗵𝗼𝘀𝗺𝗮',
+        '𝘩𝘰𝘴𝘮𝘢',
+        '𝙝𝙤𝙨𝙢𝙖',
+        '𝓱𝓸𝓼𝓶𝓪',
+        'ｈｏｓｍａ',
+        '升口与勿月',
+        '卄ㄖ丂爪卂',
+      ]
+      
+      const INITIALS = [
+        'h', 'ḩ', 'ⱨ', 'ɦ', 'ꞕ', 'ħ',
+        '𝔥', '𝖍', '𝕙', '𝐡', '𝘩', '𝙝',
+      ]
+
+      const YEARS = [
+        '甲子', '乙丑', '丙寅', '丁卯', '戊辰', '己巳',
+        '庚午', '辛未', '壬申', '癸酉', '甲戌', '乙亥',
+        '丙子', '丁丑', '戊寅', '己卯', '庚辰', '辛巳',
+        '壬午', '癸未', '甲申', '乙酉', '丙戌', '丁亥',
+        '戊子', '己丑', '庚寅', '辛卯', '壬辰', '癸巳',
+        '甲午', '乙未', '丙申', '丁酉', '戊戌', '己亥',
+        '庚子', '辛丑', '壬寅', '癸卯', '甲辰', '乙巳',
+        '丙午', '丁未', '戊申', '己酉', '庚戌', '辛亥',
+        '壬子', '癸丑', '甲寅', '乙卯', '丙辰', '丁巳',
+        '戊午', '己未', '庚申', '辛酉', '壬戌', '癸亥',
+      ]
+
+      const MONTHS = [
+        '睦月',  '如月',  '弥月',
+        '卯月',  '皐月',  '水無月',
+        '文月',  '葉月',  '長月',
+        '神無月', '霜月',  '師走',
+      ]
+
+      const WEEKDAYS = '日月火水木金土'
+
+      /**
+       * Generate a random number within the specified range.
+       * @param {number} a - Lower boundary, or otherwise upper boundary if one was not specified.
+       * @param {number?} b - (Optional) Upper boundary. `a` is used instead if this is not specified.
+       * @return {number} Random number within `[a, b)` or `[0, a)`.
+       */
+      function randomNumber(a, b) {
+        // If no `b`, assume [0, a)
+        if (isNaN(b)) {
+          b = a
+          a = 0
+        }
+
+        const [smaller, bigger] = [a, b].toSorted() // sort in place
+        const multiplier = Math.abs(bigger - smaller) // ensure positive
+        const x = Math.floor(Math.random() * multiplier)
+
+        return a + x
+      }
+
+      /**
+       * Get a random item from an array.
+       * @param {any[]} array
+       * @return {any}
+       */
+      function randomItem(array) {
+        return array[randomNumber(0, array.length)]
+      }
+
+      const titleUpdate = setInterval(() => {
+        document.title = randomItem(INITIALS) + 'osma'
+      }, 80)
+
+      /**
+       * Convert a Gregorian calendar year to its sexagenary counterpart.
+       * @param {number} gregorianYear - Gregorian calendar year
+       * @return {number}
+       */
+      function toSexagenary(gregorianYear) {
+        const a = gregorianYear - 3 - 1
+        const b = Math.floor(a / 60)
+
+        return YEARS[a - (60 * b)]
+      }
+
+      const date = new Date()
+
+      const year = toSexagenary(date.getFullYear())
+      const month = MONTHS[date.getMonth()]
+      const day = date.getDate()
+      const weekday = WEEKDAYS[date.getDay()]
+
+      const jun = (day > 20)
+        ? '下'
+        : (day > 10) ? '中' : '上'
+
+      document.getElementById('year').innerText = year
+      document.getElementById('date').innerText = `${month} ${jun}旬 ${weekday}`
+    </script>
+  </body>
+</html>

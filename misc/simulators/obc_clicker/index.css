@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;400;600;800&display=swap');
+
+:root {
+  --body-bg-img: url("./asset/background.jpg");
+
+  --body-bg: var(--body-bg-img);
+  --body-fg: #000;
+
+  --shop-fg: #FFF;
+  --shop-bg: #101D;
+
+  --stats-bg: #FFF;
+  --stats-fg: #000;
+
+  --font-body: "Inter", sans-serif;
+  --font-item: "Bebas Neue", sans-serif;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font: 400 11pt var(--font-body);
+  background: var(--body-bg);
+  background-size: cover;
+  color: var(--body-fg);
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "stats stats"
+    "main  sidebar";
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+#obc-circle {
+  filter: drop-shadow(0 0 16px #000);
+  transition: 200ms transform;
+  cursor: pointer;
+}
+
+#obc-circle:active {
+  transform: scale(.9);
+}
+
+#obc-circle img {
+  width: 100%;
+  animation: spin 60s linear forwards infinite;
+}
+
+main
+  { grid-area: main; }
+#shop
+  { grid-area: sidebar; }
+#game-stats
+  { grid-area: stats; }
+
+body > * {
+  padding: 1em;
+}
+
+main {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#owned-items {
+  overflow-y: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: .4em 1em;
+}
+
+#owned-items .item {
+  --bg: #000;
+  --fg: #FFF;
+  background-color: var(--bg);
+  color: var(--fg);
+  padding: 3px .6em;
+  border: solid 1px #FFF;
+  border-radius: 1em;
+  transition: 200ms;
+}
+
+#shop {
+  background: var(--shop-bg);
+  color: var(--shop-fg);
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.listing {
+  display: grid;
+  grid-template-areas:
+    "buy   name"
+    "stats description";
+  grid-template-columns: max-content 1fr;
+  gap: .4em 1em;
+}
+
+.name
+{ grid-area: name; }
+.description
+{ grid-area: description; }
+.item-stats {
+  grid-area: stats;
+  text-align: center;
+}
+.button-buy {
+  grid-area: buy;
+  column-span: 1 / 3;
+}
+
+.listing .name {
+  display: block;
+  font: 400 2em var(--font-item);
+}
+
+.button-buy {
+  width: 8em;
+}
+
+#game-stats {
+  background: var(--stats-bg);
+  color: var(--stats-fg);
+  font-size: 1.4em;
+  font-weight: 800;
+  /* text-align: center; */
+  border-bottom: solid 1px #000;
+  padding: .6em;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    grid-template-rows: min-content 2fr 1fr;
+    grid-template-columns: unset;
+    grid-template-areas:
+      "stats"
+      "main"
+      "sidebar";
+  }
+}

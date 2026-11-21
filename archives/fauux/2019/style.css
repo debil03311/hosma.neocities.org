@@ -1,0 +1,52 @@
+
+@font-face {
+	font-family: 'MPlus';
+	src: url('/assets/fonts/ja/MPLUSRounded1c-Light.ttf');
+}
+
+body {
+	background: #000;
+	color: #c1b492;
+	font-family: 'MPlus', sans-serif;
+	font-size: 22px;
+	text-align: justify;
+}
+
+a, span, code, q {
+	color: #D2738A;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1, h2, h3, p {
+	margin: 20px;
+}
+
+section {
+	border-left: solid 4px #D2738A;
+	border-top: solid 1px #D2738A;
+	padding-left: 20px;
+	margin: 30px;
+	margin-top: 40px;
+	max-width: 1200px;
+}
+
+section section {
+	border-left: solid 4px #c1b492;
+	border-top: none;
+	margin-top: 0;
+}
+
+section p img {
+	border: solid 1px #D2738A;
+	box-shadow: 4px 2px 0 #D2738A;
+	margin-right: 20px;
+}
+
+section p img:hover {
+	border-color: #c1b492;
+	box-shadow: none;
+}

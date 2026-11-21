@@ -1,0 +1,271 @@
+
+html {
+  overflow: hidden;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('NotoSans-Regular.ttf');
+}
+
+body {
+	background-color: #11111F;
+	background: url('i/wallpaper.png');
+	background-attachment: fixed;
+	-webkit-background-size: fixed;
+	-moz-background-size: fixed;
+	-o-background-size: fixed;
+	background-size: fixed;
+	font-family: 'Noto Sans';
+	color: #FFF;
+}
+
+#panel {
+	background: #363f48;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 26px;
+	box-shadow: 0 0px 10px #111;
+	z-index: 2;
+}
+
+.applauncher {
+	position: absolute;
+	height: 18px;
+	padding: 4px;
+	padding-right: 5px;
+	transition: 1s;
+}
+
+.applauncher:hover {
+	background: #0a70b4;
+}
+
+.paneltray {
+	position: absolute;
+	top: 0;
+	right: 52px;
+	background: #363f48;
+	padding: 5px;
+}
+
+.time {
+	position: absolute;
+	top: -10px;
+	right: 12px;
+	font-size: 14px;
+	cursor: default;
+}
+
+#app {
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	width: 80%;
+	height: 60%;
+	background: url('i/app_bg.jpg') #000;
+	border: solid 3px #363f48;
+	border-radius: 0 0 5px 5px;
+	transition: opacity 1s;
+	padding: 20px;
+}
+
+#titlebar {
+	position: absolute;
+	top: -33px;
+	left: -3px;
+	height: 25px;
+	width: 100%;
+	border: solid 3px #363f48;
+	border-radius: 5px 5px 0 0; 
+	background: #363f48;
+	cursor: default;
+	z-index: -1;
+}
+
+#darkener {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+}
+
+#titlebar #buttons {
+	position: absolute;
+	top: 4px;
+	right: 6px;
+}
+
+#buttons img:hover {
+	cursor: pointer;
+}
+
+#titlebar p {
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 14px;
+}
+
+#windowlist {
+	position: absolute;
+	top: 0;
+	left: 35px;
+	height: 16px;
+	width: 90%;
+	padding: 4px;
+	cursor: default;
+}
+
+#window {
+	position: absolute;
+	top: 0;
+	width: 200px;
+	height: 23px;
+	font-size: 13px;
+	border-bottom: solid 3px #0a70b4;
+	border-bottom-style: inset;
+}
+
+#window:hover {
+	background: rgba(95,191,255,.7);
+}
+
+#window p {
+	position: absolute;
+	top: -8px;
+	left: 4px;
+}
+
+#menu {
+	position: fixed;
+
+	opacity: 0; 
+/*	opacity: 1; */
+	top: -500px;
+/*	top: 25px; */
+
+	left: 0;
+	width: 450px;
+	height: 650px;
+	background: #363f48;
+	transition: opacity 1s, top 3s;
+	box-shadow: 0 0px 10px #111;
+	z-index: 1;
+}
+
+#menucloser {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.categs {
+	position: absolute;
+	border: solid 1px red;
+	width: 100%;
+	height: 200px;
+	list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+#categs {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+.subcategs {
+	display: inline-block;
+	width: 64px;
+	font-size: 10px;
+	padding: 10px;
+	margin-right: -5px;
+	cursor: default;
+}
+
+.subcategs:hover {
+	background: #454e57;
+}
+
+#user {
+	position: absolute;
+	bottom: 25px;
+	left: 40px;
+}
+
+#info {
+	position: absolute;
+	top: -24px;
+	left: 50px;
+}
+
+#info h3 {
+	font-size: 18px;
+}
+
+#info input {
+	position: relative;
+	top: -10px;
+	left: -4px;
+	background: rgba(0, 0, 0, 0); 
+	font-size: 12px; 
+	color: #a2a6a9;
+	border: none;
+	padding: 4px;
+}
+
+#appmenu {
+	position: absolute; 
+	top: 150px; 
+	left: -20px; 
+	width: 400px;
+}
+
+#appmenu ul {
+	width: 100%;
+	list-style-type: none;
+}
+
+#appmenu li {
+	height: 32px;
+	padding: 5px;
+	border: solid 2px rgba(0, 0, 0, 0);
+}
+
+#appmenu .thumb {
+	width: 30px;
+}
+
+#appmenu p {
+	position: relative;
+	top: -10px;
+	left: 12px;
+	display: inline-block;
+	cursor: default;
+}
+
+#appmenu li:hover {
+	width: 100%;
+	background: #355d74;
+	border-radius: 4px;
+	border: solid 2px #3b9fd1;
+}
+
+#appmenu .arrow {
+	position: absolute;
+	right: -24px;
+	margin-top: 10px;
+}

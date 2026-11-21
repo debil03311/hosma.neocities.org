@@ -1,0 +1,32 @@
+
+@font-face {
+	src: url('/assets/fonts/en/Inconsolata.otf');
+	font-family: 'Inconsolata';
+}
+
+@font-face {
+	src: url('/assets/fonts/en/NovaMono.otf');
+	font-family: 'Nova';
+}
+
+body { 
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Nova';
+	font-size: 20px;
+	padding: 40px;
+	color: #DDD;
+}
+
+#music {
+	position: fixed;
+	bottom: 0;
+	right:  0;
+	height: 42px;
+	border: 0;
+}
+
+small { font-size: 14px; }
+pre { font-family: 'Inconsolata'; }
+a { text-decoration: none; }

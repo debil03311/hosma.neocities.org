@@ -1,0 +1,89 @@
+
+body {
+	background: #300 url('https://cdn.discordapp.com/attachments/181067999405539328/219904310677471232/hellfire.png') center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: white;
+	font-family: 'brady';
+}
+
+/* table { width: 100%; } */
+img { max-height: 300px; }
+tr { font-size: 30px; }
+p { font-size: 20px; }
+
+td {
+
+	text-align: center;
+	padding: 20px;
+	text-shadow: 0 0 10px black;
+
+}
+
+a {
+
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 10px red;
+	text-decoration: none;
+	transition: 1s;
+
+}
+
+a:hover {
+
+	color: red;
+	text-shadow: 0 0 10px black;
+
+}
+
+#button {
+
+	border: solid 1px red;
+	width: auto;
+	display: inline;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	background: rgba(0,0,0,.8);
+	cursor: pointer;
+	transition: .5s;
+
+}
+
+#button:hover {
+
+	background: rgba(150,0,0,.5);
+
+}
+
+/*
+
+#dark {
+  position: fixed;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,1);
+}
+
+*/
+
+@font-face {
+
+	font-family: 'Hellcats';
+	src: url('fonts/HELLCATS.ttf');
+
+} 
+
+@font-face {
+
+	font-family: 'Brady';
+	src: url('fonts/Hello_Brady.ttf');
+
+}

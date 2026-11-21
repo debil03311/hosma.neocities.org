@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Peeb Simultaor</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <script src="./js/Constants.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/alpine.init.js"></script>
+
+  <script defer src="https://unpkg.com/alpinejs"></script>
+
+</head><body x-data="body">
+
+  <main id="history">
+    <span>
+      <b style="font-size: 2em;">#📡</b>
+      this is the beginning of poopoo peepee
+    </span>
+
+    <template x-for="message in history">
+    <article class="message" x-data="message">
+      <img class="pfp" :src="pfpPath">
+
+      <span class="username" x-text="username"></span>
+      <span class="timestamp" x-text="timestamp"></span>
+
+      <div class="content">
+
+        <template x-if="emojiPath">
+        <img :src="emojiPath"
+             class="emoji"
+             :class="{ big: !message.text }">
+        </template>
+
+        <span class="text" x-text="text"></span>
+
+        <template x-if="imagePath">
+        <img class="media" :src="imagePath">
+        </template>
+      </div>
+    </article>
+    </template>
+  </main>
+
+  <input x-model="input"
+         placeholder="#📡へメッセージを送信"
+         @keydown.enter="send()">
+
+</body></html>

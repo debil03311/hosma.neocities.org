@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+
+
+''' Some simple functions that diaply text based on parameters in oreder to save some time. '''
+
+# 1 #
+def res1():
+	print("")
+
+# 2 #
+def res2():
+	print("")
+
+# 3 # Liniar
+def res3(an, amc, vlr):
+	print( "\n\n:: An " + str(an) + "\n" + str(vi) + " " + str(aa) + " " + str(amc) + " " + str(vlr) + "\n" )
+
+
+vi = int(input("Ut. value (ex. 201300) \n> "))
+
+print( "\nVi = " + str(vi) )
+print( "D  = 7\n" )
+
+d  = 7
+dr = 5
+aa = int( vi / d )
+
+
+###  1  #  
+
+print( "#####  Amt. 1\n\n" )
+print( '\n!! Ord.:\nEntry value, anual amt., cml. amt., final value' )
+
+
+###  2  #
+
+print( "#####  Amt. 2\n\n" )
+print( '\n!! Ord.:\nEntry value, anual amt., cml. amt., final value' )
+
+
+###  3  #  Liniar
+
+print( "#####  Liniar Amt.\n\n" )
+print( '\n!! Ord.:\nEntry value, anual amt., cml. amt., final value' )
+
+## A1
+ac1 = int( vi / d   )
+vr1 = int( vi - ac1 )
+res3( "1", ac1, vr1 )
+
+## A2
+ac2 = int( aa + ac1 )
+vr2 = int( vi - ac2 )
+res3( "2", ac2, vr2 )
+
+## A3
+ac3 = int( aa + ac2 )
+vr3 = int( vi - ac3 )
+res3( "3", ac3, vr3 )
+
+## A4
+ac4 = int( aa + ac3 )
+vr4 = int( vi - ac4 )
+res3( "4", ac4, vr4 )
+
+## A5
+ac5 = int( aa + ac4 )
+vr5 = int( vi - ac5 )
+res3( "5", ac5, vr4 )
+
+## A6
+ac6 = int( aa + ac5 )
+vr6 = int( vi - ac6 )
+res3( "6", ac6, vr6 )
+
+## A7
+ac7 = int( aa + ac6 )
+vr7 = int( vi - ac7 )
+res3( "7", ac7, vr7 )
+
+
+
+

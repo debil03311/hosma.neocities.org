@@ -1,0 +1,141 @@
+@media only screen and (max-width: 800px) {
+    main header {
+        color: var(--text) !important;
+
+        text-shadow:
+             1px  1px 0 var(--bg),
+            -1px -1px 0 var(--bg),
+            -1px  1px 0 var(--bg),
+             1px -1px 0 var(--bg),
+             0 0 10px var(--shadow)
+        !important;
+    }
+}
+
+:root {
+    --bg: transparent;
+    --bg-img: url("./geocities.jpg");
+
+    --red: #832331;
+    --blue: #446c80;
+    --light-brown: #ac988a;
+    --dark-brown: #564b54;
+    --light-gray: red;
+    --dark-gray: #83637c;
+
+    --text: #000;
+    --strong: #FFF;
+    --clickable: #26A8EA;
+    --shadow: #000;
+
+    --font-main: serif;
+    --font-header: var(--font-main);
+
+    --border-radius: 0;
+}
+
+* {
+    transition: none !important;
+}
+
+.clickable {
+    color: var(--clickable);
+}
+
+body {
+    background-color: #FFF;
+    background-image: var(--bg-img);
+    color: var(--text);
+    font-family: var(--font-main);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: underline;
+}
+
+header {
+    transform: none !important;
+}
+
+strong {
+    color: var(--light-gray);
+}
+
+.fixed-button {
+    background-color: var(--bg);
+    box-shadow: 0 0 8px var(--shadow);
+}
+
+.nsfw-on {
+    color: var(--clickable) !important;
+}
+
+nav {
+    background-color: var(--bg);
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: #141414;
+    background-color: var(--blue);
+}
+
+nav a {
+    color: var(--text);
+}
+
+.nav-button {
+    transition: 64ms background-color, 200ms color;
+}
+
+.nav-button:hover {
+    background-color: var(--shadow);
+    color: #FFF;
+}
+
+.nav-button[data-redirect]::before,
+.nav-button[data-number]::after
+{
+    background-color: var(--bg);
+    color: var(--light-gray);
+    /* background-color: var(--light-gray);
+    color: var(--bg); */
+}
+
+.nav-button.toggled {
+    color: var(--clickable);
+}
+
+section {
+    background-color: var(--bg);
+}
+
+section small {
+    color: var(--light-gray);
+}
+
+main header {
+    color: var(--light-gray);
+}
+
+.separator.gap {
+    background-color: var(--light-brown);
+}
+
+.separator.nsfw {
+    background-color: var(--red);
+}
+
+.separator::after {
+    background-color: var(--bg);
+}
+
+.blog-timestamp:hover,
+.dream-index:hover {
+    color: var(--clickable);
+}
+
+#theme-picker section {
+    background-color: blue;
+    color: #fff;
+}

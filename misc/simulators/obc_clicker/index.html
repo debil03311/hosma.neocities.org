@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./asset/favicon.ico" type="image/x-icon">
+
+  <title>OBC Simulator</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <script src="./js/Constants.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/alpine.init.js"></script>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+
+</head><body x-data>
+
+  <section id="game-stats">
+    <button title="Delete Save"
+            @click="deleteSave()"
+            x-text="ICONS.delete">🗑️</button>
+    <button title="Save"
+            @click="saveState()"
+            x-text="ICONS.save">💾</button>
+
+    <span id="cps"
+          x-text="`${ICONS.cps} ${$store.state.cps}`">🕒 1</span>
+
+    <span id="score"
+            x-text="`${ICONS.clickPower} ${$store.state.clickPower}`">🖱️ 1</span>
+
+    <span id="score"
+          x-text="toCurrency($store.state.score)">£0</span>
+  </section>
+
+  <main>
+    <div id="obc-circle"
+         @click="$store.state.score += $store.state.clickPower">
+      <img id="" src="./asset/OBC_O.png" alt="OBC Logo O">
+    </div>
+
+    <section id="owned-items">
+      <template x-for="item of $store.state.shop.filter((item)=> !!item.owned)">
+      <article class="item"
+               :style="{
+                  '--bg': `#${hexify(item.price)}`,
+                  '--fg': isBrightHex(item.price) ? '#000000' : '#ffffff',
+               }">
+        <span class="name" x-text="item.name"></span>
+      </article>
+      </template>
+    </section>
+  </main>
+
+  <section id="shop" x-data="shop">
+    <template x-for="item, itemIndex in items">
+    <article class="listing">
+      <button class="button-buy"
+              x-text="toCurrency(item.price)"
+              @click="buy(itemIndex)">£0</button>
+
+      <span class="name" x-text="`(${item.owned})\t${item.name}`"></span>
+
+      <div class="item-stats">
+        <span x-text="`${ICONS.clickPower}+${item.clickPower}`"></span>
+        <span x-text="`${ICONS.cps}+${item.cps}`"></span>
+      </div>
+
+      <span class="description" x-text="item.description"></span>
+    </article>
+    </template>
+  </section>
+  
+</body></html>

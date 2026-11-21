@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Color Cards</title>
+<style>
+	
+#card, #bg_card {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	background: navy;
+	box-shadow: 0 0 40px 2px #000;
+	transform: translate( -50%, -50% );
+	cursor: pointer;
+	transition: all 3s;
+}
+
+.current {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background: rgba( 255, 255, 255, .6 );
+	color: #000;
+	border-radius: 10px 0 0 0;
+	padding: 6px 10px;
+	margin: 0;
+}
+
+.info_btn {
+	position: fixed;
+	top: 6px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: rgba( 255, 255, 255, .6 );
+	border-radius: 180px;
+	font-size: 30px;
+	text-align: center;
+	cursor: pointer;
+	opacity: .16;
+	transition: 1s;
+}
+
+.info_btn:hover { 
+	opacity: .4; 
+}
+
+.info_btn i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+}
+
+#info {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background: rgba( 255, 255, 255, .6 );
+	border-radius: 8px;
+	display: none;
+	padding: 30px;
+	transform: translate( -50%, -50% );
+}
+
+#autoplay {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: rgba( 255, 255, 255, .6 );
+	color: #000;
+	border-radius: 0 10px 0 0;
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+</head>
+<body ondblclick="alert('Spamming it doesn\'t work so now you have to refresh.'); location.reload();">
+
+<div id = "card" onclick="genCard();">
+</div>
+
+<p class = "info_btn" onclick="$( '#info' ).css( 'display', 'block' )"><i>i</i></p>
+<p class = "current">#000080</p>
+
+<div id = "info">
+	<p style="margin-top: 0;">If nothing works anymore it's because you generated one or more divs behind the one you see and you have to wait 3 seconds for each of them to disappear. Or you could reload the page.</p>
+	<span onclick="$( '#info' ).css( 'display', 'none' )" style="cursor: pointer; color: navy;">Close</span>
+</div>
+
+<script>
+
+/*
+
+88""Yb 88     888888    db    .dP"Y8 888888 
+88__dP 88     88__     dPYb   `Ybo." 88__   
+88"""  88  .o 88""    dP__Yb  o.`Y8b 88""   
+88     88ood8 888888 dP""""Yb 8bodP' 888888 
+
+8888b.   dP"Yb  88b 88  .o. 888888
+ 8I  Yb dP   Yb 88Yb88 ,dP'   88
+ 8I  dY Yb   dP 88 Y88        88
+8888Y"   YbodP  88  Y8        88
+
+88      dP"Yb   dP"Yb  88  dP
+88     dP   Yb dP   Yb 88odP
+88  .o Yb   dP Yb   dP 88"Yb
+88ood8  YbodP   YbodP  88  Yb 
+
+*/
+
+function genChar() {
+	var letters = [ 'A', 'B', 'C', 'D', 'E', 'F' ];
+	var numbers = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
+
+	var nums = numbers[ Math.floor( Math.random() * numbers.length )];
+	var lets = letters[ Math.floor( Math.random() * letters.length )];
+
+	var pick = [ nums, lets ];
+
+	char = pick[ Math.floor( Math.random() * pick.length )];
+}
+
+function genCard() {
+
+	genChar(); var c0 = char; console.log(char);
+	genChar(); var c1 = char; console.log(char);
+	genChar(); var c2 = char; console.log(char);
+	genChar(); var c3 = char; console.log(char);
+	genChar(); var c4 = char; console.log(char);
+	genChar(); var c5 = char; console.log(char);
+
+	var color = "#" + c0 + c1 + c2 + c3 + c4 + c5;
+
+	$( "body" ).prepend( '<div id = "bg_card" onclick="genCard()";></div>' );
+	$( "#bg_card" ).css( 'background', color );
+
+	$( ".current" ).html( color );
+	
+	$( "#card" ).css({
+		'width': '68%',
+		'height': '68%',
+	})
+
+	setTimeout(function(){ 
+		$( "#card" ).css( 'top', '-100%' )
+	}, 800);
+
+	setTimeout(function(){ 
+		$( "#card" ).remove().css({ 'top': '50%', 'pointer-events': 'all' });
+		$( "#bg_card" ).attr( 'id', 'card' );
+	}, 2000);
+
+}
+
+</script>
+
+</body>
+</html>

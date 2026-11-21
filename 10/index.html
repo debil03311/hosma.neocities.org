@@ -1,0 +1,147 @@
+<!DOCTYPE HTML><html lang="en"><head>
+    <link rel="stylesheet" href="/moved.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <meta name="theme-color" content="#47B897">
+  	<meta name="author" content="hosma">
+  	<meta name="description" content="I also go by debil sometimes. You might known me as either the fauux ARG guy, the SOUP guy, or the >lone_meme hogger.">
+  	<meta name="image" content="/hosma_circle_transparent.png">
+  
+  	<meta property="og:site_name" content="Neocities">
+  	<meta property="og:title" content="hosma">
+  	<meta property="og:description" content="I also go by debil sometimes. You might known me as either the fauux ARG guy, the SOUP guy, or the >lone_meme hogger.">
+  	<meta property="og:image" content="/hosma_circle_transparent.png">
+
+    <title>home - hosma</title>
+    <link rel="stylesheet" href="/assets/redist/icofont/icofont.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" id="theme-link" href="./css/theme/default.css">
+</head><body onload='bodyLoadCallback()'>
+
+    <a id="jump-to-top"
+        class="fixed-button noselect invisible"
+        onclick='document.getElementById("top").scrollIntoView()'>
+        <i class="icofont-rounded-up"></i>
+    </a>
+
+    <nav id="nav" class="noselect">
+        <div class="nav-button"
+            onclick='loadPage("home")'>
+            <i class="icofont-home"></i>
+            <span class="label">Home</span>
+        </div>
+
+        <div class="nav-button"
+            onclick='toggleThemePicker()'>
+            <i class="icofont-paint"></i>
+            <span class="label">Themes</span>
+        </div>
+
+        <div class="nav-button"
+            onclick='loadPage("comments")'>
+            <i class="icofont-comment"></i>
+            <span class="label">Comments</span>
+        </div>
+
+        <div class="nav-button"
+            onclick='loadPage("blog")'>
+            <i class="icofont-pen"></i>
+            <span class="label">Blog</span>
+        </div>
+
+        <div class="nav-button"
+            onclick='loadPage("dreams")'>
+            <i class="icofont-bed"></i>
+            <span class="label">Dreams</span>
+        </div>
+
+        <!-- Outer -->
+
+        <a class="nav-button"
+            href="/misc/fauux/"
+            data-redirect>
+            <!-- data-number="1" -->
+            <i class="icofont-rat"></i>
+            <span class="label">fauux 2019</span>
+        </a>
+
+        <a class="nav-button"
+            href="/fauuxonlife/"
+            data-redirect>
+            <i class="icofont-radio"></i>
+            <span class="label">fauuxon.life</span>
+        </a>
+
+        <a class="nav-button"
+            href="/tokipona/"
+            data-redirect>
+            <i class="icofont-penalty-card"></i>
+            <span class="label">toki pona</span>
+        </a>
+
+        <a class="nav-button"
+            href="/misc/"
+            data-redirect>
+            <i class="icofont-map"></i>
+            <span class="label">Trash</span>
+        </a>
+        <!-- ><i class="icofont-site-map"></i></div> -->
+
+        <a class="nav-button"
+            href="/404/"
+            data-redirect>
+            <small>404</small>
+        </a>
+
+        <div class="nav-button invisible"
+            onclick='toggleCat("pepsi", this)'>
+            <i class="icofont-brand-pepsi"></i>
+        </div>
+
+        <div class="nav-button invisible"
+            onclick='toggleCat("milk", this)'>
+            <i class="icofont-milk"></i>
+        </div>
+    </nav>
+
+    <main id="main"><div id="top"></div>
+        <header>Loading...</header>
+
+        <section>
+            <h1>At least it's trying to.</h1>
+
+            <p class="centered">
+                Just in case, please don't be a schizo and enable JavaScript.
+            </p>
+        </section>
+    </main>
+
+    <div id="theme-picker" class="full-fixed invisible">
+        <section>
+            <h1>Choose a theme</h1>
+        </section>
+    </div>
+
+    <div id="console" class="hidden" onclick='htmlConsole.input.focus()'>
+        <pre id="console-screen"></pre>
+        <div id="console-input-wrapper">
+            <span id="ps1">
+                [hosma@neocities]
+                <span id="pwd">~</span>&nbsp;
+            </span>
+
+            <span contenteditable id="console-input"></span>
+        </div>
+    </div>
+
+    <div id="cat"></div>
+    <div id="reimu"></div>
+
+<script defer src="./js/htmlcommentbox.js"></script>
+<script defer src="./index.js"></script>
+<script defer src="./js/theme.js"></script>
+<script defer src="./js/console.js"></script>
+</body></html>

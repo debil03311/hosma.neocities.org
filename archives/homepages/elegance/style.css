@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #DDD;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.no-mouse {
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.small-font {
+    font-size: .8rem;
+}
+
+.bg-blur {
+    background: #0008;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 16px #0008;
+}
+
+.japanese {
+    font-family: "YU Gothic";
+}
+
+html {
+    background: linear-gradient(185deg,
+        #1b6f7f,
+        #dbbdc0 32%,
+        #7a6069 80%,
+        #7a342f
+    );
+}
+
+body {
+    --pad: 32px;
+
+    min-height: 100vh;
+    background: fixed center center;
+    background-size: cover;
+    color: #DDD;
+    /* Look, I tried. Get better fonts. */
+    font: 400 1.2em "Yu Gothic UI", "Inter", "Segoe UI", sans-serif;
+    margin: 0;
+
+    display: flex;
+    padding: var(--pad);
+}
+
+#warning,
+#overlay,
+#vignette
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#warning {
+    background: #1e1b1e;
+    z-index: 8;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+#warning-inner {
+    width: 80%;
+    max-width: 512px;
+    text-align: justify;
+}
+
+#warning h1 {
+    text-align: center;
+}
+
+#warning-buttons {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-warning {
+    min-width: 128px;
+    background: #0004;
+    color: #FFF;
+    font-size: inherit;
+    font-weight: bold;
+    border: solid 1px hsl(-8deg, 44%, 28%);
+    border-radius: 3px;
+    padding: 8px 16px;
+}
+
+.btn-warning:hover {
+    background-color: #FFF1;
+    border-color: #FFF;
+    cursor: pointer;
+}
+
+#overlay {
+    backdrop-filter: blur(64px);
+    opacity: .2;
+}
+
+#vignette {
+    box-shadow: inset 0 0 128px #0008;
+}
+
+/* LEFT */
+
+#time {
+    top: var(--pad);
+    left: var(--pad);
+}
+
+#time > section {
+    padding: 16px;
+}
+
+#time > section:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+#time-main,
+#time-other
+{
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+#time-main > div {
+    position: relative;
+    top: -4px;
+}
+
+#clock {
+    line-height: 1em;
+    font-size: 4em;
+    font-weight: 800;
+}
+
+#clock span {
+    display: inline-block;
+}
+
+#hour::after {
+    content: ":";
+}
+
+#date-wrap {
+    font-size: 1.32em;
+    font-weight: 200;
+    margin-left: 16px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#day {
+    font-weight: 400;
+}
+
+#time-other {
+    width: 100%;
+    gap: 8px;
+}
+
+.timezone {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* BIRTHDAY */
+
+#calendar {
+    background-color: #ffd70088;
+    color: #000;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* RIGHT */
+
+#panels-wrap {
+    flex-grow: 1;
+}
+
+#panels {
+    float: right;
+    top: var(--pad);
+    right: var(--pad);
+    width: 64%;
+    max-width: 512px;
+    padding: 4px 16px;
+}
+
+#panels > section {
+    max-height: 128px;
+    /* margin: 0 16px; */
+    padding: 2px 0;
+}
+
+#panels > section:not(:last-child) {
+    border-bottom: solid 1px #686868;
+}
+
+/* BRAINLY */
+
+#brainly {
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#brainly a {
+    color: inherit;
+    text-decoration: none;
+    margin: 4px 0;
+}
+
+#brainly a:hover {
+    text-decoration: underline;
+}
+
+#brainly a:nth-child(even) {
+    color: #BBB;
+}
+
+/* KOTD */
+
+#kotd {
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+#kotd-kanji {
+    color: #FFF;
+    text-shadow: 0 0 10px #FFF6;
+}
+
+/* FUMO */
+
+#fumo {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TODO */
+
+#todo {
+    max-height: unset !important;
+    padding-top: 0 !important;
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    padding: 2px;
+}
+
+.todo-item::before {
+    content: "‣";
+    color: gold;
+    margin-right: .5em;
+}
+
+.todo-item:hover {
+    text-decoration: line-through;
+    color: crimson;
+    cursor: pointer;
+}
+
+#todo-input {
+    width: 100%;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 4px 4px 2px 4px;
+}
+
+#todo-input:focus {
+    text-align: left;
+    background: #0004;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>New tab</title>
+
+<link rel="stylesheet" 
+	  type="text/css" 
+	  href="styles.css">
+
+<script src = "/assets/redist/jquery-3.1.0.min.js"></script>
+
+</head>
+<body>
+
+<div id = "bg"></div>
+
+<div id = "time">
+	<p class = "clock">00:00</p>
+	<p class = "day">Today</p>
+</div>
+
+<div id = "player">
+	<table><tr><td>
+		<div id = "img">
+			<iframe id="iframe" 
+					src="https://www.youtube.com/embed/v1F33xIXNq4?showinfo=0" 
+					frameborder="0" 
+					allowfullscreen>
+			</iframe>
+		</div>
+	</td><td style = "padding-left: 40px; vertical-align: bottom;">
+		<p class = "play">Now playing</p>
+		<p class = "tracks">saib. - Act Right</p>
+	</td></tr></table>
+</div>
+
+<div id = "drawer">
+	<a     href = "https://facebook.com/messages/">
+		<img src = "asset/messenger.png">
+	</a><a href = "https://youtube.com/">
+		<img src = "asset/youtube.png">
+	</a><a href = "https://4chan.org/g/">
+		<img src = "asset/4chan.png">
+	</a><a href = "https://thepiratebay.org/">
+		<img src = "asset/tpb.png">
+	</a><a href = "https://mail.google.com/">
+		<img src = "asset/gmail.png"
+			 style = "margin: 0;">
+	</a>
+</div>
+
+
+<script src = "timedate.js"></script>
+
+</body>
+</html>
