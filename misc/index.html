@@ -82,6 +82,23 @@
       content: "IMG";
       color: green;
     }
+
+    @media only screen and (orientation: portrait) {
+      body {
+        grid-template-columns: max-content 1fr;
+      }
+
+      article {
+        padding: 4px 0;
+      }
+
+      .label {
+        grid-column: 2 / 3;
+        font-size: smaller;
+        border-left: solid 1ch #0001;
+        padding-left: 1ch;
+      }
+    }
   </style>
 
 </head>
